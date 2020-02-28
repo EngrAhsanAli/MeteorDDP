@@ -1,0 +1,31 @@
+{
+  "name": "MeteorDDP",
+  "version": "0.1.0",
+  "summary": "A short description of MeteorDDP.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/engrahsanali/MeteorDDP",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "engrahsanali": "hafiz.m.ahsan.ali@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/engrahsanali/MeteorDDP.git",
+    "tag": "0.1.0"
+  },
+  "libraries": "z",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MeteorDDP/Classes/**/*",
+  "dependencies": {
+    "CryptoSwift": [
+
+    ],
+    "XCGLogger": [
+
+    ]
+  }
+}

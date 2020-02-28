@@ -1,0 +1,6 @@
+framework module MeteorDDP {
+  umbrella header "MeteorDDP-umbrella.h"
+
+  export *
+  module * { export * }
+}
