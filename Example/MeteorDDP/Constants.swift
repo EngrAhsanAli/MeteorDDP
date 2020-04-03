@@ -10,7 +10,7 @@ import MeteorDDP
 
 
 //  *** methods that are tested against a server are tested against the url below ***
-//let url = "ws://swiftddp.meteor.com/websocket"
+//let url = "ws://MeteorDDP.meteor.com/websocket"
 
 //let url = "ws://52.199.85.68:3000/websocket"
 let url = "ws://localhost:3000/websocket"

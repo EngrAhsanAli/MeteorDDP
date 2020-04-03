@@ -18,7 +18,7 @@
 // THE SOFTWARE.
 
 // MARK:- MeteorCollection protocol declaration is necessary
-// MeteorCollection provides basic persistence as well as an api for integrating SwiftDDP with persistence stores.
+// MeteorCollection provides basic persistence as well as an api for integrating MeteorDDP with persistence stores.
 open class MeteorCollection<T:MeteorDocument>: AbstractCollection {
     
     let collectionSetDidChange = debounce(TimeInterval(0.33), queue: DispatchQueue.main, action: {

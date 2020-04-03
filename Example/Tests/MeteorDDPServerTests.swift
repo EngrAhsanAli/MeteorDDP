@@ -11,7 +11,7 @@ import Nimble
 @testable import MeteorDDP
 
 
-// Tests against a Meteor instance at swiftddp.meteor.com
+// Tests against a Meteor instance at MeteorDDP.meteor.com
 class MeteorDDPServerTests:QuickSpec {
     override func spec() {
         

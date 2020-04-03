@@ -56,9 +56,9 @@ A client for Meteor servers, written in Swift 5!
 
 # Description
 
-A version of  [SwiftDDP](https://github.com/siegesmund/SwiftDDP)  for [Meteor](https://github.com/meteor/meteor) servers, written in Swift 5! 
+A version of  [MeteorDDP](https://github.com/siegesmund/MeteorDDP)  for [Meteor](https://github.com/meteor/meteor) servers, written in Swift 5! 
 
-**Credits of this library go to [SwiftDDP](https://github.com/siegesmund/SwiftDDP) author and it is just a replica of SwiftDDP which is compatible with Swift 5 and Xcode 11. Future enhancements and updates of this library are expected**
+**Credits of this library go to [MeteorDDP](https://github.com/siegesmund/MeteorDDP) author and it is just a replica of MeteorDDP which is compatible with Swift 5 and Xcode 11. Future enhancements and updates of this library are expected**
 
 
 MeteorDDP is really helpful to integrate servers written in meteor (a framework written in javascript) using native Swift in iOS.
@@ -316,7 +316,7 @@ Meteor.call("foo", [1, 2, 3, 4]) { result, error in
 When passing parameters to a server method, the parameters object must be serializable with **NSJSONSerialization**
 
 #### Simple in-memory persistence
-SwiftDDP includes a class called MeteorCollection that provides simple, ephemeral dictionary backed persistence. MeteorCollection stores objects subclassed from MeteorDocument. Creating a collection is as simple as:
+MeteorDDP includes a class called MeteorCollection that provides simple, ephemeral dictionary backed persistence. MeteorCollection stores objects subclassed from MeteorDocument. Creating a collection is as simple as:
 
 ```swift
 class List: MeteorDocument {
@@ -395,7 +395,7 @@ struct Contact {
 }
 
 ```
-Next, we'll create the collection class that will hold our contacts and provide the logic to respond to server-side changes to the documents and the subscription set. SwiftDDP contains an abstract class called AbstractCollection that can be used to build custom collections. Subclassing AbstractCollection allows you to override three methods that are called in response to events on the server: *documentWasAdded*, *documentWasChanged* and *documentWasRemoved*.
+Next, we'll create the collection class that will hold our contacts and provide the logic to respond to server-side changes to the documents and the subscription set. MeteorDDP contains an abstract class called AbstractCollection that can be used to build custom collections. Subclassing AbstractCollection allows you to override three methods that are called in response to events on the server: *documentWasAdded*, *documentWasChanged* and *documentWasRemoved*.
 
 ```swift
 class UserCollection: AbstractCollection {

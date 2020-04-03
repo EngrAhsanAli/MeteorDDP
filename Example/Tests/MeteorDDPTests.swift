@@ -73,7 +73,7 @@ class MeteorTest: QuickSpec {
             it ("handles malformed json without crashing") {
                 let message = MeteorMessage(message: "{\"msg\":\"test\", \"id\"test100\"}")
                 expect(message.isError).to(beTrue())
-                expect(message.reason!).to(equal("SwiftDDP JSON serialization error."))
+                expect(message.reason!).to(equal("MeteorDDP JSON serialization error."))
             }
             
             it ("Sends malformed json to the error handler callback") {
@@ -86,11 +86,11 @@ class MeteorTest: QuickSpec {
                 try! client.messageHandler(message)
                 
                 expect(message.isError).to(beTrue())
-                expect(message.reason!).to(equal("SwiftDDP JSON serialization error."))
+                expect(message.reason!).to(equal("MeteorDDP JSON serialization error."))
                 
                 expect(error).toEventuallyNot(beNil())
                 expect(error.isValid).toEventually(beTrue())
-                expect(error.reason!).to(equal("SwiftDDP JSON serialization error."))
+                expect(error.reason!).to(equal("MeteorDDP JSON serialization error."))
             }
             
         }

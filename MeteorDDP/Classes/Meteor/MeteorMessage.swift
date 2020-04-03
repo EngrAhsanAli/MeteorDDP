@@ -28,8 +28,8 @@ public struct MeteorMessage {
         
         if let JSON = message.dictionaryValue { json = JSON }
         else {
-            json = ["msg":"error", "reason":"SwiftDDP JSON serialization error.",
-                "details": "SwiftDDP JSON serialization error. JSON string was: \(message). Message will be handled as a DDP message error."]
+            json = ["msg":"error", "reason":"MeteorDDP JSON serialization error.",
+                "details": "MeteorDDP JSON serialization error. JSON string was: \(message). Message will be handled as a DDP message error."]
         }
     }
     
