@@ -56,9 +56,9 @@ A client for Meteor servers, written in Swift 5!
 
 # Description
 
-A version of  [MeteorDDP](https://github.com/siegesmund/MeteorDDP)  for [Meteor](https://github.com/meteor/meteor) servers, written in Swift 5! 
+A version of  [SwiftDDP](https://github.com/siegesmund/SwiftDDP)  for [Meteor](https://github.com/meteor/meteor) servers, written in Swift 5! 
 
-**Credits of this library go to [MeteorDDP](https://github.com/siegesmund/MeteorDDP) author and it is just a replica of MeteorDDP which is compatible with Swift 5 and Xcode 11. Future enhancements and updates of this library are expected**
+**Credits of this library go to [SwiftDDP](https://github.com/siegesmund/SwiftDDP) author and it is just a replica of SwiftDDP which is compatible with Swift 5 and Xcode 11. Future enhancements and updates of this library are expected**
 
 
 MeteorDDP is really helpful to integrate servers written in meteor (a framework written in javascript) using native Swift in iOS.
