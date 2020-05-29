@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MeteorDDP'
-  s.version          = '1.0'
+  s.version          = '2.0'
   s.summary          = 'A client for Meteor servers, written in Swift 5!'
 
 # This description is used to generate tags and improve search results.
@@ -42,6 +42,8 @@ MeteorDDP is really helpful to integrate servers written in meteor (a framework 
   # s.dependency 'AFNetworking', '~> 2.3'
   
   s.dependency 'CryptoSwift'
-  s.dependency 'XCGLogger'
+  s.dependency 'Starscream'
+  
+
 
 end

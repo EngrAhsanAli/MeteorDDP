@@ -8,14 +8,26 @@
 
 import MeteorDDP
 
-class Document: MeteorDocument {
+// MARK: - TaskModel
+struct TaskModel: Codable {
+    let createdAt: CreatedAt?
+    let owner, id, text: String
+    let username: String?
+
+    enum CodingKeys: String, CodingKey {
+        case createdAt, owner, username
+        case id = "_id"
+        case text
+    }
     
-    var state:String?
-    var city:String?
-    
+    // MARK: - CreatedAt
+    struct CreatedAt: Codable {
+        let date: Int
+
+        enum CodingKeys: String, CodingKey {
+            case date = "$date"
+        }
+    }
 }
 
-class TestModel:MeteorDocument {
-    var msg: String?
-    var optional: String?
-}
+

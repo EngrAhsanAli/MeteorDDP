@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2BA69DFF203034777A78762F /* Pods_MeteorDDP_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213FD738F41C9D2AA92963B4 /* Pods_MeteorDDP_Example.framework */; };
-		41F990B82409418A00DB00E1 /* MeteorDDPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F990B72409418A00DB00E1 /* MeteorDDPTests.swift */; };
-		41F990BA2409425500DB00E1 /* MeteorDDPServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F990B92409425500DB00E1 /* MeteorDDPServerTests.swift */; };
+		416CD243244B96A6006D5E5B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416CD242244B96A6006D5E5B /* TaskCell.swift */; };
+		418174F624483E5E00C73827 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418174F524483E5E00C73827 /* TodoViewController.swift */; };
 		41F990BB2409430B00DB00E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F990B52409414600DB00E1 /* Constants.swift */; };
 		41F990BC2409431E00DB00E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F990B52409414600DB00E1 /* Constants.swift */; };
 		41F990BE240943BC00DB00E1 /* MeteorEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F990BD240943BC00DB00E1 /* MeteorEntities.swift */; };
 		41F990BF240943EA00DB00E1 /* MeteorEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F990BD240943BC00DB00E1 /* MeteorEntities.swift */; };
+		41FF90DE2442B13900B1E86F /* MeteorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF90DD2442B13900B1E86F /* MeteorTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -35,10 +36,11 @@
 /* Begin PBXFileReference section */
 		213FD738F41C9D2AA92963B4 /* Pods_MeteorDDP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeteorDDP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CC3A1D1B54871D2987EA8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		416CD242244B96A6006D5E5B /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		418174F524483E5E00C73827 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		41F990B52409414600DB00E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		41F990B72409418A00DB00E1 /* MeteorDDPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorDDPTests.swift; sourceTree = "<group>"; };
-		41F990B92409425500DB00E1 /* MeteorDDPServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorDDPServerTests.swift; sourceTree = "<group>"; };
 		41F990BD240943BC00DB00E1 /* MeteorEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorEntities.swift; sourceTree = "<group>"; };
+		41FF90DD2442B13900B1E86F /* MeteorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorTests.swift; sourceTree = "<group>"; };
 		481DCC6ACA064980E39AEFC4 /* Pods_MeteorDDP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeteorDDP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* MeteorDDP_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteorDDP_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +105,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				418174F524483E5E00C73827 /* TodoViewController.swift */,
 				41F990BD240943BC00DB00E1 /* MeteorEntities.swift */,
+				416CD242244B96A6006D5E5B /* TaskCell.swift */,
 				41F990B52409414600DB00E1 /* Constants.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -125,8 +129,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				41F990B72409418A00DB00E1 /* MeteorDDPTests.swift */,
-				41F990B92409425500DB00E1 /* MeteorDDPServerTests.swift */,
+				41FF90DD2442B13900B1E86F /* MeteorTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -223,10 +226,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7J9FU828Q2;
 						LastSwiftMigration = 1130;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7J9FU828Q2;
 						LastSwiftMigration = 1130;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -327,18 +332,16 @@
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MeteorDDP/MeteorDDP.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MeteorDDP.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -352,9 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418174F624483E5E00C73827 /* TodoViewController.swift in Sources */,
 				41F990BE240943BC00DB00E1 /* MeteorEntities.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				416CD243244B96A6006D5E5B /* TaskCell.swift in Sources */,
 				41F990BB2409430B00DB00E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,9 +368,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FF90DE2442B13900B1E86F /* MeteorTests.swift in Sources */,
 				41F990BF240943EA00DB00E1 /* MeteorEntities.swift in Sources */,
-				41F990BA2409425500DB00E1 /* MeteorDDPServerTests.swift in Sources */,
-				41F990B82409418A00DB00E1 /* MeteorDDPTests.swift in Sources */,
 				41F990BC2409431E00DB00E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +432,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -481,6 +486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -504,13 +510,17 @@
 			baseConfigurationReference = D42A97067AD4F174D980F105 /* Pods-MeteorDDP_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7J9FU828Q2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MeteorDDP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.MeteorDDP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -519,13 +529,17 @@
 			baseConfigurationReference = C93960C787F8FC081A3B8691 /* Pods-MeteorDDP_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7J9FU828Q2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MeteorDDP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.MeteorDDP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -533,6 +547,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CE0AB1A002C8F5CE252FD9A /* Pods-MeteorDDP_Tests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 7J9FU828Q2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -555,6 +572,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3754D80E599AC78B35C5028 /* Pods-MeteorDDP_Tests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 7J9FU828Q2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
