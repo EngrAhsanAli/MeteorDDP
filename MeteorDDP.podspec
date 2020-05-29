@@ -43,7 +43,7 @@ MeteorDDP is really helpful to integrate servers written in meteor (a framework 
   
   s.dependency 'CryptoSwift'
   s.dependency 'Starscream'
-  
+  s.swift_version = '5.0'
 
 
 end
