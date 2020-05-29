@@ -73,21 +73,31 @@ class MeteorTests: QuickSpec {
     
     func collection_tests() {
         it ("Collection Tests for tasks") {
-//            var added = [MeteorKeyValue]()
-//            var updated = [MeteorKeyValue]()
-//            var removed = [String]()
-//            let _id = String.randomString
+            var added = [MeteorKeyValue]()
+            var updated = [MeteorKeyValue]()
+            var removed = [String]()
+            let _id = String.randomString
             
-//            meteor.onCollectionChange = {
-//                switch $0 {
-//                    case .added(let collection, let id, let fields):
-//                        if ((collection == collection) && (_id == id)) { added.append(fields) }
-//                    case .changed(_, _, let fields, _):
-//                        updated.append(fields)
-//                    case .removed(_, let id):
-//                        removed.append(id)
-//                }
-//            }
+            meteor.addEventObserver(collection, event: .dataAdded) {
+                guard let value = $0 as? MeteorDocument, (_id == value.id) else {
+                    return
+                }
+                added.append(value.fields ?? [:])
+            }
+            
+            meteor.addEventObserver(collection, event: .dataChange) {
+                guard let value = $0 as? MeteorDocument, (_id == value.id) else {
+                    return
+                }
+                updated.append(value.fields ?? [:])
+            }
+            
+            meteor.addEventObserver(collection, event: .dataRemove) {
+                guard let value = $0 as? MeteorDocument, (_id == value.id) else {
+                    return
+                }
+                removed.append(value.id)
+            }
             
             meteor.subscribe(collection, params:nil)
 
