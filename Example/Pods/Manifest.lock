@@ -1,9 +1,9 @@
 PODS:
-  - CryptoSwift (1.3.0)
+  - CryptoSwift (1.3.1)
   - MeteorDDP (2.0):
     - CryptoSwift
     - Starscream
-  - Nimble (8.0.7)
+  - Nimble (8.0.9)
   - Quick (2.2.0)
   - Starscream (4.0.3)
 
@@ -24,9 +24,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CryptoSwift: 1283821600233bdbeb96d7b389c3288c3bf77211
+  CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
   MeteorDDP: fd886523de8ada1bb35dd42a8f007cdedef6b936
-  Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   Starscream: ef06f0961fff0880bca0604416d61141e4faca67
 
