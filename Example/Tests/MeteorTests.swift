@@ -73,10 +73,10 @@ class MeteorTests: QuickSpec {
     
     func collection_tests() {
         it ("Collection Tests for tasks") {
-            var added = [MeteorKeyValue]()
-            var updated = [MeteorKeyValue]()
-            var removed = [String]()
-            let _id = String.randomString
+//            var added = [MeteorKeyValue]()
+//            var updated = [MeteorKeyValue]()
+//            var removed = [String]()
+//            let _id = String.randomString
             
 //            meteor.onCollectionChange = {
 //                switch $0 {
