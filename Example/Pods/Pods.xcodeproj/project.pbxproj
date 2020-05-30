@@ -7,123 +7,121 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		014025D61EC4E5025DF8A915D23D7635 /* MeteorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F01CC017B8CF352FFC5F0559AA3F7 /* MeteorLogger.swift */; };
-		01EF11AB116B0ACA1E64E9447DB6674B /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5A501BCFF2C4A285046A8BDAE4A093 /* Transport.swift */; };
+		04253F80B592623A46D395A43E6A6C65 /* MeteorCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C24E9A1E2CCEE55EBC8A003EAD545B /* MeteorCollections.swift */; };
 		044707D54906AA7CF4554B3516491FB8 /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9229698812C877B3A989DD3ED78188F7 /* PKCS7Padding.swift */; };
 		05C985DCB4F3D41492BC333EDA7EE34E /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A07E4E229D3DB1057ED480ACC1DFF1 /* Blowfish+Foundation.swift */; };
 		067CFDFCCF814A9410283CD3F8150503 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79737BC8DB29DF6A147AD3560A2D6BA /* UInt32+Extension.swift */; };
 		0837CAE176AE66736FE457DDAAF5E01D /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBF0D224EF9C13F7CB1FD83CB569876 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		083A75C30AFB7EF0C51EC28566B05F0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDE9F8C7348CE62BD9BB903B4770B9F1 /* XCTest.framework */; };
-		0846137CD6B529D03D18DB56B8D187F1 /* WebSocketTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C535DBA9F0572284DDB98F09ABF83FD /* WebSocketTask.swift */; };
+		083A75C30AFB7EF0C51EC28566B05F0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11D1A300F1C5E683CC1A33723F1FF06 /* XCTest.framework */; };
 		08665AFE99DBE24F44EF0ACD4F9F56CA /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE3D184D7C65C989D2C41181825CD0 /* Behavior.swift */; };
 		0892D14FE7A3452423E9129D7917664B /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF79BFD916B7D20666E86982AE6B22 /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		08BCA630E30C7AE682A24FBA9BEAFE2D /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A709C5CE2B0185F25F334E311BC4C /* HMAC+Foundation.swift */; };
 		08D0324DB4D2E86ADB32FB3CDBD73DDC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE229BD92D365779BBC7CA64701606 /* String+Extension.swift */; };
 		092256E303520E50ADEFF25EEB4E73EE /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = C01B68188D15DB12086FDF2429D63E3F /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		092EB704F9AA619F5CEA71C968A88B99 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F02A188235D875A6D30A4C4DB4533F /* Starscream.framework */; };
 		09AB99BC4EE247AD5D92A6929AC316F3 /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CE7E3048E3D92D884E0F783A96662 /* StreamEncryptor.swift */; };
 		0A0B6645CBFB982C45D3AB3DE653FB79 /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF1FD7FDE9E3B38C925B3FFAA7B723D /* DigestType.swift */; };
 		0BDEB0C89363CEB6DCCA73EBCEB94D83 /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A84AF6E8D4058806919E14FDF46FF9 /* BlockMode.swift */; };
 		0F26C9536AD2D5D50CF7994FAB46E9FA /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97773D301FE8004339E493E04F564DAD /* Generics.swift */; };
-		11070FFF3540433D46FB113820BDE4F8 /* StringHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D041617690CA8987E8222D6031F92 /* StringHTTPHandler.swift */; };
 		13D2A4D59DD9612E1AA7F3182A342162 /* mach_excServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E957A8C3AF13DC01B9AD28F1F781658 /* mach_excServer.c */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		15207E20E1466C32CCB1B87852F63361 /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889689C5BCE96632A718401DCFA504C /* WSEngine.swift */; };
 		15558F00820248BC3C31CCF0FA75C532 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFFB4EEFA2E6C5BF49EE6DE20D647D /* AES.Cryptors.swift */; };
 		15BD0D56C2301F1210B4991E5FB40699 /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE01CF13BB7BC31F56E225091B30EC83 /* Scrypt.swift */; };
 		192A3F8BEC1A99FD8712D3E09724D72C /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A423BD38C14680FD6C9CDC2C8E1C0D0 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		1B13A393964510E4DC2B44C95E621F05 /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A376C7B625788322932A2E2C49C25 /* SHA3.swift */; };
+		202C0658CE13F46BD665498F74F1C21A /* WebSocketTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C535DBA9F0572284DDB98F09ABF83FD /* WebSocketTask.swift */; };
+		207098CA752D2B43965DD2F9CE7A00C2 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0692C49B028612A0AE8E5961F0ACE633 /* WebSocket.swift */; };
+		2079E9B9C69D97A7ADC3CBAC64A5957A /* TCPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC868F18D0F8EB9E7F602AFD2F2B8AE /* TCPTransport.swift */; };
 		2115CECF15EC80604692894143F3932E /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F0406916253FA85103698E23AAB11 /* AEAD.swift */; };
 		2146BF023CC905C1DFB226FBEF8CF80A /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5FA16F6E2912DFAF56CB748B8CAD5 /* ECB.swift */; };
-		21E6EE483E2BA437F089D5F0855C20D6 /* MeteorOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEC78398808E49CFFA175EE928EBA9 /* MeteorOAuth.swift */; };
 		2258747D44CCBECF7E85346FE9069024 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FED71BBFE18769EC3AA12D8E68A836D /* Cipher.swift */; };
 		22E1EDBF560583A04FC4C30267BD408A /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5AD5AE01CE070DCD6F36E518DADAE8 /* URL+FileName.swift */; };
 		234849AD309265FD107C74357FC8C0CF /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6CD4DB7F965F19AED6B24695B541A /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		2391FFD3230B40E2348B5257D6296BBB /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD0DB7DB964626B43C6134B92DBFD8 /* BeGreaterThanOrEqualTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		23FEBF7FCB02A47A881B45090228B26B /* MeteorDDP+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5D1BD4680234C8413AADBEDF43707D /* MeteorDDP+Error.swift */; };
 		26661371FE41122B779422E580631A57 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6539522B42F5D33627E6092AA7D45 /* BatchedCollection.swift */; };
 		26B9FEAB3DE0C8B91709D53571752A3B /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CDD161E0051F3CC4BA9F8C6B6687F9 /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		271C67655E6C1457D61E39822C3908A3 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60483E944EB2CFFE308E4366442E71F8 /* HooksPhase.swift */; };
-		27D40342C1FC9184A1F52F6DD07E321B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */; };
-		281C74B21D895F0F5252DA6B73AEBFF9 /* MeteorWebSockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F3CE35176F90F5A36A658AC70243E /* MeteorWebSockets.swift */; };
+		286AB10A0386A56B7A78B676ACA2FA97 /* MeteorClient+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B674787442A6304D889719C27A35CE1 /* MeteorClient+Method.swift */; };
 		28CCAB591F87200E760C3B0D6118E332 /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67B2EB581E034878D6DFD89960DCFA8 /* BlockDecryptor.swift */; };
 		29E8DB8011CC93E90CD8FFC64699A877 /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBCC259B6A96C9DF294830F58EAA2A /* PBKDF1.swift */; };
+		2ABDFC899D4A7E74691EB2936DA79E6F /* MeteorClient+MessageIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334452E80D164381041E5DA0D723CD68 /* MeteorClient+MessageIn.swift */; };
+		2ADE96661FB3A32A4851DCB83F547A74 /* WSCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD41E08FE9F686BA658C53DEAD67AB /* WSCompression.swift */; };
 		2B350015B9F7546D0769649EE12D7D1A /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686066B0AADAC335268FB0E84F9129F9 /* NimbleXCTestHandler.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		2D0C0F2A7BD5535BF25FE42DAE52A2C5 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81C2F17E5B68FF2B250F15088504E83 /* Combine.framework */; };
 		2D10E08AEF67CB49A0582555F841AAC5 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412BE5784284DCC7F83755B3C74660B /* CompactMap.swift */; };
 		2EA8B4F77F25009885E315BF0902172D /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667A558DBF59EBEA08A525894F87354 /* Callsite.swift */; };
-		2FFE58B6CDBCD6001E5049A78436C885 /* MeteorEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999F24BB1873957D5D7A450FB6F1FA2 /* MeteorEncodable.swift */; };
 		30FFC4B71D4DCEFADC7C958E1190A161 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68679321BB23D67C841E3E086B9413AD /* MD5.swift */; };
 		3262B230B938C8D6522790093FEAF69D /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F14A693735810E2368838D4C5A259B4 /* EndWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		330E8E4A6596ED625E9B34C94CC4136E /* Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E2888084747156A23424471B3DC147 /* Await.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		33A59DD3171E7D8095F81AF0F6894FD0 /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE474CB191BDDBDBFC61CDA0317BB0C2 /* AES+Foundation.swift */; };
-		342DF4FC1352AAD2615AACB484950E0C /* MeteorClient+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B674787442A6304D889719C27A35CE1 /* MeteorClient+Method.swift */; };
 		3460FEA0CEADB05D3B56C2E1CAF9590C /* ElementsEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF83453699EA9D5F4BC919D258BE6ED /* ElementsEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		3732CD5009E2E10F0D54E7D49A9818B7 /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D6AECAB0B0B1600C4D012908193CFE /* Rabbit+Foundation.swift */; };
-		381D88B53406B6B1857281C31AA8066F /* MeteorCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C24E9A1E2CCEE55EBC8A003EAD545B /* MeteorCollections.swift */; };
 		39133A7716CEDEB690A7DA9D12C45C4D /* CwlDarwinDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BEE7BC363C597907BACEDBAEE50540 /* CwlDarwinDefinitions.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		3A3486233FB309EA82A465F93D8DE889 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F41A5F3846B69CF6A4BD7065F16E228 /* CBCMAC.swift */; };
-		3ABD1908266CA66120E2F6A215855915 /* MeteorDDP+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72EFEE4CD71281E1B6888E256A4985 /* MeteorDDP+TimeInterval.swift */; };
 		3B525CC6E41701E9A5969F9AD4F31CFD /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE98159D8996B98B499C013511A0D7 /* BlockEncryptor.swift */; };
+		3BCFF519A7403632AE826121E3DD5C3F /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D425100611A93C68848326EDA3B5CC3 /* Security.swift */; };
 		3BD0C370BBCEBDEA68B8EDBD969370EB /* mach_excServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E857250C2E3DB191F0F532909068976 /* mach_excServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D369B0AD64BAB54AA66A1D42A0744C0 /* FoundationSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFE23D0A9933DC6F5AE354C726FC04 /* FoundationSecurity.swift */; };
+		3D7A768825CBE19E451A52EB9A1BEE9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		3F1ECBD497A45250260618905A957017 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6F877F8C369ACEF98288D15117BD7 /* ZeroPadding.swift */; };
-		41015B4688DCADD39AEDE177CF0DD5C1 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A502DBD0FE0FAB51CF5F3A8FCBA8416 /* Engine.swift */; };
-		417D233EFE584C6F5756ACDCAB048709 /* MeteorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AD0CBD7DDD21C13AAC390406196E8 /* MeteorClient.swift */; };
+		416C217D8C19801DC83D5115E48F3134 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583699747E65837F3F9AE876431E24A /* HTTPHandler.swift */; };
 		4203EF96811AE514D64AE069311B1575 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706DB2EE192A4F2A2CB5E88D2D3D5F1 /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		427B9220F08C7BE28D426682B6C8FD8B /* MeteorClient+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90933D5C89AFEBB586C515993C66CF /* MeteorClient+Events.swift */; };
 		42F76698690916E0407F51610D829412 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A96194FC7F710A929CFE6722438BD /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		4353CA65C3763363A8F954408BF7408B /* MeteorOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005012342A20915AA047A45477F11DE /* MeteorOAuthViewController.swift */; };
 		442EA849CBB8549884CD5FD9ADDD98C0 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90BF152C9029CC1042E6A8ADB72ADE /* CBC.swift */; };
-		44BA137843B9620AA5B12A6C83FD6568 /* MeteorClient+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C02A3B91D723487717E068946357D /* MeteorClient+Message.swift */; };
 		44C9470137EF941955A1FDCE71D68C26 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7005014727DAF499A6F28CBF36B886B /* MatcherProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		452606D2B948F653A4BDF0B0AC9EA78D /* MeteorEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999F24BB1873957D5D7A450FB6F1FA2 /* MeteorEncodable.swift */; };
+		45C67AFBA99536E95A72605EF138787E /* MeteorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB0A525854EF757D79A512B8440F71 /* MeteorError.swift */; };
 		461A0D9A9E5BAEF5F12EF9EFCB3449E8 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD841E224EE893A640AF57B7434078 /* Closures.swift */; };
 		46B90B2CF2EB97B38C43A31E9A5478C2 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB12AF92C0576D6EEFFE588EA40B1 /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		46BDEBF35D99D2CC53EF72DFC5BDCDCC /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B18BAB368717872E4EF286932AB54 /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		499B25F5A2C2BB2A263B731EBE9C3CC6 /* FoundationTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D1C47C1B442F44FAD333D09524CC9 /* FoundationTransport.swift */; };
 		49AFD07EF060BC4C10BC3A767CC54B05 /* String+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CFC24213BB154D41FC9FA600F9AD1 /* String+C99ExtendedIdentifier.swift */; };
 		4A9D1029392018D69956D67CEC678D05 /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA59E507D61E549CBDC069BB13BA280 /* ErrorUtility.swift */; };
 		4A9E7C1A8B697A1C0B0A1E0DF855A591 /* CwlCatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CA37591CE25429CE924DA7D7B3D514 /* CwlCatchException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		4B142B035F2395B9F639A9132EA45E13 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C318D5CAC5A3FDE3478CB5074B49C71 /* UInt128.swift */; };
 		4BA09DD20F30ABB2BCE71C15AC7713D3 /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1B59D9B323FB3DBA75BED6058640E3 /* ChaCha20.swift */; };
-		4F158C6EA857E84987358F25A158112C /* MeteorClient+Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7494449E8E97657BED6F5EE9843B6CB4 /* MeteorClient+Accounts.swift */; };
 		50A90B2D4FA3EBFF26D653873734FEF7 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E5184A7595CF8F852573C8BB4BC428 /* Authenticator.swift */; };
 		5220CE53965AEB43057039D7D31BA943 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB5BFCB5AF5A48625CF9D2CFFA7D075 /* Example.swift */; };
 		52AB6461CAA9481D24835F3E48301FC6 /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B05029B60C60D601AA99EF1AA84D6 /* BeIdenticalTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		52C9152ECDF14BE97A7569F73FAE61E4 /* Pods-MeteorDDP_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94300DAEF9B0FDE86E763F931BA13387 /* Pods-MeteorDDP_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52E11D6FC2FA7DE75DB539F34834FA7E /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FEED8E6897BB90BD41227E6A96E7F7 /* QuickConfiguration.m */; };
 		5578F928AEFA8B2B7CC542033590DFD6 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9815E0F890F76CE558456F6045289E3 /* Match.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		56615CFCD6A555561B6B790B4CCB574C /* MeteorDDP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E63AD8F87F57D52E372013365BEDD88 /* MeteorDDP-dummy.m */; };
+		55DDFAEE2C3403B6D9169D31F921241C /* MeteorClient+MessageOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8714DAC8EDD07AB32DB01BBAE579C2 /* MeteorClient+MessageOut.swift */; };
 		56782173293488FE6042FBA164F66AD7 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF16A78CE1A49D798C13456BF3B078C /* Data+Extension.swift */; };
-		57691E98D88C6E602E3577C7960DBB37 /* FoundationHTTPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFCD1CA5A4E63A4708908BAEC15EA3C /* FoundationHTTPServerHandler.swift */; };
+		57BC01CFA9ACB1D8B23FC1DA86BE9CD0 /* ExponentialBackoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06815F3CE1FF9BE0F1DC1B1D4D7BD0C /* ExponentialBackoff.swift */; };
 		582D529682D8E57A3BE833B667F788D2 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DC2EC277F5C56C593DD1C7798D505 /* ExampleMetadata.swift */; };
 		58E922B0E45D494152E7BEA5FF41264C /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF8AF0A532BFDDA7E159D9BAF76B1D1 /* Array+Foundation.swift */; };
-		596CFBF56C0BCC78D40BB72EF5417D36 /* MeteorDDP+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5D1BD4680234C8413AADBEDF43707D /* MeteorDDP+Error.swift */; };
-		59705D4137563E67B3C1DD3E1F9A5CD6 /* MeteorClient+MessageIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334452E80D164381041E5DA0D723CD68 /* MeteorClient+MessageIn.swift */; };
+		5A712957ADF0C40AFD1C7774F91C0D18 /* FoundationTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D1C47C1B442F44FAD333D09524CC9 /* FoundationTransport.swift */; };
 		5B6F70DDD4C63CF6ED95291BCB633494 /* ContainElementSatisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90640F954D1C07A73F6FBEED9D416ECA /* ContainElementSatisfying.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		5BDB0BB5F464064DF78D998FB490324F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */; };
+		5BDB0BB5F464064DF78D998FB490324F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
+		5EF8890CB4DBB1EED94BCD0D6FF53A50 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C39D15EDFE7F0080FBCC1C61801723F /* CryptoSwift.framework */; };
 		602E3758C0EF64AF6B7FCEA05BF5B9B9 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B493CEB5A917F6999FEAFF064A7CD1 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		60AD44D1236ACD82D40A3789AA9F4C8E /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888204EEFA027571F3E8A7F008D0280F /* Blowfish.swift */; };
-		6109D2669C0A574A46571EB32F653748 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */; };
 		639C6438CD01AE7A36FE1E551F2E7A8F /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE25EC3714780E8F130BC49FB0708550 /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64E26D7D025AC4462DFA8BA66B38C9D8 /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C50AF61756903D1980B00CA4BEC750 /* HaveCount.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		65659FC64F5249FE734ED7CEEDE9EEBC /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F89C77461A553E41D4B2B10374BFDD1 /* ChaCha20+Foundation.swift */; };
-		66E6501BBEFCB26B4DF86B34D643D927 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC42E2FB51B2148F012620A1E1BB26E8 /* WebSocketServer.swift */; };
+		664D70FF59C751C96F90D0A10F1E135D /* FrameCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7323030A19D409A1716DE3A8686A03B2 /* FrameCollector.swift */; };
 		685C08200C0E6B0EBAA4CD760E4A4795 /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2903DBA0CDA93EE11D696876406E8FC /* AEADChaCha20Poly1305.swift */; };
 		6B208ADC7C0A1E218185146D9C11A7A2 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84A796AE1DF1B7592786123E9C5116 /* World+DSL.swift */; };
 		6D8C8798BA67FEAC054AA1070D7B61E9 /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271E2560E8C81E122EE6CDCD1A64346 /* SHA2.swift */; };
+		6E5F3A5DFD59E76357B1A6F46A92F887 /* MeteorDDP+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96C7BCF62CA9135E08D8674EA3173E /* MeteorDDP+Date.swift */; };
+		6E740EC177C3C83C238300366CA0E517 /* MeteorClient+Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7494449E8E97657BED6F5EE9843B6CB4 /* MeteorClient+Accounts.swift */; };
 		706CEC35B3D8A123470744F2D690B1BF /* Quick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF512EF7991AE1A6D3D1697FFB1EEF /* Quick-dummy.m */; };
 		7262FFAEB1BD2731B9A12B1D0B458DEC /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938AE6DC4E3AFF76BAC0F96648A73D0 /* Digest.swift */; };
 		72DDD7AE2125A695DB8D093F17B7C4E6 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9344146990214F2E145CE8E10FA1CDA /* DSL.swift */; };
 		72FB8CEABF346A37D54CC08647489A98 /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C15DBA1620A77B5414CDB51E17D591 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		7386CBF80A5183A6C6A0A11B5DE33734 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDB6724340F96DA7996070FD6DA2C7A /* QuickSpec.m */; };
-		744F1BA2913DF40428C1B7E8F791F5B0 /* MeteorDDP+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70C49A347AF864B41669E7C6795E64 /* MeteorDDP+String.swift */; };
 		755A93B0ECC17CE5F17E3D7D62632375 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E404712018EEC91023B2BB009FA46D /* XCTestSuite+QuickTestSuiteBuilder.m */; };
 		7803047DA2F58FEA92C2FE22784E9B57 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BADB98554E8B6F029E8A7B29FAC2FD /* AES.swift */; };
+		788A769E2EA4153EBF28069FFA32C646 /* MeteorClient+Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B08722B96A527A4D6FE12D90272CF /* MeteorClient+Sub.swift */; };
 		78A51B7FCC1DFB888AAA254529013C12 /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD330D97D5C503FD12E7FD873A3784A3 /* BeginWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		79C72D0AA0AA5CEF87B9A1A1F3C3278A /* MeteorDDP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB58158FD3DB633F227A45E95D55FC13 /* MeteorDDP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ABDEE0E781182E5F0C52CE632D4ECF1 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD023F35860877D81E94C4C7890C5183 /* Configuration.swift */; };
 		7AC93EB6DCDA9226165D5BC354FE7BC6 /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8A401D46018B6EFC8CFFCF4F8DBA6B /* DSL.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		7DAC86DCBC36C10F43FA5FEB819B7BF1 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD7A4540F7B0A7B73399A7276D99FB /* Functional.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		7E118DAB36B78AB9495D73EE2E3F48A7 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D425100611A93C68848326EDA3B5CC3 /* Security.swift */; };
-		7F84138E11F7660026FD27CB0E49C308 /* MeteorClient+MessageOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8714DAC8EDD07AB32DB01BBAE579C2 /* MeteorClient+MessageOut.swift */; };
 		806B9040D79A3DC58FB56EAC16FE19BF /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFD60209E3B8088B54DD296B676A2E /* Stringers.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		80DEBE41D84FBA1C4D4FE00C8D797E82 /* CwlPreconditionTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = F96BBEF032A0E73DEF29962AC3617AB2 /* CwlPreconditionTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8110DE269159298AAE56E8A3AE8AC4F9 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A95F1565B8D11C8926544DD11E61C4D5 /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		826DD5EFD35AA5C82DB2EFDB8389E715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */; };
+		826DD5EFD35AA5C82DB2EFDB8389E715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		83976C4AC81DBA1656F1358F25032074 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD0AA0C08616102209147FA89C7E099 /* World.swift */; };
 		84273331B9DBC7CCC0096CBD285B5B29 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9460E89F9173AB34DC82AA25DF04B36 /* UInt16+Extension.swift */; };
 		85B78668F9D73876B13E05AA4863084E /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89D9338B1E59101BE4D1B3DEF3315C /* Checksum.swift */; };
@@ -131,44 +129,42 @@
 		8911DDD5910AA1C6E099EBF768AFC8F7 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = A27CFA1828AFDC00EB952BBEFA63E982 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		89EE4D6DBDB79963D65AA1E67B543B6D /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510D99EE7B55A707707600D8EC8F46C /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8A0EF19254BAC5DF0885D1FBA345E016 /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A20690F411DDDA71105CFEF853A2620 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		8AEEA688DE0F147E5240CB1CAE85274B /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEEC49D87924150833A823B139DB431 /* Compression.swift */; };
-		8C5A7F6C56A9FCACBE03860175A06CAB /* WSCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD41E08FE9F686BA658C53DEAD67AB /* WSCompression.swift */; };
 		8D17749611AB0C8BD51C068749D8DF68 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F4B47597B17AA6506AE68970B6B6BD /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D543DAD9A6C0B8BF8A5DB38AD876677 /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AC43A3FCF6DA04A359CD102B7760D6 /* SatisfyAnyOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8D75EC8969EA46FBD6E1BED7791A3C37 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8784CC1354CD5460E2F3D39A760FB7A0 /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		8E8DB0413F47528F1A30410B067B9C28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */; };
-		8F92F250A0B4EE1B4E693EA82CDDA784 /* MeteorClient+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90933D5C89AFEBB586C515993C66CF /* MeteorClient+Events.swift */; };
-		8FE8F15C021DDA22113AE7ADD4A88873 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9FC75AC0178E67D1A238DB8AFC3DB3 /* CryptoSwift.framework */; };
-		901D89D330F98893C47545F3CEDE3868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */; };
+		8E8DB0413F47528F1A30410B067B9C28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
+		901D89D330F98893C47545F3CEDE3868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		92506A7A62E10713A921D19DD0107CCA /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3C36D2BFBB223817360A27A894238 /* SuiteHooks.swift */; };
-		935F76BD1BBB14AF3F40FF0B2E59A2C5 /* MeteorDDP+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A180D04EF90F93C7021A17B0D173FCC /* MeteorDDP+Constants.swift */; };
+		93D98366292DE2A857C7EDF7148ED93D /* MeteorDDP+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72EFEE4CD71281E1B6888E256A4985 /* MeteorDDP+TimeInterval.swift */; };
+		9496AD50B1236D84F678C7B2D7CFAB5D /* MeteorClient+Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4E3BC4DA64F2EF96875AC99C0DAC0 /* MeteorClient+Object.swift */; };
 		949BCBEB311C3DEE272AACD4CAC31A45 /* Pods-MeteorDDP_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62686D01728A67EFBEBB8ACC01C94D84 /* Pods-MeteorDDP_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94C622E3466416E78076D445025CAE9F /* StringHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D041617690CA8987E8222D6031F92 /* StringHTTPHandler.swift */; };
 		94DA3131D64B3D904BE28E72F1871065 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB232901780B96C8C079ECAAC487FB /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		96388E24E61D7DEB0C5E384C5262A7BE /* Pods-MeteorDDP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B506AE4E24CBD284DBE24C4ED5B5ED42 /* Pods-MeteorDDP_Example-dummy.m */; };
+		9681386EE1C90D4D22893E93AEEB4F9A /* MeteorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F01CC017B8CF352FFC5F0559AA3F7 /* MeteorLogger.swift */; };
 		99AA881E586F22B7E3295232A94C462A /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A8242EAD7D5F8EDB88D9DFCEC8FA8 /* PKCS5.swift */; };
 		99E8019F4689A514DAC6AA40AFF7352E /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27183D2196B718B06EABB47C917778C5 /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		9B9366E801D1081730591FC3C882F3A7 /* MeteorClient+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE287BEE3CCFCB816C6E757F47E1A1 /* MeteorClient+User.swift */; };
 		9B9714C476F416AD7FD803EA1184D113 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3509E9423BC277E63072380B749BB191 /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9BB5E9B6487FE95C710687B484C17161 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = E8A93A0099846ECA864F29108C89EAD3 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BBB1FFC4DBE4DBC086B77A27DF11406 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D448341CE2AF3BF42B1BBC7F86A93A40 /* PCBC.swift */; };
 		9C460BA614D4B1D314A252C4C5CE1D87 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F5F60B0ED25DD54F4CCF453BB47D5 /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		9C99907710B1BBB52B26501E61E54E11 /* FoundationHTTPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFCD1CA5A4E63A4708908BAEC15EA3C /* FoundationHTTPServerHandler.swift */; };
+		9EA7B3AB58563AEED297C33CE92F9A76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		9F70369EF71BD9ABAFF687AF532CC20D /* CwlMachBadInstructionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C91A73C03C89737CEA0606A42AD02D77 /* CwlMachBadInstructionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F97818F89D611D55CB8D0FA48C05334 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B7B10ABBE759B973F5FEBBFB6CF87 /* CMAC.swift */; };
 		A1259ED9D2C8A08AA42FD5C26A303307 /* ISO78164Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781E75AE9FBD9C35EFFE31341CD8481 /* ISO78164Padding.swift */; };
 		A205E5FE1599A32AC27D72F550EAE84F /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F2A3593424424AF66509BCE94061F0 /* QuickSpecBase.m */; };
 		A540B2C1A87E8BFBC546CA7DDB669DC6 /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EF4033F4568DFA1B18E25122F194E1 /* NoPadding.swift */; };
-		A572608E176D81610C3113AE4590FCB4 /* MeteorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB0A525854EF757D79A512B8440F71 /* MeteorError.swift */; };
+		A6A95DF1C8BBD2559E694214D4E26404 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A502DBD0FE0FAB51CF5F3A8FCBA8416 /* Engine.swift */; };
 		A9996A6303084D17B9C439CB132A1F69 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC68B3B2862C0B75819592353351C4E /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A9AA3412BC04172A1AABAF8E5128405B /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBB774BEA0F75F9E9AD7BC979940C73 /* CCM.swift */; };
-		AACD5C983DE7BDB0B3DE8055621F6DD8 /* MeteorClient+Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B08722B96A527A4D6FE12D90272CF /* MeteorClient+Sub.swift */; };
+		AA443B5CFCF40D9AC7D7DFAA63B18A81 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A95F1565B8D11C8926544DD11E61C4D5 /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AADC2368A9BB00B6BFB6166561DA7ED5 /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69417C31F846922A7D90EE5AEB0E099F /* StreamDecryptor.swift */; };
-		AB12B081EA4BB1EAC55157437A99E064 /* Framer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C89FA06BC28958BB09BF89CF10E2BF /* Framer.swift */; };
+		AB4326A1EBE37596C3438DAE6ABCA71C /* Framer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C89FA06BC28958BB09BF89CF10E2BF /* Framer.swift */; };
 		AB4C28FFACD81812471ADEA5EF0DFA0D /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10FA5DF649F76634226D053F952F21 /* Updatable.swift */; };
-		ABAB466C1D1D31BC40FA0C3CDB2B3F2C /* MeteorDDP+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96C7BCF62CA9135E08D8674EA3173E /* MeteorDDP+Date.swift */; };
 		AD0CC5F20DE793052D0AD2960796666D /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D540459451EACAC95E53FD01D99E874 /* Collection+Extension.swift */; };
 		AD69407E2FA1D39A9E09248052F2D81B /* ExpectationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F516E898BCF61409BFB15F2CAC7FC3 /* ExpectationMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		ADFE544EC8B84354C2584F668DDA0AB2 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03011B8CAC712831DF67026850A1E225 /* SHA1.swift */; };
-		AF8F947530B4FE7506B79A7E9804C878 /* TCPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC868F18D0F8EB9E7F602AFD2F2B8AE /* TCPTransport.swift */; };
 		B09639961789FD326D7CDEEC44753780 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025C833F669CBA41AC50B21A0A7295D /* Array+Extension.swift */; };
 		B0BAFFC73B5ED2FE02AFB40525A10FF3 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF463575813586B6710485D97B070FE9 /* String+FoundationExtension.swift */; };
 		B2A65EEDB5D5EC246EA68E10964FF7B3 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03D399E0016A07A887722A7113B53BA /* ThrowError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -176,85 +172,97 @@
 		B4058A2AA8486E9879F113E6F67B9679 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E936A9CE8D863B94794D77C290D668 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B41A5B6A24330C76328F756067B04508 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97447B1E3621558F94360B04AEA70CF /* BlockModeOptions.swift */; };
 		B4B387C4C8A64B305D196A902DAC8693 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6CE08DF13AAB0FE419BF2F496958A0 /* UInt8+Extension.swift */; };
+		B56C26748A892BF45236037F909719F7 /* MeteorClient+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE287BEE3CCFCB816C6E757F47E1A1 /* MeteorClient+User.swift */; };
 		B6607A673440A83CE99361A08D82C734 /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 2660D9A0E3C407D91D012BECEC9D7C94 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6CC23C6C288F4EB9EDD3A06F1F5F094 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85ACEC4B3DA6B26A140D01B239595B6 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B71070160CF07EFA99ED0445B0D191E7 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE31A6D8E9F937E753F39442F0D65E79 /* Nimble-dummy.m */; };
+		B75D04B8E4016717653E03B298248C5A /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9D78952727DCD56DD4EED2FB359E29 /* Starscream.framework */; };
 		B7662703AF8D3FFFCB0070C50FEDCC58 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3921040C81525295E26AADCC57F1281A /* Errors.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B79FC6E46F642C3FC74B3E6D9175B1AB /* SatisfyAllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24261AD484A1EEB95A23773C53445049 /* SatisfyAllOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		B7C8FD5DDE7CDEA4D71AC50FAF0556A1 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84B32600E21F57B565074A9A0C67FE3 /* Starscream-dummy.m */; };
+		B9F002A6E56E0F822D64865376773CAA /* FoundationHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EE18A1B134D4C090043CAA0D769BA /* FoundationHTTPHandler.swift */; };
 		BC707EE6F1F2944EC00E84985856F3D6 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA928E6C5CADC1EDAA558F467D031F44 /* Utils+Foundation.swift */; };
 		BD3A8A47F0415452E6050485C3BCDC12 /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA88C1F9B4B474F3291798DB1F73C /* BlockCipher.swift */; };
-		BDF4AEBEE81CA1633E54B16A3781350A /* FoundationSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFE23D0A9933DC6F5AE354C726FC04 /* FoundationSecurity.swift */; };
 		BE4EF0266BA2D10A3BFBEC822F812877 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA936DAAF4BA81E4B555F70FCB323D9 /* SecureBytes.swift */; };
-		BEFFD372420F3E94CA4124394DA5D32B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B2BF6B006FC4D7132AF9CBB9247F7 /* Data+Extensions.swift */; };
-		BF600E64950D5A26A69BA78A4AF78CDA /* MeteorDDP+KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF40B86A6C7718D2DB550CD9E2DE0B2 /* MeteorDDP+KeyValue.swift */; };
 		C051C0411627BD5FCDA031782EB1F716 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = C143458CA2D172D1FE6869CA3D2B3B5D /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C06F3D3E7433F6F815F0E83E4889A956 /* MeteorDDP+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70C49A347AF864B41669E7C6795E64 /* MeteorDDP+String.swift */; };
 		C0C98C8C7D07E1598F20EE2F0539197D /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BF9CCD62D085645F91C18D010F6F2 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		C1337AFA6390A3C1BD37F839BB4E687A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0692C49B028612A0AE8E5961F0ACE633 /* WebSocket.swift */; };
 		C271B106D26C7852C5CE48CCCDAC15C8 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74D8FFF818F2624FAED830B4E395F3 /* ExampleGroup.swift */; };
 		C37AB03E7188A7AEEBA352A03E323345 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB7C07B7BFB07F0CC9D41B396C45429 /* QuickSelectedTestSuiteBuilder.swift */; };
 		C58E477A67D7B8C127643270D2A8AFE3 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B638E7DE6E75994D30705E3BC77EAD /* CipherModeWorker.swift */; };
+		C72AB27A73B96F601EF1428A1CDB973F /* MeteorWebSockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F3CE35176F90F5A36A658AC70243E /* MeteorWebSockets.swift */; };
 		C7950AC7B81DDBB435FCBD29F09654E7 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EB366C571994C009960DE147B3D4D /* Int+Extension.swift */; };
 		C903AEFEEB4E73644A03FB8285543107 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375C2BDE788B740723C458084E7B55D /* BeEmpty.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C90A138294C054100E1AD3E417D15E9F /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83D2A69812881C057D0686880CC4E7 /* Padding.swift */; };
 		C979EEB0159A65246F6BD2C906A8ADB7 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E26FD1B5CFE1E95674DC277BF87B48 /* BeVoid.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C9804B63544FEDC2346DC4A752672ECD /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF5E640CB2FF1A5145CEA9024944377 /* QCKDSL.m */; };
 		C99BBC3F70E056CB6A3CC0516318939D /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30592424801244F1E6E8414B24167514 /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		C9B019F17CD2F3C88DF9644B32AE228A /* MeteorDDP+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A180D04EF90F93C7021A17B0D173FCC /* MeteorDDP+Constants.swift */; };
 		CD1AB65BA0770CC8ABD2F830A4A70C83 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D98F0AD4FA99A3E73B90334E25B912 /* Filter.swift */; };
 		CD6B1F146B0E157FE5B9CAFFAE77A5B5 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2FA58118BE8A88E10480538F279213 /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE62C254656D4CF20731066FC011C57C /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC42E2FB51B2148F012620A1E1BB26E8 /* WebSocketServer.swift */; };
 		CE64A74481463A66728A8B5466E49E4B /* Pods-MeteorDDP_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC71B7BB57C31EA3C56BDCEB0B51B19 /* Pods-MeteorDDP_Tests-dummy.m */; };
+		CE7CAAC3B714E6958EDBD1B38D6BE1FD /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B2BF6B006FC4D7132AF9CBB9247F7 /* Data+Extensions.swift */; };
 		CEA5DAF45185EED5EA8E1FB2B259DA40 /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763DFA4B8161837F1AD673B043DF9970 /* CFB.swift */; };
 		CEE8D31A4E76BB7B350BF2A7175D4BC2 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC54B6FF199DD180BBC76763EDD4F9 /* NMBExceptionCapture.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		CF9218FF56D8EE43681150A3E1635C9A /* ToSucceed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3598B7DA393A0473EAB8285E1EEBC /* ToSucceed.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		D09E0D2539FF0E1406DE6DF22EAB059E /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742136A52F108447E606E89FDCEAB5E4 /* OFB.swift */; };
+		D110FDB24EC585D0EE81113D826EB84A /* MeteorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AD0CBD7DDD21C13AAC390406196E8 /* MeteorClient.swift */; };
 		D115E6DB3D5DC3709101A6537B3FDAF3 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF9E5FA940D0951DF4FF5486037A46 /* Operators.swift */; };
 		D308040B4B357AA3157C1FB898926951 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE2335FBECC21993279A8092AEA9255 /* CTR.swift */; };
 		D320F1902575B9E3E6DCA15AF679A3D5 /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26BA857DEDF43B722AFF6F58B10D2A /* Bit.swift */; };
 		D32464EE89E6AC469532CD33627184F3 /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC81B761CC276BA0AE164321A532A49F /* Poly1305.swift */; };
 		D34D0540ADCBF163575B6B5444B1AAF6 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B53EB63445C301C1DC10442A0E3DCEC /* Contain.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		D59E0C8A2370C04ED748EC38CF86FB92 /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB68605E37D90A148EFCFB1BBBA6FB0 /* Rabbit.swift */; };
-		D5B8456C3940BD99447474DD224C459E /* MeteorClient+Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4E3BC4DA64F2EF96875AC99C0DAC0 /* MeteorClient+Object.swift */; };
 		D5E58F8710D0AE6B3157828F43197104 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E89810CC621B3FD1BCAD9597BF04E3 /* Cryptor.swift */; };
-		D6596342E96C675D932CAC7AC13D0310 /* MeteorDDP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB58158FD3DB633F227A45E95D55FC13 /* MeteorDDP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D719403E97C7D47CA4BFA1ED98CFC4FB /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84B32600E21F57B565074A9A0C67FE3 /* Starscream-dummy.m */; };
+		D8F95E1BD1DFBD6DD984477DC9DEEBB3 /* MeteorClient+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C02A3B91D723487717E068946357D /* MeteorClient+Message.swift */; };
 		D9CFB8E5E354D7BE61D092259779F437 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331E69BF03602E16A969784B72D94A0 /* Equal.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		D9D6150D329A87CBB415FD349F0C50FD /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D709EE55D9C6A4DB094591394DCC4A /* SourceLocation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		DA99200613D340B7A3C048F7379D43A6 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5A501BCFF2C4A285046A8BDAE4A093 /* Transport.swift */; };
 		DB84342A0C0DEABBF7F729DE55225D82 /* XCTestObservationCenter+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD967F80603E3A7032A234871DE0BAF /* XCTestObservationCenter+Register.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		DCD198D49C0A198A09525B7688EE3BC9 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CA1F3D18E0B3AEE63DFFD8336DF3D8 /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		DDAE53857AD0EA48831575B925A52B24 /* MeteorOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005012342A20915AA047A45477F11DE /* MeteorOAuthViewController.swift */; };
 		DED813943ABF7ACBD1C38B2D8024DA9C /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0BFF807169C8E166CFC9B382AD9AE7 /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEF4723BC38310FA6ACBD8CE16CEB23A /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78696929642BD958DA7E2FD22AFBE1B /* Server.swift */; };
 		DFAAEF3440DDBCA8719DD048DAE27FDF /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2CE9D0D10362A9006E1E70C7D604E6 /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E069C2B4846975AE6FB513EDF53422AF /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CDB43EDE5CEC7635A5308EE066E44D /* NativeEngine.swift */; };
 		E0EAC85F7ACFAD998B14FCE66144000E /* NMBStringify.h in Headers */ = {isa = PBXBuildFile; fileRef = AFB616451F5C25B0C57A9768EFCEC151 /* NMBStringify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E458AAE1AE9E2250F29806E5633B1860 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA5ED8DA9C671C6999096FE3A24B8F /* Expression.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		E4D3413849CFA118036E980BB1EB85EF /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F8F5F17AC38FAE1E8F249BC2B2609B /* NSBundle+CurrentTestBundle.swift */; };
 		E4F96D299417E852A360C53F5AC28C27 /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552010448339D9ADFEEC6815DC7D5671 /* Cryptors.swift */; };
+		E62398ADD3E933D7A1EA8F23AE252242 /* MeteorDDP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E63AD8F87F57D52E372013365BEDD88 /* MeteorDDP-dummy.m */; };
+		EA5607D697DC99736C6482BC46FCD444 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEEC49D87924150833A823B139DB431 /* Compression.swift */; };
 		EC7EF3D5778783BD93EBC6F82016ADA9 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C94388036D1BE5D9BAAB8CAE3960BA /* BeNil.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		ECCA1FA570A912E8CDB54EB843F1D030 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C303505780100A183260419784434 /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		ED2986C498E1BBBF431AF6C6E3346936 /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5A75183212EDD967CDD8988D02927F /* UInt64+Extension.swift */; };
 		EDA824C30979C1248080F88390328DD3 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B202F54DB843E477131B496428716 /* GCM.swift */; };
 		EE157DBCE1F197BC50B908D77778B508 /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 5704288692812AD15D29B7E6E986AB54 /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFB9CC9267297D8104141A4046AAD14E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */; };
+		EFB9CC9267297D8104141A4046AAD14E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		F0DC17C4B50818D786974C6EF2753368 /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DE3903035DAFD55005BDD1C6BFC975 /* HKDF.swift */; };
 		F27A7DE93F66B0C12B4C646D99F5B9F4 /* CwlCatchException.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7B3D5059BED11DA36A463AE3FE4B7 /* CwlCatchException.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F310B21703A7BC438A09DDB96670583F /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A03411FA888D5CF9389C10C9A4867 /* AssertionRecorder.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F42E00F96FA3C7D9F5FA5554A128C479 /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C49E1889E4DE023D842D054A5864C2 /* QuickTestSuite.swift */; };
 		F4877B3857C780DCDB7F413A03F95600 /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE79775969D7B6CAD82F86575026E8 /* BeCloseTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		F54283504CE529137C671989E7F4486D /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CDB43EDE5CEC7635A5308EE066E44D /* NativeEngine.swift */; };
-		F60E654D1BE83F08361627AD11B0615C /* ExponentialBackoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06815F3CE1FF9BE0F1DC1B1D4D7BD0C /* ExponentialBackoff.swift */; };
 		F78E35D04F09485FA5DFA72FE1AD5AB2 /* NMBStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A658198592EA5AE55784C80068E3D12 /* NMBStringify.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F85056360C30EFE3B5DF7A3AB6026FC1 /* CryptoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D5F481D6C02F20E69D2BFE76EC0C92 /* CryptoSwift-dummy.m */; };
-		F8AFEBBA817FD0B27C303C70C563683E /* FoundationHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EE18A1B134D4C090043CAA0D769BA /* FoundationHTTPHandler.swift */; };
-		F8CF56962C89CD8C374EBF1942E96A67 /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889689C5BCE96632A718401DCFA504C /* WSEngine.swift */; };
-		F9462282C8B3A1A4DE322FC78AE79267 /* FrameCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7323030A19D409A1716DE3A8686A03B2 /* FrameCollector.swift */; };
+		F9350B60A35578BA1886E66FFBD67C2D /* MeteorDDP+KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF40B86A6C7718D2DB550CD9E2DE0B2 /* MeteorDDP+KeyValue.swift */; };
 		F9E85548BF1EF8C5035BAF92233C34B6 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0CEF731ED156D0B28B2D36DA434FB /* RaisesException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		F9F63AAFFDB85B8D026938BBA2E2DEF9 /* MeteorOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEC78398808E49CFFA175EE928EBA9 /* MeteorOAuth.swift */; };
 		FAC4371C5DF59C0E22D26F47AD2D586F /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673EB9A132EF0BDEFC83ADBA2D096D4F /* PBKDF2.swift */; };
 		FB2109853FB9C4E290BA3BD554C09001 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185256EC6FAA7CFADE7276AE5B8D7A3 /* Utils.swift */; };
-		FCA2325FD70D8D96F6AF3738CBD3C61D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78696929642BD958DA7E2FD22AFBE1B /* Server.swift */; };
 		FEB70BF4154B2F56D3F28DA87D7B6158 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14222F8D934F751F75D8536C5140099 /* HMAC.swift */; };
 		FF920E965F1CA016FF302DE8C92C5122 /* CwlBadInstructionException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3360FB7A6392B01B3074D1F467F73 /* CwlBadInstructionException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		FF92C17630C62C1D87E78CE3586529F4 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583699747E65837F3F9AE876431E24A /* HTTPHandler.swift */; };
 		FFB20EE60273038323880E0E31C78056 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E91011F101422BA66090F0D7EA1090 /* ExampleHooks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2C4B822DE7BD31663E9DAFDE3AB37CDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
+			remoteInfo = CryptoSwift;
+		};
 		59959D4AA791C44057C8F9FAB596633A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -283,26 +291,19 @@
 			remoteGlobalIDString = 9F91D90AE26F168C2F05123B7DE36AD8;
 			remoteInfo = MeteorDDP;
 		};
-		9B6E468F917650FCF03FF423B45D95B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
-			remoteInfo = CryptoSwift;
-		};
-		AD8B824F33AC012FB0C3058CC77644DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
-			remoteInfo = Starscream;
-		};
 		C166277855A8FE6396AA88421BAD655F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C82891EAB7293DBEE916B21F57E8474D;
 			remoteInfo = Quick;
+		};
+		D7F077AC7661095BD6DE0F14F95BC657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
+			remoteInfo = Starscream;
 		};
 		F828B2B7A9F7A6171363DDB4B9F52545 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -339,7 +340,6 @@
 		13E91011F101422BA66090F0D7EA1090 /* ExampleHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleHooks.swift; path = Sources/Quick/Hooks/ExampleHooks.swift; sourceTree = "<group>"; };
 		1485A5AAD3F60EF10DBE2E9EE5A4FA21 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
 		1706DB2EE192A4F2A2CB5E88D2D3D5F1 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
-		18F02A188235D875A6D30A4C4DB4533F /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5A501BCFF2C4A285046A8BDAE4A093 /* Transport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transport.swift; path = Sources/Transport/Transport.swift; sourceTree = "<group>"; };
 		1AA936DAAF4BA81E4B555F70FCB323D9 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
 		1B3BB12AF92C0576D6EEFFE588EA40B1 /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
@@ -358,6 +358,7 @@
 		290AD0CBD7DDD21C13AAC390406196E8 /* MeteorClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MeteorClient.swift; sourceTree = "<group>"; };
 		2A96C7BCF62CA9135E08D8674EA3173E /* MeteorDDP+Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MeteorDDP+Date.swift"; sourceTree = "<group>"; };
 		2AEF512EF7991AE1A6D3D1697FFB1EEF /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
+		2C39D15EDFE7F0080FBCC1C61801723F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD95B626C2399646BB622D1F5A4A127 /* Quick-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Quick-Info.plist"; sourceTree = "<group>"; };
 		2CDBCC259B6A96C9DF294830F58EAA2A /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS/PBKDF1.swift; sourceTree = "<group>"; };
 		2D425100611A93C68848326EDA3B5CC3 /* Security.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Security.swift; path = Sources/Security/Security.swift; sourceTree = "<group>"; };
@@ -445,7 +446,6 @@
 		6E857250C2E3DB191F0F532909068976 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h; sourceTree = "<group>"; };
 		6F1B7B10ABBE759B973F5FEBBFB6CF87 /* CMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CMAC.swift; path = Sources/CryptoSwift/CMAC.swift; sourceTree = "<group>"; };
 		6FC6F877F8C369ACEF98288D15117BD7 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
-		6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		717960F42455F0D6517D1E33FA4E1515 /* MeteorDDP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MeteorDDP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7323030A19D409A1716DE3A8686A03B2 /* FrameCollector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameCollector.swift; path = Sources/Framer/FrameCollector.swift; sourceTree = "<group>"; };
 		742136A52F108447E606E89FDCEAB5E4 /* OFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OFB.swift; path = Sources/CryptoSwift/BlockMode/OFB.swift; sourceTree = "<group>"; };
@@ -532,11 +532,12 @@
 		B5F3C36D2BFBB223817360A27A894238 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		B7005014727DAF499A6F28CBF36B886B /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		B85ACEC4B3DA6B26A140D01B239595B6 /* Predicate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Predicate.swift; path = Sources/Nimble/Matchers/Predicate.swift; sourceTree = "<group>"; };
+		B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B9815E0F890F76CE558456F6045289E3 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Sources/Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
 		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC26BA857DEDF43B722AFF6F58B10D2A /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
 		BC81B761CC276BA0AE164321A532A49F /* Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poly1305.swift; path = Sources/CryptoSwift/Poly1305.swift; sourceTree = "<group>"; };
-		BDE9F8C7348CE62BD9BB903B4770B9F1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BC9D78952727DCD56DD4EED2FB359E29 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE474CB191BDDBDBFC61CDA0317BB0C2 /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
 		BEDB6724340F96DA7996070FD6DA2C7A /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/QuickObjectiveC/QuickSpec.m; sourceTree = "<group>"; };
 		BFBB774BEA0F75F9E9AD7BC979940C73 /* CCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CCM.swift; path = Sources/CryptoSwift/BlockMode/CCM.swift; sourceTree = "<group>"; };
@@ -564,6 +565,7 @@
 		CF74D8FFF818F2624FAED830B4E395F3 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
 		D0464D49A8E6A21885EED97D54C0AAD7 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		D06815F3CE1FF9BE0F1DC1B1D4D7BD0C /* ExponentialBackoff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExponentialBackoff.swift; sourceTree = "<group>"; };
+		D11D1A300F1C5E683CC1A33723F1FF06 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D3DE3903035DAFD55005BDD1C6BFC975 /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
 		D412BE5784284DCC7F83755B3C74660B /* CompactMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompactMap.swift; path = Sources/CryptoSwift/CompactMap.swift; sourceTree = "<group>"; };
 		D448341CE2AF3BF42B1BBC7F86A93A40 /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
@@ -589,7 +591,6 @@
 		EE25EC3714780E8F130BC49FB0708550 /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
 		EE8A401D46018B6EFC8CFFCF4F8DBA6B /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
 		EE8F0406916253FA85103698E23AAB11 /* AEAD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEAD.swift; path = Sources/CryptoSwift/AEAD/AEAD.swift; sourceTree = "<group>"; };
-		EE9FC75AC0178E67D1A238DB8AFC3DB3 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC71B7BB57C31EA3C56BDCEB0B51B19 /* Pods-MeteorDDP_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MeteorDDP_Tests-dummy.m"; sourceTree = "<group>"; };
 		F0E404712018EEC91023B2BB009FA46D /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		F67B2EB581E034878D6DFD89960DCFA8 /* BlockDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockDecryptor.swift; path = Sources/CryptoSwift/BlockDecryptor.swift; sourceTree = "<group>"; };
@@ -597,6 +598,7 @@
 		F73D1C47C1B442F44FAD333D09524CC9 /* FoundationTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationTransport.swift; path = Sources/Transport/FoundationTransport.swift; sourceTree = "<group>"; };
 		F79737BC8DB29DF6A147AD3560A2D6BA /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
 		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81C2F17E5B68FF2B250F15088504E83 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
 		F938AE6DC4E3AFF76BAC0F96648A73D0 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/CryptoSwift/Digest.swift; sourceTree = "<group>"; };
 		F96BBEF032A0E73DEF29962AC3617AB2 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/include/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		F97447B1E3621558F94360B04AEA70CF /* BlockModeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockModeOptions.swift; path = Sources/CryptoSwift/BlockMode/BlockModeOptions.swift; sourceTree = "<group>"; };
@@ -638,21 +640,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		677AE3F12C91439AD07A1E4D27191BE8 /* Frameworks */ = {
+		81B9A466F1A63D8A62D56C2F58D20623 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D40342C1FC9184A1F52F6DD07E321B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AEFD19D50D8DBFA3A57F5F7823FF5C1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8FE8F15C021DDA22113AE7ADD4A88873 /* CryptoSwift.framework in Frameworks */,
-				6109D2669C0A574A46571EB32F653748 /* Foundation.framework in Frameworks */,
-				092EB704F9AA619F5CEA71C968A88B99 /* Starscream.framework in Frameworks */,
+				2D0C0F2A7BD5535BF25FE42DAE52A2C5 /* Combine.framework in Frameworks */,
+				5EF8890CB4DBB1EED94BCD0D6FF53A50 /* CryptoSwift.framework in Frameworks */,
+				3D7A768825CBE19E451A52EB9A1BEE9E /* Foundation.framework in Frameworks */,
+				B75D04B8E4016717653E03B298248C5A /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +656,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8DB0413F47528F1A30410B067B9C28 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD953D31414949C6201F88FC1D6EDCB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA7B3AB58563AEED297C33CE92F9A76 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,6 +929,16 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
+		73FA536CF92B1BDCB149C1A4F23D413D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C39D15EDFE7F0080FBCC1C61801723F /* CryptoSwift.framework */,
+				BC9D78952727DCD56DD4EED2FB359E29 /* Starscream.framework */,
+				8CB60C946BE70A7AE880225350535D76 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82FCCC005E303FE72391AFCFD8C9F903 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,14 +965,14 @@
 			path = "../Target Support Files/Starscream";
 			sourceTree = "<group>";
 		};
-		8C84225D1F3403D43B055D351FF733E4 /* Frameworks */ = {
+		8CB60C946BE70A7AE880225350535D76 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EE9FC75AC0178E67D1A238DB8AFC3DB3 /* CryptoSwift.framework */,
-				18F02A188235D875A6D30A4C4DB4533F /* Starscream.framework */,
-				D9EA6F3D8E66F03BC00F7F2C7FDFFAC6 /* iOS */,
+				F81C2F17E5B68FF2B250F15088504E83 /* Combine.framework */,
+				B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */,
+				D11D1A300F1C5E683CC1A33723F1FF06 /* XCTest.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		9423581C8D050F277B6783928B3B94A3 /* Starscream */ = {
@@ -1115,7 +1128,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				DF7495553F37B7511026A1A9C96AD86D /* Development Pods */,
-				8C84225D1F3403D43B055D351FF733E4 /* Frameworks */,
+				73FA536CF92B1BDCB149C1A4F23D413D /* Frameworks */,
 				A92605C9D2E52CF89B5995B04E64384E /* Pods */,
 				3DDB5B520B95ADB35F0E57881BB3CEAD /* Products */,
 				ED393321712B0222B714FC453680F9A6 /* Targets Support Files */,
@@ -1132,15 +1145,6 @@
 			);
 			name = MeteorDDP;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		D9EA6F3D8E66F03BC00F7F2C7FDFFAC6 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6FF7B6D9785B0149E7F9DAA546A3D8E6 /* Foundation.framework */,
-				BDE9F8C7348CE62BD9BB903B4770B9F1 /* XCTest.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		DB162A79FCC482518354008581B96653 /* Support Files */ = {
@@ -1222,6 +1226,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EC7FB2FFB1CB7D14928F782276618E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA443B5CFCF40D9AC7D7DFAA63B18A81 /* Starscream-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500ADEE720EF34DA259C2BD287ECFEA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79C72D0AA0AA5CEF87B9A1A1F3C3278A /* MeteorDDP-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51A00ABBA2BEF3913A4628399CEBD45B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1235,14 +1255,6 @@
 				9BB5E9B6487FE95C710687B484C17161 /* Nimble.h in Headers */,
 				8D17749611AB0C8BD51C068749D8DF68 /* NMBExceptionCapture.h in Headers */,
 				E0EAC85F7ACFAD998B14FCE66144000E /* NMBStringify.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56CA32F663FC16E479E6E80CBFCAF01B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8110DE269159298AAE56E8A3AE8AC4F9 /* Starscream-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1267,14 +1279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C9152ECDF14BE97A7569F73FAE61E4 /* Pods-MeteorDDP_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A948BD5BEF7E8A7CE32786A4F073C989 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D6596342E96C675D932CAC7AC13D0310 /* MeteorDDP-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1338,12 +1342,12 @@
 		};
 		9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C1CE6BB9EDF7A5E03D2F67575833A83 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildConfigurationList = D9F0A44CC83C78EC81E6FBD621845EDD /* Build configuration list for PBXNativeTarget "Starscream" */;
 			buildPhases = (
-				56CA32F663FC16E479E6E80CBFCAF01B /* Headers */,
-				B38370569CB432A41F5478F114D24102 /* Sources */,
-				677AE3F12C91439AD07A1E4D27191BE8 /* Frameworks */,
-				44D545D1E50109006B2105A91B7017AA /* Resources */,
+				4EC7FB2FFB1CB7D14928F782276618E7 /* Headers */,
+				F265EBD892D738651745D05BB5AC49D2 /* Sources */,
+				FD953D31414949C6201F88FC1D6EDCB8 /* Frameworks */,
+				5C9D758F5A12A7F7A66F7E364518E812 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1356,18 +1360,18 @@
 		};
 		9F91D90AE26F168C2F05123B7DE36AD8 /* MeteorDDP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10C036C17C4C3093BFE33EDACB7A9C73 /* Build configuration list for PBXNativeTarget "MeteorDDP" */;
+			buildConfigurationList = A170EDB68299AC7A5E7A2B3B3E141F4A /* Build configuration list for PBXNativeTarget "MeteorDDP" */;
 			buildPhases = (
-				A948BD5BEF7E8A7CE32786A4F073C989 /* Headers */,
-				B51A5C977A70711A0D647E35335F3AB3 /* Sources */,
-				AEFD19D50D8DBFA3A57F5F7823FF5C1A /* Frameworks */,
-				6FEC07661FEFD075F1BBCE9F24F0EC54 /* Resources */,
+				500ADEE720EF34DA259C2BD287ECFEA8 /* Headers */,
+				37C0306AD98B94432FA330355EB0B145 /* Sources */,
+				81B9A466F1A63D8A62D56C2F58D20623 /* Frameworks */,
+				8DB2DC9C6ADD082A0FE8C57D436D24F9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B193610DD82B6A2BD5AC13EFDAF59EE5 /* PBXTargetDependency */,
-				49CE9A7CDD269A34E41B1E1338EBED24 /* PBXTargetDependency */,
+				57A8C03F1007DC6F1F138B26F5822795 /* PBXTargetDependency */,
+				B6B96132B4E74168488D53CE8C0F15B2 /* PBXTargetDependency */,
 			);
 			name = MeteorDDP;
 			productName = MeteorDDP;
@@ -1456,14 +1460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44D545D1E50109006B2105A91B7017AA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6FEC07661FEFD075F1BBCE9F24F0EC54 /* Resources */ = {
+		5C9D758F5A12A7F7A66F7E364518E812 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1478,6 +1475,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7ACD25997C01FD960F9B4331D0A5D21F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB2DC9C6ADD082A0FE8C57D436D24F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1592,6 +1596,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37C0306AD98B94432FA330355EB0B145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57BC01CFA9ACB1D8B23FC1DA86BE9CD0 /* ExponentialBackoff.swift in Sources */,
+				6E740EC177C3C83C238300366CA0E517 /* MeteorClient+Accounts.swift in Sources */,
+				427B9220F08C7BE28D426682B6C8FD8B /* MeteorClient+Events.swift in Sources */,
+				D8F95E1BD1DFBD6DD984477DC9DEEBB3 /* MeteorClient+Message.swift in Sources */,
+				2ABDFC899D4A7E74691EB2936DA79E6F /* MeteorClient+MessageIn.swift in Sources */,
+				55DDFAEE2C3403B6D9169D31F921241C /* MeteorClient+MessageOut.swift in Sources */,
+				286AB10A0386A56B7A78B676ACA2FA97 /* MeteorClient+Method.swift in Sources */,
+				9496AD50B1236D84F678C7B2D7CFAB5D /* MeteorClient+Object.swift in Sources */,
+				788A769E2EA4153EBF28069FFA32C646 /* MeteorClient+Sub.swift in Sources */,
+				B56C26748A892BF45236037F909719F7 /* MeteorClient+User.swift in Sources */,
+				D110FDB24EC585D0EE81113D826EB84A /* MeteorClient.swift in Sources */,
+				04253F80B592623A46D395A43E6A6C65 /* MeteorCollections.swift in Sources */,
+				C9B019F17CD2F3C88DF9644B32AE228A /* MeteorDDP+Constants.swift in Sources */,
+				6E5F3A5DFD59E76357B1A6F46A92F887 /* MeteorDDP+Date.swift in Sources */,
+				23FEBF7FCB02A47A881B45090228B26B /* MeteorDDP+Error.swift in Sources */,
+				F9350B60A35578BA1886E66FFBD67C2D /* MeteorDDP+KeyValue.swift in Sources */,
+				C06F3D3E7433F6F815F0E83E4889A956 /* MeteorDDP+String.swift in Sources */,
+				93D98366292DE2A857C7EDF7148ED93D /* MeteorDDP+TimeInterval.swift in Sources */,
+				E62398ADD3E933D7A1EA8F23AE252242 /* MeteorDDP-dummy.m in Sources */,
+				452606D2B948F653A4BDF0B0AC9EA78D /* MeteorEncodable.swift in Sources */,
+				45C67AFBA99536E95A72605EF138787E /* MeteorError.swift in Sources */,
+				9681386EE1C90D4D22893E93AEEB4F9A /* MeteorLogger.swift in Sources */,
+				F9F63AAFFDB85B8D026938BBA2E2DEF9 /* MeteorOAuth.swift in Sources */,
+				DDAE53857AD0EA48831575B925A52B24 /* MeteorOAuthViewController.swift in Sources */,
+				C72AB27A73B96F601EF1428A1CDB973F /* MeteorWebSockets.swift in Sources */,
+				202C0658CE13F46BD665498F74F1C21A /* WebSocketTask.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B696486F0A1F297138BE66AE2B9596D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1623,67 +1660,6 @@
 				6B208ADC7C0A1E218185146D9C11A7A2 /* World+DSL.swift in Sources */,
 				83976C4AC81DBA1656F1358F25032074 /* World.swift in Sources */,
 				755A93B0ECC17CE5F17E3D7D62632375 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B38370569CB432A41F5478F114D24102 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AEEA688DE0F147E5240CB1CAE85274B /* Compression.swift in Sources */,
-				BEFFD372420F3E94CA4124394DA5D32B /* Data+Extensions.swift in Sources */,
-				41015B4688DCADD39AEDE177CF0DD5C1 /* Engine.swift in Sources */,
-				F8AFEBBA817FD0B27C303C70C563683E /* FoundationHTTPHandler.swift in Sources */,
-				57691E98D88C6E602E3577C7960DBB37 /* FoundationHTTPServerHandler.swift in Sources */,
-				BDF4AEBEE81CA1633E54B16A3781350A /* FoundationSecurity.swift in Sources */,
-				499B25F5A2C2BB2A263B731EBE9C3CC6 /* FoundationTransport.swift in Sources */,
-				F9462282C8B3A1A4DE322FC78AE79267 /* FrameCollector.swift in Sources */,
-				AB12B081EA4BB1EAC55157437A99E064 /* Framer.swift in Sources */,
-				FF92C17630C62C1D87E78CE3586529F4 /* HTTPHandler.swift in Sources */,
-				F54283504CE529137C671989E7F4486D /* NativeEngine.swift in Sources */,
-				7E118DAB36B78AB9495D73EE2E3F48A7 /* Security.swift in Sources */,
-				FCA2325FD70D8D96F6AF3738CBD3C61D /* Server.swift in Sources */,
-				B7C8FD5DDE7CDEA4D71AC50FAF0556A1 /* Starscream-dummy.m in Sources */,
-				11070FFF3540433D46FB113820BDE4F8 /* StringHTTPHandler.swift in Sources */,
-				AF8F947530B4FE7506B79A7E9804C878 /* TCPTransport.swift in Sources */,
-				01EF11AB116B0ACA1E64E9447DB6674B /* Transport.swift in Sources */,
-				C1337AFA6390A3C1BD37F839BB4E687A /* WebSocket.swift in Sources */,
-				66E6501BBEFCB26B4DF86B34D643D927 /* WebSocketServer.swift in Sources */,
-				8C5A7F6C56A9FCACBE03860175A06CAB /* WSCompression.swift in Sources */,
-				F8CF56962C89CD8C374EBF1942E96A67 /* WSEngine.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B51A5C977A70711A0D647E35335F3AB3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F60E654D1BE83F08361627AD11B0615C /* ExponentialBackoff.swift in Sources */,
-				4F158C6EA857E84987358F25A158112C /* MeteorClient+Accounts.swift in Sources */,
-				8F92F250A0B4EE1B4E693EA82CDDA784 /* MeteorClient+Events.swift in Sources */,
-				44BA137843B9620AA5B12A6C83FD6568 /* MeteorClient+Message.swift in Sources */,
-				59705D4137563E67B3C1DD3E1F9A5CD6 /* MeteorClient+MessageIn.swift in Sources */,
-				7F84138E11F7660026FD27CB0E49C308 /* MeteorClient+MessageOut.swift in Sources */,
-				342DF4FC1352AAD2615AACB484950E0C /* MeteorClient+Method.swift in Sources */,
-				D5B8456C3940BD99447474DD224C459E /* MeteorClient+Object.swift in Sources */,
-				AACD5C983DE7BDB0B3DE8055621F6DD8 /* MeteorClient+Sub.swift in Sources */,
-				9B9366E801D1081730591FC3C882F3A7 /* MeteorClient+User.swift in Sources */,
-				417D233EFE584C6F5756ACDCAB048709 /* MeteorClient.swift in Sources */,
-				381D88B53406B6B1857281C31AA8066F /* MeteorCollections.swift in Sources */,
-				935F76BD1BBB14AF3F40FF0B2E59A2C5 /* MeteorDDP+Constants.swift in Sources */,
-				ABAB466C1D1D31BC40FA0C3CDB2B3F2C /* MeteorDDP+Date.swift in Sources */,
-				596CFBF56C0BCC78D40BB72EF5417D36 /* MeteorDDP+Error.swift in Sources */,
-				BF600E64950D5A26A69BA78A4AF78CDA /* MeteorDDP+KeyValue.swift in Sources */,
-				744F1BA2913DF40428C1B7E8F791F5B0 /* MeteorDDP+String.swift in Sources */,
-				3ABD1908266CA66120E2F6A215855915 /* MeteorDDP+TimeInterval.swift in Sources */,
-				56615CFCD6A555561B6B790B4CCB574C /* MeteorDDP-dummy.m in Sources */,
-				2FFE58B6CDBCD6001E5049A78436C885 /* MeteorEncodable.swift in Sources */,
-				A572608E176D81610C3113AE4590FCB4 /* MeteorError.swift in Sources */,
-				014025D61EC4E5025DF8A915D23D7635 /* MeteorLogger.swift in Sources */,
-				21E6EE483E2BA437F089D5F0855C20D6 /* MeteorOAuth.swift in Sources */,
-				4353CA65C3763363A8F954408BF7408B /* MeteorOAuthViewController.swift in Sources */,
-				281C74B21D895F0F5252DA6B73AEBFF9 /* MeteorWebSockets.swift in Sources */,
-				0846137CD6B529D03D18DB56B8D187F1 /* WebSocketTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1765,6 +1741,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F265EBD892D738651745D05BB5AC49D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5607D697DC99736C6482BC46FCD444 /* Compression.swift in Sources */,
+				CE7CAAC3B714E6958EDBD1B38D6BE1FD /* Data+Extensions.swift in Sources */,
+				A6A95DF1C8BBD2559E694214D4E26404 /* Engine.swift in Sources */,
+				B9F002A6E56E0F822D64865376773CAA /* FoundationHTTPHandler.swift in Sources */,
+				9C99907710B1BBB52B26501E61E54E11 /* FoundationHTTPServerHandler.swift in Sources */,
+				3D369B0AD64BAB54AA66A1D42A0744C0 /* FoundationSecurity.swift in Sources */,
+				5A712957ADF0C40AFD1C7774F91C0D18 /* FoundationTransport.swift in Sources */,
+				664D70FF59C751C96F90D0A10F1E135D /* FrameCollector.swift in Sources */,
+				AB4326A1EBE37596C3438DAE6ABCA71C /* Framer.swift in Sources */,
+				416C217D8C19801DC83D5115E48F3134 /* HTTPHandler.swift in Sources */,
+				E069C2B4846975AE6FB513EDF53422AF /* NativeEngine.swift in Sources */,
+				3BCFF519A7403632AE826121E3DD5C3F /* Security.swift in Sources */,
+				DEF4723BC38310FA6ACBD8CE16CEB23A /* Server.swift in Sources */,
+				D719403E97C7D47CA4BFA1ED98CFC4FB /* Starscream-dummy.m in Sources */,
+				94C622E3466416E78076D445025CAE9F /* StringHTTPHandler.swift in Sources */,
+				2079E9B9C69D97A7ADC3CBAC64A5957A /* TCPTransport.swift in Sources */,
+				DA99200613D340B7A3C048F7379D43A6 /* Transport.swift in Sources */,
+				207098CA752D2B43965DD2F9CE7A00C2 /* WebSocket.swift in Sources */,
+				CE62C254656D4CF20731066FC011C57C /* WebSocketServer.swift in Sources */,
+				2ADE96661FB3A32A4851DCB83F547A74 /* WSCompression.swift in Sources */,
+				15207E20E1466C32CCB1B87852F63361 /* WSEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1786,11 +1790,11 @@
 			target = 6F13695E06195A78EA8A95F8C7ED0D2F /* Nimble */;
 			targetProxy = 59959D4AA791C44057C8F9FAB596633A /* PBXContainerItemProxy */;
 		};
-		49CE9A7CDD269A34E41B1E1338EBED24 /* PBXTargetDependency */ = {
+		57A8C03F1007DC6F1F138B26F5822795 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Starscream;
-			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
-			targetProxy = AD8B824F33AC012FB0C3058CC77644DA /* PBXContainerItemProxy */;
+			name = CryptoSwift;
+			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
+			targetProxy = 2C4B822DE7BD31663E9DAFDE3AB37CDE /* PBXContainerItemProxy */;
 		};
 		9BAC0CE899DDE3ACE8138AB1C2AB4D93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1804,17 +1808,17 @@
 			target = E49698473B2870F59F78338EE5257444 /* Pods-MeteorDDP_Example */;
 			targetProxy = F828B2B7A9F7A6171363DDB4B9F52545 /* PBXContainerItemProxy */;
 		};
-		B193610DD82B6A2BD5AC13EFDAF59EE5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CryptoSwift;
-			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
-			targetProxy = 9B6E468F917650FCF03FF423B45D95B2 /* PBXContainerItemProxy */;
-		};
 		B6442F5A221BAE3BC493FF2810EF49CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CryptoSwift;
 			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
 			targetProxy = 656E56EEF9845259047E84334961DFF4 /* PBXContainerItemProxy */;
+		};
+		B6B96132B4E74168488D53CE8C0F15B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
+			targetProxy = D7F077AC7661095BD6DE0F14F95BC657 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1919,6 +1923,70 @@
 			};
 			name = Release;
 		};
+		4E27E84B67A09C5907B778768259C321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9363E32452958905C0B8D2829A4FF659 /* MeteorDDP.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MeteorDDP/MeteorDDP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MeteorDDP/MeteorDDP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MeteorDDP/MeteorDDP.modulemap";
+				PRODUCT_MODULE_NAME = MeteorDDP;
+				PRODUCT_NAME = MeteorDDP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		53E6207975BBF4C25756A050FC29122A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 328BCB2B5A5AE574231146D63E6DB066 /* Starscream.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		5808AB50F21535E10701B82B07F396BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E7FE46E96E9205352EA3A481E7779CF /* Nimble.release.xcconfig */;
@@ -1950,38 +2018,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		62ED4D9243CB14AA3CFC082F893C69FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9363E32452958905C0B8D2829A4FF659 /* MeteorDDP.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MeteorDDP/MeteorDDP-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MeteorDDP/MeteorDDP-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MeteorDDP/MeteorDDP.modulemap";
-				PRODUCT_MODULE_NAME = MeteorDDP;
-				PRODUCT_NAME = MeteorDDP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		6419F8B082355ACCD0253D94132EC9D0 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2016,38 +2052,6 @@
 			};
 			name = Release;
 		};
-		88ADAEE4C8B144E9D46FD86394029472 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 328BCB2B5A5AE574231146D63E6DB066 /* Starscream.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
-				PRODUCT_MODULE_NAME = Starscream;
-				PRODUCT_NAME = Starscream;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		8C715C3802F459D15998450BF83176C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66B1FC52ED5E1BC7D6DD4E19014F3732 /* CryptoSwift.debug.xcconfig */;
@@ -2079,72 +2083,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		8E0EE41A6DF3A022A9482154540EC59D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5CEB2034CE324B314BA28C41D5B5390 /* Starscream.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
-				PRODUCT_MODULE_NAME = Starscream;
-				PRODUCT_NAME = Starscream;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8F11B809C27CE3BCCAABCA85B7CC2B0E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B337E941A1528CB82E9351104C69B5ED /* MeteorDDP.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MeteorDDP/MeteorDDP-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MeteorDDP/MeteorDDP-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MeteorDDP/MeteorDDP.modulemap";
-				PRODUCT_MODULE_NAME = MeteorDDP;
-				PRODUCT_NAME = MeteorDDP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		99662E994355BFFDF432F0A9500D1A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2181,6 +2119,39 @@
 			};
 			name = Debug;
 		};
+		9DC71D3480D9499A9CBCA77B391A5F20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5CEB2034CE324B314BA28C41D5B5390 /* Starscream.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A3E0A3784EE612B03D3E91EC12FB2AA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7765455A32BEEDAEFFBEE2FC6762A923 /* Pods-MeteorDDP_Tests.debug.xcconfig */;
@@ -2215,6 +2186,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		B5069D2B7B0B5237D7E2ABAFE07FA5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B337E941A1528CB82E9351104C69B5ED /* MeteorDDP.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MeteorDDP/MeteorDDP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MeteorDDP/MeteorDDP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MeteorDDP/MeteorDDP.modulemap";
+				PRODUCT_MODULE_NAME = MeteorDDP;
+				PRODUCT_NAME = MeteorDDP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		D3A6C80F3FAB2BF6A9626EFEDBA7041A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2411,24 +2415,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10C036C17C4C3093BFE33EDACB7A9C73 /* Build configuration list for PBXNativeTarget "MeteorDDP" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				62ED4D9243CB14AA3CFC082F893C69FD /* Debug */,
-				8F11B809C27CE3BCCAABCA85B7CC2B0E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C1CE6BB9EDF7A5E03D2F67575833A83 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88ADAEE4C8B144E9D46FD86394029472 /* Debug */,
-				8E0EE41A6DF3A022A9482154540EC59D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3A95371CEB9FA0B9CB33B8974DEA7368 /* Build configuration list for PBXNativeTarget "Pods-MeteorDDP_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2465,6 +2451,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A170EDB68299AC7A5E7A2B3B3E141F4A /* Build configuration list for PBXNativeTarget "MeteorDDP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E27E84B67A09C5907B778768259C321 /* Debug */,
+				B5069D2B7B0B5237D7E2ABAFE07FA5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BDCEF7A4213E8B1075A3468660B5A88C /* Build configuration list for PBXNativeTarget "Pods-MeteorDDP_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2479,6 +2474,15 @@
 			buildConfigurations = (
 				8C715C3802F459D15998450BF83176C8 /* Debug */,
 				6419F8B082355ACCD0253D94132EC9D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F0A44CC83C78EC81E6FBD621845EDD /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E6207975BBF4C25756A050FC29122A /* Debug */,
+				9DC71D3480D9499A9CBCA77B391A5F20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
