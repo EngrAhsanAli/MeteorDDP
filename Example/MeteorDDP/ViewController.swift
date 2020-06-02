@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MeteorDDP
 //
-//  Created by engrahsanali on 02/26/2020.
+//  Created by engrahsanali on 06/02/2020.
 //  Copyright (c) 2020 engrahsanali. All rights reserved.
 //
 
@@ -17,10 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         meteor.delegate = self
-                
+        
         clearLogAction(self)
         connectAction(self)
-                
+        
     }
     
     @IBAction func checkAttrsAction(_ sender: Any) {
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                 self.logTasks(d, nil)
             }
         }
-
+        
     }
     
     @IBAction func connectAction(_ sender: Any) {
@@ -157,10 +157,10 @@ extension ViewController: MeteorDelegate {
             
         case .dataChange:
             self.logResult("Changed data in collection " + (event as? MeteorDocument)!.name)
-
+            
         case .dataRemove:
             self.logResult("Removed data in collection " + (event as? MeteorDocument)!.name)
-
+            
         }
     }
     

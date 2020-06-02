@@ -2,12 +2,6 @@ import Foundation
 
 /// A Nimble matcher that succeeds when the actual value matches with all of the matchers
 /// provided in the variable list of matchers.
-public func satisfyAllOf<T>(_ predicates: Predicate<T>...) -> Predicate<T> {
-    return satisfyAllOf(predicates)
-}
-
-/// A Nimble matcher that succeeds when the actual value matches with all of the matchers
-/// provided in the variable list of matchers.
 public func satisfyAllOf<T, U>(_ matchers: U...) -> Predicate<T>
     where U: Matcher, U.ValueType == T {
         return satisfyAllOf(matchers.map { $0.predicate })
@@ -45,7 +39,7 @@ public func && <T>(left: Predicate<T>, right: Predicate<T>) -> Predicate<T> {
     return satisfyAllOf(left, right)
 }
 
-#if canImport(Darwin)
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
 extension NMBObjCMatcher {
     @objc public class func satisfyAllOfMatcher(_ matchers: [NMBMatcher]) -> NMBPredicate {
         return NMBPredicate { actualExpression in
@@ -66,12 +60,8 @@ extension NMBObjCMatcher {
                         return predicate.satisfies({ try expression.evaluate() }, location: actualExpression.location).toSwift()
                     } else {
                         let failureMessage = FailureMessage()
-                        let success = matcher.matches(
-                            // swiftlint:disable:next force_try
-                            { try! expression.evaluate() },
-                            failureMessage: failureMessage,
-                            location: actualExpression.location
-                        )
+                        // swiftlint:disable:next line_length
+                        let success = matcher.matches({ try! expression.evaluate() }, failureMessage: failureMessage, location: actualExpression.location)
                         return PredicateResult(bool: success, message: failureMessage.toExpectationMessage())
                     }
                 }

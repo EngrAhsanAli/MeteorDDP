@@ -1,4 +1,4 @@
-#if canImport(Darwin)
+#if os(macOS) || os(iOS) || os(watchOS) || os(tvOS)
 
 import Foundation
 
@@ -17,7 +17,7 @@ extension Bundle {
      Module name has to be a valid "C99 extended identifier".
      */
     internal var moduleName: String {
-        let fileName = bundleURL.fileName
+        let fileName = bundleURL.fileName as NSString
         return fileName.c99ExtendedIdentifier
     }
 }

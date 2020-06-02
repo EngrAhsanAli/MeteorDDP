@@ -24,21 +24,19 @@ public func containElementSatisfying<S: Sequence, T>(_ predicate: @escaping ((T)
     }
 }
 
-#if canImport(Darwin)
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
     extension NMBObjCMatcher {
-        @objc public class func containElementSatisfyingMatcher(_ predicate: @escaping ((NSObject) -> Bool)) -> NMBMatcher {
-            return NMBPredicate { actualExpression in
+        @objc public class func containElementSatisfyingMatcher(_ predicate: @escaping ((NSObject) -> Bool)) -> NMBObjCMatcher {
+            return NMBObjCMatcher(canMatchNil: false) { actualExpression, failureMessage in
                 let value = try actualExpression.evaluate()
                 guard let enumeration = value as? NSFastEnumeration else {
-                    let message = ExpectationMessage.fail(
-                        "containElementSatisfying must be provided an NSFastEnumeration object"
-                    )
-                    return NMBPredicateResult(status: .fail, message: message.toObjectiveC())
+                    // swiftlint:disable:next line_length
+                    failureMessage.postfixMessage = "containElementSatisfying must be provided an NSFastEnumeration object"
+                    failureMessage.actualValue = nil
+                    failureMessage.expected = ""
+                    failureMessage.to = ""
+                    return false
                 }
-
-                let message = ExpectationMessage
-                    .expectedTo("find object in collection that satisfies predicate")
-                    .toObjectiveC()
 
                 var iterator = NSFastEnumerationIterator(enumeration)
                 while let item = iterator.next() {
@@ -47,11 +45,13 @@ public func containElementSatisfying<S: Sequence, T>(_ predicate: @escaping ((T)
                     }
 
                     if predicate(object) {
-                        return NMBPredicateResult(status: .matches, message: message)
+                        return true
                     }
                 }
 
-                return NMBPredicateResult(status: .doesNotMatch, message: message)
+                failureMessage.actualValue = nil
+                failureMessage.postfixMessage = "find object in collection that satisfies predicate"
+                return false
             }
         }
     }

@@ -1,9 +1,9 @@
 //
-//  CwlCatchException.swift
-//  CwlAssertionTesting
+//  CwlCatchException.h
+//  CwlCatchException
 //
 //  Created by Matt Gallagher on 2016/01/10.
-//  Copyright © 2016 Matt Gallagher ( https://www.cocoawithlove.com ). All rights reserved.
+//  Copyright © 2016 Matt Gallagher ( http://cocoawithlove.com ). All rights reserved.
 //
 //  Permission to use, copy, modify, and/or distribute this software for any
 //  purpose with or without fee is hereby granted, provided that the above
@@ -18,18 +18,15 @@
 //  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-import Foundation
+#import <Foundation/Foundation.h>
 
-#if canImport(NimbleCwlCatchExceptionSupport)
-import NimbleCwlCatchExceptionSupport
+//! Project version number for CwlCatchException.
+FOUNDATION_EXPORT double CwlCatchExceptionVersionNumber;
+
+//! Project version string for CwlCatchException.
+FOUNDATION_EXPORT const unsigned char CwlCatchExceptionVersionString[];
+
+#if !SWIFT_PACKAGE && NON_SWIFT_PACKAGE
+__attribute__((visibility("hidden")))
 #endif
-
-private func catchReturnTypeConverter<T: NSException>(_ type: T.Type, block: @escaping () -> Void) -> T? {
-	return catchExceptionOfKind(type, block) as? T
-}
-
-extension NSException {
-	public static func catchException(in block: @escaping () -> Void) -> Self? {
-		return catchReturnTypeConverter(self, block: block)
-	}
-}
+NSException* __nullable catchExceptionOfKind(Class __nonnull type, __attribute__((noescape)) void (^ __nonnull inBlock)(void));

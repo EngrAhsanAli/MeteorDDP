@@ -2,12 +2,11 @@ use_frameworks!
 
 target 'MeteorDDP_Example' do
   pod 'MeteorDDP', :path => '../'
-  pod 'Quick'
-  pod 'Nimble'
+
   target 'MeteorDDP_Tests' do
     inherit! :search_paths
 
-    
-
+    pod 'Quick', '~> 1.2.0'
+    pod 'Nimble', '~> 7.0'
   end
 end

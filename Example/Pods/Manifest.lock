@@ -3,14 +3,14 @@ PODS:
   - MeteorDDP (2.0):
     - CryptoSwift
     - Starscream
-  - Nimble (8.0.9)
-  - Quick (2.2.0)
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
   - Starscream (4.0.3)
 
 DEPENDENCIES:
   - MeteorDDP (from `../`)
-  - Nimble
-  - Quick
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2.0)
 
 SPEC REPOS:
   trunk:
@@ -25,11 +25,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
-  MeteorDDP: 0880c5d6f2b0d860cfb6de56f05174fd77021a73
-  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  MeteorDDP: ef887bbe500764213394b1ab25470076781b43ae
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Starscream: ef06f0961fff0880bca0604416d61141e4faca67
 
-PODFILE CHECKSUM: 8447d42736162e2ba26864644c5faf0b04bd7f06
+PODFILE CHECKSUM: e3cd01e350045305224a45dc451b3c169359c6c1
 
 COCOAPODS: 1.9.3

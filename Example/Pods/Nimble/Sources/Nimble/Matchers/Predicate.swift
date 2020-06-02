@@ -218,7 +218,6 @@ extension Predicate: Matcher {
 extension Predicate {
     // Someday, make this public? Needs documentation
     internal func after(f: @escaping (Expression<T>, PredicateResult) throws -> PredicateResult) -> Predicate<T> {
-        // swiftlint:disable:previous identifier_name
         return Predicate { actual -> PredicateResult in
             let result = try self.satisfies(actual)
             return try f(actual, result)
@@ -242,7 +241,7 @@ extension Predicate {
     }
 }
 
-#if canImport(Darwin)
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
 public typealias PredicateBlock = (_ actualExpression: Expression<NSObject>) throws -> NMBPredicateResult
 
 public class NMBPredicate: NSObject {

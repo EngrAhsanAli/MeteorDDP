@@ -1,8 +1,14 @@
 import Foundation
 
-#if canImport(Darwin)
-@objcMembers
-public class _FilterBase: NSObject {}
+// `#if swift(>=3.2) && (os(macOS) || os(iOS) || os(tvOS) || os(watchOS)) && !SWIFT_PACKAGE`
+// does not work as expected.
+#if swift(>=3.2)
+    #if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS)) && !SWIFT_PACKAGE
+    @objcMembers
+    public class _FilterBase: NSObject {}
+    #else
+    public class _FilterBase: NSObject {}
+    #endif
 #else
 public class _FilterBase: NSObject {}
 #endif

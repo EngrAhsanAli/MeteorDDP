@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MeteorDDP
 //
-//  Created by engrahsanali on 02/26/2020.
+//  Created by engrahsanali on 06/02/2020.
 //  Copyright (c) 2020 engrahsanali. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
@@ -43,3 +43,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
