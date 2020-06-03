@@ -55,7 +55,6 @@ open class MeteorCollections {
     /// - Parameter name: The string name of the collection (must match the name of the collection on the server)
     public init(client: MeteorClient) {
         self.client = client
-        bindEvents()
 
     }
     
@@ -243,6 +242,8 @@ public extension MeteorCollections {
 
         unsubscribe(name)
         client.collections[name] = self
+        
+        bindEvents()
         return client.subscribe(name, params: params, callback: callback)
     }
     
