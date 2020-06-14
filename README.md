@@ -6,7 +6,7 @@ A client for Meteor servers, written in Swift 5!
 
 Following web sockets methods are used to connect [MeteorDDP](https://github.com/EngrAhsanAli/MeteorDDP) to [Meteor](%5Bhttps://www.meteor.com/%5D%28https://www.meteor.com/%29) Servers.
 
-- [Starscream](%5Bhttps://github.com/daltoniam/Starscream%5D%28https://github.com/daltoniam/Starscream%29) Min iOS 8
+- [Starscream](https://github.com/daltoniam/Starscream) Min iOS 8
 - [URLSessionWebSocketTask](https://developer.apple.com/documentation/foundation/urlsessionwebsockettask) Min iOS 13
 
 ## Table of Contents

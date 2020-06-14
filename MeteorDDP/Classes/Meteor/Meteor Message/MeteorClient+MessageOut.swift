@@ -84,8 +84,8 @@ internal extension MeteorClient {
         messages.forEach {
             switch $0 {
                 
-            case .email(let p):     message["email"] = p
-                
+            case .email(let p):     message["user"] = ["email": p]
+
             case .username(let p):  message["user"] = ["username": p]
 
             case .password(let p):  message["password"] = ["digest" : p.sha256(), "algorithm":"sha-256"]
