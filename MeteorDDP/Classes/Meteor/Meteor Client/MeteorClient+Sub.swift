@@ -79,9 +79,9 @@ internal extension MeteorClient {
     ///   - params: dictionary
     ///   - callback: callback
     @discardableResult
-    func sub(_ id: String, name: String, params: [Any]?, callback: MeteorCollectionCallback?) -> String {
+    func sub(_ id: String, name: String, params: [Any]?, collectionName: String?, callback: MeteorCollectionCallback?) -> String {
 
-        subHandler[id] = SubHolder(id: id, name: name, callback: callback)
+        subHandler[id] = SubHolder(id: id, name: collectionName ?? name, callback: callback)
 
         var messages: [MessageOut] = [.msg(.sub), .name(name), .id(id)]
         if let p = params {
@@ -110,10 +110,10 @@ public extension MeteorClient {
     ///   - params: An object containing method arguments, if any
     ///   - callback: The closure to be executed when the server sends a 'ready' message
     @discardableResult
-    func subscribe(_ name: String, params: [Any]?, callback: MeteorCollectionCallback? = nil, completion: MeteorCompletionVoid? = nil) -> String {
+    func subscribe(_ name: String, params: [Any]?, collectionName: String? = nil, callback: MeteorCollectionCallback? = nil, completion: MeteorCompletionVoid? = nil) -> String {
         let id = String.randomString
         logger.log(.sub, "Collection [\(name)] with id [\(id)]")
-        return sub(id, name: name, params: params, callback: callback)
+        return sub(id, name: name, params: params, collectionName: collectionName, callback: callback)
     }
 
     /// Sends an unsubscribe request to the server. If a callback is passed, the callback asynchronously runs when the client receives a 'ready' message indicating that the subset of documents contained in the subscription have been removed.
@@ -144,22 +144,22 @@ public extension MeteorClient {
     @discardableResult
     func unsubscribe(withName name: String, callback: MeteorCompletionVoid?) -> [String] {
         
-        let unsubgroup = DispatchGroup()
-                
+//        let unsubgroup = DispatchGroup()
+
         let subs = findSubscription(byName: name).map { (holder) -> String in
-            unsubgroup.enter()
+//            unsubgroup.enter()
             
             unsubscribe(holder.id) {
-                unsubgroup.leave()
+//                unsubgroup.leave()
                 logger.log(.unsub, "Removed data due to unsubscribe")
-                
+                callback?()
             }
             return holder.id
         }
         
-        if let completion = callback {
-            unsubgroup.notify(queue: .main, execute: completion)
-        }
+//        if let completion = callback {
+//            unsubgroup.notify(queue: .main, execute: completion)
+//        }
         
         return subs
     }

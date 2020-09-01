@@ -245,7 +245,7 @@ internal extension MeteorClient {
         self.subHandler.filter {
             $1.name != loginServiceConfig
         }.forEach {
-            self.sub($1.id, name: $1.name, params: nil, callback: nil)
+            self.sub($1.id, name: $1.name, params: nil, collectionName: nil, callback: nil)
         }
         
         if !self.loginWithToken({ result, error in

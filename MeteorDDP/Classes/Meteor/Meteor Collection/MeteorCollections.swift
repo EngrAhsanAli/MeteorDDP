@@ -237,14 +237,14 @@ public extension MeteorCollections {
     ///   - params: params
     ///   - callback: completion
     @discardableResult
-    func subscribe(_ name: String, params: [Any]?, callback: MeteorCollectionCallback? = nil) -> String {
+    func subscribe(_ name: String, params: [Any]?, collectionName: String? = nil, callback: MeteorCollectionCallback? = nil) -> String {
         self.name = name
 
         unsubscribe(name)
         client.collections[name] = self
         
         bindEvents()
-        return client.subscribe(name, params: params, callback: callback)
+        return client.subscribe(name, params: params, collectionName: collectionName, callback: callback)
     }
     
     /// Unsubscribe

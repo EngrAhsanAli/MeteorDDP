@@ -139,11 +139,8 @@ fileprivate extension MeteorClient {
                 
             }
             
-            findSubscription(byName: collection).forEach {
-                $0.callback?(event, result)
-            }
-            
             broadcastEvent(collection, event: event, value: result)
+            invokeCallback(collection, event, result)
             
         }
     }
@@ -181,4 +178,11 @@ fileprivate extension MeteorClient {
         
     }
     
+    func invokeCallback(_ collection: String, _ event: MeteorEvents, _ result: MeteorDocument) {
+        DispatchQueue.main.async {
+            self.findSubscription(byName: collection).forEach {
+                $0.callback?(event, result)
+            }
+        }
+    }
 }

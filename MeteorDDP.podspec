@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MeteorDDP'
-  s.version          = '2.0'
+  s.version          = '2.1'
   s.summary          = 'A client for Meteor servers, written in Swift 5!'
 
 # This description is used to generate tags and improve search results.
