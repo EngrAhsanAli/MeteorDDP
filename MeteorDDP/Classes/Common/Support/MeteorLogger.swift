@@ -33,8 +33,12 @@
 // MARK:- 🚀 MeteorLogger - Prints the information in defined manner
 open class MeteorLogger {
     
+    public enum Level {
+        case normal, incomming, info, none
+    }
+    
     /// Flag to allow logging information  in the application
-    public static var loggingEnabled = true
+    public static var loggingLevel: Level = .incomming
     
     /// Print header
     fileprivate func printTag() {
@@ -45,8 +49,8 @@ open class MeteorLogger {
     /// - Parameters:
     ///   - label: tag
     ///   - items: items to print
-    internal func log(_ label: LogTags, _ items: Any) {
-        guard MeteorLogger.loggingEnabled else {
+    internal func log(_ label: LogTags, _ items: Any, _ type: Level) {
+        guard (MeteorLogger.loggingLevel != .none) && ((type == MeteorLogger.loggingLevel) || MeteorLogger.loggingLevel == .normal) else {
             return
         }
         printTag()

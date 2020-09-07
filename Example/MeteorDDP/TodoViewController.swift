@@ -45,9 +45,13 @@ class TodoViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        meteor.unsubscribe(withName: collection, callback: nil)
-        meteor.removeEventObservers(collection, event: [.dataAdded]) // no need
-        documents.removeAll()
+        tableView.delegate = nil
+        tableView.dataSource = nil
+        meteor.unsubscribe(withName: collection, callback: {
+            meteor.removeEventObservers(collection, event: [.dataAdded]) // no need
+            self.documents.removeAll()
+        })
+        
     }
     
 

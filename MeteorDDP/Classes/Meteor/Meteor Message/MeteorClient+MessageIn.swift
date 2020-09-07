@@ -118,9 +118,9 @@ internal extension MessageIn {
     
     
     /// Logs the message in console
-    func log() {
+    func log(_ type: MeteorLogger.Level) {
         if message != nil {
-            logger.log(.receiveMessage, response)
+            logger.log(.receiveMessage, response, type)
         }
         else {
             logger.logError(.receiveMessage, response)

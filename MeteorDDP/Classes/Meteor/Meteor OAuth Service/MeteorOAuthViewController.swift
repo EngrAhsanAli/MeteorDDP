@@ -91,7 +91,7 @@ public class MeteorOAuthViewController: UIViewController {
     func signIn(token: String, secret: String) {
         let params = ["oauth":["credentialToken": token, "credentialSecret": secret]] as MeteorKeyValue
         meteor?.loginUser(params: params, method: .login) { result, error in
-            logger.log(.login, "Meteor login attempt \(String(describing: result)), \(String(describing: error))")
+            logger.log(.login, "Meteor login attempt \(String(describing: result)), \(String(describing: error))", .normal)
             self.close()
         }
     }

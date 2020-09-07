@@ -60,7 +60,12 @@ public final class MeteorClient {
     var collections = [String: MeteorCollections]()         // collections handler with name
     
     weak public var delegate: MeteorDelegate?               // meteor ddp and websocket events delegate
-            
+    
+    // Find sub name queue
+    let findSubQueue: DispatchQueue = {
+        DispatchQueue(label: "\(METEOR_DDP) FindSubQueue", attributes: .concurrent)
+    }()
+    
     // Background data queue
     let backgroundQueue: OperationQueue = {
         let queue = OperationQueue()
@@ -184,7 +189,7 @@ internal extension MeteorClient {
     func sendMessage(msgs: [MessageOut])  {
         syncWarning("Socket Message send")
         let msg = makeMessage(msgs).toJson!
-        logger.log(.socket, msg)
+        logger.log(.socket, msg, .normal)
         socket.send(msg)
     }
     
@@ -245,12 +250,12 @@ internal extension MeteorClient {
         self.subHandler.filter {
             $1.name != loginServiceConfig
         }.forEach {
-            self.sub($1.id, name: $1.name, params: nil, collectionName: nil, callback: nil)
+            self.sub($1.id, name: $1.name, params: nil, collectionName: nil, callback: nil, completion: nil)
         }
         
         if !self.loginWithToken({ result, error in
             guard let error = error else {
-                logger.log(.login, "Auto resumed previous login session")
+                logger.log(.login, "Auto resumed previous login session", .info)
                 return
             }
             self.logout()

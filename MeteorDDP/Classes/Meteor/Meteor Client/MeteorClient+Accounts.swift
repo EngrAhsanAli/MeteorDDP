@@ -130,7 +130,7 @@ public extension MeteorClient {
             oauthDialog.url = URL(string: oauth.getServiceUrl(service, clientId: clientId))
             viewController.present(oauthDialog, animated: true, completion: nil)
         } else {
-            logger.log(.login, "Already have valid server login credentials. Logging in with preexisting login token")
+            logger.log(.login, "Already have valid server login credentials. Logging in with preexisting login token", .normal)
         }
     }
     
@@ -168,7 +168,6 @@ internal extension MeteorClient {
     func loginWithToken(_ callback: MeteorMethodCallback?) -> Bool {
         if let user = self.getPersistedUser {
             self.loggedInUser = user
-            print(user)
             if (user.tokenExpires.compare(Date()) == ComparisonResult.orderedDescending) {
                 let params = ["resume": user.token]
                 loginUser(params: params, method: .login, callback: callback)

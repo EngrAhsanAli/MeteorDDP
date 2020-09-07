@@ -140,7 +140,7 @@ let meteorCollection: MeteorCollections = {
 MeteorCollections(client: meteor)
 }()
 
-MeteorLogger.loggingEnabled = true
+public static var loggingLevel: Level = .normal
 
 ```
 Connecting to a Meteor server

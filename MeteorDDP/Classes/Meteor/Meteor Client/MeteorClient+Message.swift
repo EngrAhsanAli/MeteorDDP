@@ -53,6 +53,9 @@ internal extension MeteorClient {
     /// Parse DDP messages and dispatch to the appropriate function
     /// - Parameter text: Incomming message
     func messageInHandle(_ text: String) {
+        guard text.count > 0 else {
+            return
+        }
         
         let message = MessageIn(message: text)
         
@@ -66,16 +69,19 @@ internal extension MeteorClient {
                 case .connected:
                     self.connectedCallback?(message.session!)
                     self.loginServiceSubscription()
+                    message.log(.info)
                     
                 case .ping:
                     heartbeat.addOperation() {
                         self.pong(message.id)
                     }
+                    message.log(.info)
                     
                 case .pong:
                     heartbeat.addOperation() {
                         self.server.pong = Date()
                     }
+                    message.log(.info)
                     
                 case .ready:
                     guard let subs = message.subs else {
@@ -84,6 +90,7 @@ internal extension MeteorClient {
                     documentQueue.addOperation() {
                         self.ready(subs)
                     }
+                    message.log(.info)
                     
                 case .nosub:
                     guard let id = message.id else {
@@ -92,18 +99,19 @@ internal extension MeteorClient {
                     documentQueue.addOperation() {
                         self.nosub(id, error: message.error)
                     }
-                    
+                    message.log(.info)
                 }
                 
             case .method(let s):
                 handleMethod(message, type: s)
+                message.log(.incomming)
                 
             case .sub(let s):
                 handleSub(message, type: s)
+                message.log(.incomming)
                 
             }
             
-            message.log()
         }
     }
     
@@ -178,6 +186,12 @@ fileprivate extension MeteorClient {
         
     }
     
+    
+    /// Invoke the callback of method against that collection name
+    /// - Parameters:
+    ///   - collection: collection Name
+    ///   - event: Meteor event
+    ///   - result: Meteor document
     func invokeCallback(_ collection: String, _ event: MeteorEvents, _ result: MeteorDocument) {
         DispatchQueue.main.async {
             self.findSubscription(byName: collection).forEach {

@@ -42,10 +42,10 @@ internal class WebSocketTask: NSObject {
     var webSocketTask: URLSessionWebSocketTask!
     
     
-    /// <#Description#>
+    /// Class to handle the websockets thourgh the preffered methods
     /// - Parameters:
-    ///   - url: <#url description#>
-    ///   - timeout: <#timeout description#>
+    ///   - url: websocket ws or wss endpoint
+    ///   - timeout: connection timeout
     init(url: URL, timeout: Double) {
         super.init()
         
@@ -59,18 +59,18 @@ internal class WebSocketTask: NSObject {
         webSocketTask = urlSession.webSocketTask(with: url)
     }
     
-    /// <#Description#>
+    /// Connect the websocket
     func connect() {
         webSocketTask.resume()
         listen()
     }
     
-    /// <#Description#>
+    /// Disconnect the websocket
     func disconnect() {
         webSocketTask.cancel(with: .goingAway, reason: nil)
     }
     
-    /// <#Description#>
+    /// Listen incomming messages
     func listen()  {
         webSocketTask.receive { result in
             switch result {
@@ -89,8 +89,8 @@ internal class WebSocketTask: NSObject {
 
     }
     
-    /// <#Description#>
-    /// - Parameter text: <#text description#>
+    /// Send message over socket as String
+    /// - Parameter text: input
     func send(text: String) {
         webSocketTask.send(URLSessionWebSocketTask.Message.string(text)) { error in
             if let error = error {
@@ -99,8 +99,8 @@ internal class WebSocketTask: NSObject {
         }
     }
     
-    /// <#Description#>
-    /// - Parameter data: <#data description#>
+    /// Send message over socket as Data
+    /// - Parameter data: input
     func send(data: Data) {
         webSocketTask.send(URLSessionWebSocketTask.Message.data(data)) { error in
             if let error = error {

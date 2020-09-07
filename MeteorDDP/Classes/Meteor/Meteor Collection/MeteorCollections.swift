@@ -146,7 +146,7 @@ public extension MeteorCollections {
     /// - Parameter document: a document that inherits from MeteorDocument
     func remoteInsert(_ id: String, fields: MeteorKeyValue) {
         guard let name = name else {
-            logger.log(.sub, "Call the subscribe method first")
+            logger.log(.sub, "Call the subscribe method first", .info)
             return
         }
         var document = fields
@@ -170,7 +170,7 @@ public extension MeteorCollections {
     ///   - operation: a dictionary containing a Mongo selector and a json object
     func remoteUpdate(_ id: String, document: MeteorKeyValue, withMongoOperation operation: MeteorKeyValue) {
         guard let name = name else {
-            logger.log(.sub, "Call the subscribe method first")
+            logger.log(.sub, "Call the subscribe method first", .info)
             return
         }
         
@@ -191,7 +191,7 @@ public extension MeteorCollections {
     /// - Parameter document: a document that inherits from MeteorDocument
     func remoteUpdate(_ id: String, document: MeteorKeyValue) {
         guard let name = name else {
-            logger.log(.sub, "Call the subscribe method first")
+            logger.log(.sub, "Call the subscribe method first", .info)
             return
         }
         let originalDocument = _documents[id]
@@ -212,7 +212,7 @@ public extension MeteorCollections {
     /// - Parameter document: a document that inherits from MeteorDocument
     func remoteRemove(_ id: String, document: MeteorKeyValue) {
         guard let name = name else {
-            logger.log(.sub, "Call the subscribe method first")
+            logger.log(.sub, "Call the subscribe method first", .info)
             return
         }
         localRemove(id)

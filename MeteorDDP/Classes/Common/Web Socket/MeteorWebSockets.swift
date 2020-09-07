@@ -40,11 +40,11 @@ public enum WebSocketMethod {
 // MARK:- 🚀 MeteorWebSockets
 public class MeteorWebSockets {
     
-    internal var url: URL                               //
-    internal var socket: Any?                           //
-    internal var preferredMethod: WebSocketMethod       //
-    internal var onEvent: ((WebSocketEvent) -> ())?     // d
-    internal var timeout: TimeInterval                  //
+    internal var url: URL
+    internal var socket: Any?
+    internal var preferredMethod: WebSocketMethod
+    internal var onEvent: ((WebSocketEvent) -> ())?
+    internal var timeout: TimeInterval
     
     /// Init
     /// - Parameters:
@@ -111,10 +111,10 @@ internal extension MeteorWebSockets {
             switch event {
             case .connected(let session):
                 self.onEvent?(.connected)
-                logger.log(.socket, "Connection started with session \(session)")
+                logger.log(.socket, "Connection started with session \(session)", .info)
             case .disconnected(let reason, let code):
                 self.onEvent?(.disconnected)
-                logger.log(.socket, "Connection closed with code \(code). \(reason)")
+                logger.log(.socket, "Connection closed with code \(code). \(reason)", .info)
             case .text(let text):
                 self.onEvent?(.text(text))
             case .error(let error):
