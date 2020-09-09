@@ -194,7 +194,7 @@ fileprivate extension MeteorClient {
     ///   - result: Meteor document
     func invokeCallback(_ collection: String, _ event: MeteorEvents, _ result: MeteorDocument) {
         DispatchQueue.main.async {
-            self.findSubscription(byName: collection).forEach {
+            self.subHandler.values.filter { $0.collectionName == collection }.forEach {
                 $0.callback?(event, result)
             }
         }
