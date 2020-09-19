@@ -158,30 +158,30 @@ fileprivate extension MeteorClient {
     ///   - message: Response
     ///   - type: Method
     func handleMethod(_ message: MessageIn, type: MessageIn.MessageInMethod) {
-        guard let id = message.id,
-            let method = self.methodHandler[id] else {
-                return
-        }
+        methodResultQueue.addOperation() {
+            DispatchQueue.main.async {
                 
-        switch type {
-            
-        case .result:
-
-            methodResultQueue.addOperation() {
-                DispatchQueue.main.async {
-                    method.completion(message.result, message.error)
+                guard let id = message.id,
+                    let method = self.methodHandler[id] else {
+                        return
                 }
-
-                let result = MeteorMethod(name: method.name, result: message.result, error: message.error)
-                self.broadcastEvent(method.name, event: .method, value: result)
-                self.methodHandler[id] = nil
+                
+                switch type {
+                    
+                case .result:
+                    method.completion(message.result, message.error)
+                    
+                    let result = MeteorMethod(name: method.name, result: message.result, error: message.error)
+                    self.broadcastEvent(method.name, event: .method, value: result)
+                    self.methodHandler[id] = nil
+                    
+                case .error:
+                    
+                    let error = MeteorError(message.message)
+                    let result = MeteorMethod(name: method.name, result: nil, error: error)
+                    self.broadcastEvent(method.name, event: .method, value: result)
+                }
             }
-            
-        case .error:
-            
-            let error = MeteorError(message.message)
-            let result = MeteorMethod(name: method.name, result: nil, error: error)
-            broadcastEvent(method.name, event: .method, value: result)
         }
         
     }
@@ -194,9 +194,7 @@ fileprivate extension MeteorClient {
     ///   - result: Meteor document
     func invokeCallback(_ collection: String, _ event: MeteorEvents, _ result: MeteorDocument) {
         DispatchQueue.main.async {
-            self.subHandler.values.filter { $0.collectionName == collection }.forEach {
-                $0.callback?(event, result)
-            }
+            self.findSubscription(byName: collection)?.callback?(event, result)
         }
     }
 }

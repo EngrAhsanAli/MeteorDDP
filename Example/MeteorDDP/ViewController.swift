@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         self.logResult("Logged In? " + (meteor.isLoggedIn ? "Yep" : "Nope"))
         self.logResult("Found User ID? " + (meteor.userId != nil ? "Yep" : "Nope"))
         
+        meteor.call(callName, params: nil) { (res, err) in
+            print("Call Result ", res)
+        }
+        
         meteorCollection.subscribe(collection, params: nil) { events, document in
             print("Subscription to collection " + collection)
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
@@ -35,7 +39,6 @@ class ViewController: UIViewController {
         }
         
         meteorCollection.collectionDidChange = { collection in
-            print(collection.count)
             collection.documents.forEach { (d) in
                 self.logTasks(d, nil)
             }

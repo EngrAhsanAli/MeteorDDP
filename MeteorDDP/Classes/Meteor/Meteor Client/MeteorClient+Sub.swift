@@ -35,13 +35,8 @@ internal extension MeteorClient {
     /// Iterates over the Dictionary of subscriptions to find a subscription by name
     /// - Parameter name: name
     
-    func findSubscription(byName name: String) -> [SubHolder] {
-        subHandler.values.filter { $0.name == name }
-    }
-    
-    // Iterates over the Dictionary of subscriptions to find a subscription by name
-    func subscriptionReady(_ name:String) -> Bool {
-        return subHandler.values.filter { ($0.name == name) && $0.ready }.count > 0
+    func findSubscription(byName name: String) -> SubHolder? {
+        subHandler[name] ?? subHandler.filter { $0.value.name == name }.first?.value
     }
     
     /// Sub Ready
@@ -81,7 +76,8 @@ internal extension MeteorClient {
     @discardableResult
     func sub(_ id: String, name: String, params: [Any]?, collectionName: String?, callback: MeteorCollectionCallback?, completion: MeteorCompletionVoid?) -> String {
         
-        subHandler[id] = SubHolder(id: id, name: name, collectionName: collectionName, completion: completion, callback: callback)
+        let subIdentifier = collectionName ?? name
+        subHandler[subIdentifier] = SubHolder(id: id, name: name, collectionName: collectionName, completion: completion, callback: callback)
 
         var messages: [MessageOut] = [.msg(.sub), .name(name), .id(id)]
         if let p = params {
@@ -139,19 +135,21 @@ public extension MeteorClient {
     /// Unsubscribe Sends an unsubscribe request to the server.
     /// - Parameters:
     ///   - name: The name of the subscription
+    ///   - allowRemove:  Auto remove messages after unsub
     ///   - callback: The closure to be executed when the server sends a 'ready' message
-    @discardableResult
-    func unsubscribe(withName name: String, callback: MeteorCompletionVoid?) -> [String] {
-
-        let subs = findSubscription(byName: name).map { (holder) -> String in
-            unsubscribe(holder.id) {
-                logger.log(.unsub, "Removed data due to unsubscribe", .info)
-                callback?()
-            }
-            return holder.id
+    func unsubscribe(withName name: String, allowRemove: Bool = true, callback: MeteorCompletionVoid?) {
+        guard let holder = findSubscription(byName: name) else {
+            logger.log(.unsub, "Cannot find name \(name)", .info)
+            return
         }
-        
-        return subs
+        if !allowRemove {
+            subHandler[name] = nil
+            removeEventObservers(name, event: MeteorEvents.collection)
+        }
+        unsubscribe(holder.id) {
+            logger.log(.unsub, "Removed data due to unsubscribe", .info)
+            callback?()
+        }
     }
     
     /// Update Collection
