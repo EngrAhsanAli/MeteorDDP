@@ -61,6 +61,8 @@ public final class MeteorClient {
     
     weak public var delegate: MeteorDelegate?               // meteor ddp and websocket events delegate
     
+    let invokeDelay: TimeInterval = 0.33
+    
     // Find sub name queue
     let findSubQueue: DispatchQueue = {
         DispatchQueue(label: "\(METEOR_DDP) FindSubQueue", attributes: .concurrent)
