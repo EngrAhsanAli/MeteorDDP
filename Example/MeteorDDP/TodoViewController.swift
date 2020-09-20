@@ -23,7 +23,7 @@ class TodoViewController: UIViewController {
         
         if inputField.isEnabled {
             
-            meteor.subscribe(collection, params: nil, collectionName: "collectionName", callback: { (event, doc) in
+            meteor.subscribe(collection, params: nil, collectionName: nil, callback: { (event, doc) in
                 print("Event ", event)
                 print("Document ", doc)
                 
@@ -33,7 +33,7 @@ class TodoViewController: UIViewController {
             
         }
         
-        meteor.addEventObserver("collectionName", event: .dataAdded) {
+        meteor.addEventObserver("groups", event: .dataAdded) {
             guard let value = $0 as? MeteorDocument else {
                 return
             }

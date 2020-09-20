@@ -42,11 +42,11 @@ internal extension MeteorClient {
     /// Sub Ready
     /// - Parameter subs: sub IDs array
     func ready(_ subs: [String]) {
-        subs.forEach {
-            if var sub = subHandler[$0] {
+        subs.forEach { id in
+            if var sub = subHandler.filter({ $0.value.id == id }).first?.value {
                 sub.ready = true
                 sub.completion?()
-                subHandler[$0] = sub
+                subHandler.updateValue(sub, forKey: sub.key)
             }
         }
     }
@@ -77,7 +77,7 @@ internal extension MeteorClient {
     func sub(_ id: String, name: String, params: [Any]?, collectionName: String?, callback: MeteorCollectionCallback?, completion: MeteorCompletionVoid?) -> String {
         
         let subIdentifier = collectionName ?? name
-        subHandler[subIdentifier] = SubHolder(id: id, name: name, collectionName: collectionName, completion: completion, callback: callback)
+        subHandler[subIdentifier] = SubHolder(id: id, name: name, key: subIdentifier, collectionName: collectionName, completion: completion, callback: callback)
 
         var messages: [MessageOut] = [.msg(.sub), .name(name), .id(id)]
         if let p = params {

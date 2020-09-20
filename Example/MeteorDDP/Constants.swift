@@ -16,11 +16,11 @@ let meteorCollection: MeteorCollections = {
     MeteorCollections(client: meteor)
 }()
 
-let url = "ws://localhost:3000/websocket"
-let user = "meteorddp"
-let pass = "123456"
-let collection = "tasks"
-let callName = "tasks.getAll"
+let url = "ws://54.150.237.15:4000//websocket"
+let user = "mike@goflow.com"
+let pass = "aaaaaa"
+let collection = "subscribeAllGroupsOptV2"
+let callName = "getAllGroupsPaginated"
 
 
 extension UITextView {
