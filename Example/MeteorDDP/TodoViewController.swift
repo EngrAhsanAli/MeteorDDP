@@ -33,7 +33,7 @@ class TodoViewController: UIViewController {
             
         }
         
-        meteor.addEventObserver("groups", event: .dataAdded) {
+        meteor.addEventObserver("collectionName", event: .dataAdded) {
             guard let value = $0 as? MeteorDocument else {
                 return
             }
