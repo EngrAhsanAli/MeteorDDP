@@ -24,8 +24,8 @@ class TodoViewController: UIViewController {
         if inputField.isEnabled {
             
             meteor.subscribe(collection, params: nil, collectionName: nil, callback: { (event, doc) in
-                print("Event ", event)
-                print("Document ", doc)
+                print("Event received in closure ", event)
+                print("Document received in closure ", doc)
                 
             }) {
                 print("Subscription Done")

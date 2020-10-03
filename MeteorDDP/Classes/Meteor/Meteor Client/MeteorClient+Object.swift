@@ -54,11 +54,10 @@ internal extension MeteorClient {
     
     /// Subscription object
     struct SubHolder {
-        let id, name, key: String
-        var collectionName: String?
-        var ready: Bool = false
+        let id, name: String
+        let collectionName: String?
         var completion: MeteorCompletionVoid?
-        var callback: MeteorCollectionCallback?
+        let callback: MeteorCollectionCallback?
     }
     
     /// Method object

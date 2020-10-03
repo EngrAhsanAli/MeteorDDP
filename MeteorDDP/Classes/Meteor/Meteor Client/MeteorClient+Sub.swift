@@ -36,17 +36,28 @@ internal extension MeteorClient {
     /// - Parameter name: name
     
     func findSubscription(byName name: String) -> SubHolder? {
-        subHandler[name] ?? subHandler.filter { $0.value.name == name }.first?.value
+        if let identifier = subNames[name] {
+            return subHandler[identifier]
+        }
+        logger.logError(.sub, "Sub not found with name \(name)")
+        return nil
+    }
+    
+    func findSubscription(byCollection name: String) -> SubHolder? {
+        if let identifier = subCollections[name] {
+            return subHandler[identifier]
+        }
+        return nil
+        
     }
     
     /// Sub Ready
     /// - Parameter subs: sub IDs array
     func ready(_ subs: [String]) {
         subs.forEach { id in
-            if var sub = subHandler.filter({ $0.value.id == id }).first?.value {
-                sub.ready = true
+            if let sub = subHandler[id] {
                 sub.completion?()
-                subHandler.updateValue(sub, forKey: sub.key)
+                subHandler[id]?.completion = nil
             }
         }
     }
@@ -57,7 +68,7 @@ internal extension MeteorClient {
     ///   - error: error
     func nosub(_ id: String, error: MeteorError?) {
         guard let error = error else {
-            if let sub = subHandler[id], sub.ready {
+            if let sub = subHandler[id] {
                 removeEventObservers(sub.name, event: MeteorEvents.collection)
                 sub.completion?()
                 subHandler[id] = nil
@@ -76,8 +87,11 @@ internal extension MeteorClient {
     @discardableResult
     func sub(_ id: String, name: String, params: [Any]?, collectionName: String?, callback: MeteorCollectionCallback?, completion: MeteorCompletionVoid?) -> String {
         
-        let subIdentifier = collectionName ?? name
-        subHandler[subIdentifier] = SubHolder(id: id, name: name, key: subIdentifier, collectionName: collectionName, completion: completion, callback: callback)
+        if let collectionName = collectionName {
+            subCollections[collectionName] = id // Get id from collectionName
+        }
+        subNames[name] = id // Get id from sub name
+        subHandler[id] = SubHolder(id: id, name: name, collectionName: collectionName, completion: completion, callback: callback)
 
         var messages: [MessageOut] = [.msg(.sub), .name(name), .id(id)]
         if let p = params {
@@ -104,6 +118,7 @@ public extension MeteorClient {
     /// - Parameters:
     ///   - name: The name of the subscription
     ///   - params: An object containing method arguments, if any
+    ///   - collectionName: The closure of events against this collection name if provided
     ///   - callback: The closure to be executed when the server sends a 'ready' message
     @discardableResult
     func subscribe(_ name: String, params: [Any]?, collectionName: String? = nil, callback: MeteorCollectionCallback? = nil, completion: MeteorCompletionVoid? = nil) -> String {
@@ -148,6 +163,7 @@ public extension MeteorClient {
         }
         unsubscribe(holder.id) {
             logger.log(.unsub, "Removed data due to unsubscribe", .info)
+            self.subNames[name] = nil
             callback?()
         }
     }

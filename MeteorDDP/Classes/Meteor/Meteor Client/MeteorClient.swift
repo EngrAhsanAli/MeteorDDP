@@ -47,6 +47,10 @@ public final class MeteorClient {
     
     var subHandler = [String: SubHolder]()                  // subscription handler
     
+    var subCollections = [String: String]()                 // subscription holder for collection names
+
+    var subNames = [String: String]()                       // subscription holder for names
+
     var methodHandler = [String: MethodHolder]()            // methods handler
     
     var connectedCallback: ((String) -> ())?                // meteor connected callback
@@ -245,13 +249,10 @@ internal extension MeteorClient {
     /// DDP loginServiceConfiguration
     func loginServiceSubscription() {
         let loginServiceConfig = "meteor.loginServiceConfiguration"
-        self.subscribe(loginServiceConfig, params: nil)
-
-        self.subHandler.filter {
-            $1.name != loginServiceConfig
-        }.forEach {
-            self.sub($1.id, name: $1.name, params: nil, collectionName: nil, callback: nil, completion: nil)
+        if let sub = subNames[loginServiceConfig] {
+            unsubscribe(sub, completion: nil)
         }
+        self.subscribe(loginServiceConfig, params: nil)
         
         if !self.loginWithToken({ result, error in
             guard let error = error else {
