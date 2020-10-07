@@ -67,7 +67,8 @@ internal extension MeteorClient {
                 switch s {
                     
                 case .connected:
-                    self.connectedCallback?(message.session!)
+                    self.sessionId = message.session
+                    self.connectedCallback?(sessionId!)
                     self.loginServiceSubscription()
                     message.log(.info)
                     

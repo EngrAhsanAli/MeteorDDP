@@ -71,6 +71,7 @@ internal extension MeteorClient {
                     
                 }
                 
+            case .session(let m):  message["session"] = m
             }
         }
         
@@ -107,6 +108,7 @@ internal extension MeteorClient {
     enum MessageOut {
         case version(String), support([String])
         case id(String), name(String), method(String)
+        case session(String)
         case msg(MsgType)
         case params([Any])
         

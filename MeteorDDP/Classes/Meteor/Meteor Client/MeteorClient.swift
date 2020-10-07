@@ -63,6 +63,8 @@ public final class MeteorClient {
         
     var collections = [String: MeteorCollections]()         // collections handler with name
     
+    var sessionId: String? = nil                            // Session id for reconnection
+    
     weak public var delegate: MeteorDelegate?               // meteor ddp and websocket events delegate
     
     // Find sub name queue
@@ -176,13 +178,23 @@ public final class MeteorClient {
     }
     
     /// Disconnects and remove events for provided websocket interface
-    public func disconnect() {
-        socket.onEvent = nil
-        delegate = nil
-        notificationCenter.removeObserver(self)
+    /// - Parameter receiveEvents: receive disconnect events
+    public func disconnect(receiveEvents: Bool = false) {
+        if !receiveEvents {
+            socket.onEvent = nil
+            delegate = nil
+            notificationCenter.removeObserver(self)
+        }
         socket.disconnect()
     }
     
+    /// Auto trigger reconnection
+    public func triggerReconnect() {
+        backOff.createBackoff {
+            self.socket.configureWebSocket()
+            self.ping()
+        }
+    }
 }
 
 // MARK:- 🚀 Meteor Client - 
@@ -213,7 +225,10 @@ internal extension MeteorClient {
                 self.handleResponse(text)
                 
             case let .error(error):
-                logger.logError(.socket, "\(String(describing: error?.localizedDescription))")
+                if let error = error {
+                    logger.logError(.socket, "\(String(describing: error.localizedDescription))")
+                }
+                
             }
             self.delegate?.didReceive(name: .websocket, event: event)
         }
@@ -228,20 +243,18 @@ internal extension MeteorClient {
         }
     }
     
-    /// Auto trigger reconnection
-    fileprivate func triggerReconnect() {
-        backOff.createBackoff {
-            self.socket.configureWebSocket()
-            self.ping()
-        }
-    }
-    
     /// DDP connection open event
     fileprivate func eventOnOpen() {
         
         heartbeat.addOperation() {
             self.backOff.reset()
-            self.sendMessage(msgs: [.msg(.connect), .version(self.version), .support(self.support)])
+            
+            var messages: [MessageOut] = [.msg(.connect), .version(self.version), .support(self.support)]
+            if let sessionId = self.sessionId {
+                messages.append(.session(sessionId))
+            }
+            
+            self.sendMessage(msgs: messages)
         }
         
     }
