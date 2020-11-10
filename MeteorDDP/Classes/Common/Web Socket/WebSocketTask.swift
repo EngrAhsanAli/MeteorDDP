@@ -41,6 +41,8 @@ internal class WebSocketTask: NSObject {
     
     var webSocketTask: URLSessionWebSocketTask!
     
+    var isConnected: ((Bool) -> ())?
+    
     
     /// Class to handle the websockets thourgh the preffered methods
     /// - Parameters:
@@ -75,6 +77,7 @@ internal class WebSocketTask: NSObject {
         webSocketTask.receive { result in
             switch result {
             case .failure(let error):
+                self.isConnected?(false)
                 self.onEvent?(.error(error))
             case .success(let message):
                 switch message {
@@ -116,11 +119,17 @@ internal class WebSocketTask: NSObject {
 extension WebSocketTask: URLSessionWebSocketDelegate {
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
+        isConnected?(true)
         onEvent?(.connected)
     }
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
+        isConnected?(false)
         onEvent?(.disconnected)
+    }
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        isConnected?(false)
     }
     
 }

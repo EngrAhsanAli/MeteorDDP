@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        MeteorLogger.loggingLevel = .normal
         meteor.delegate = self
         
         clearLogAction(self)

@@ -54,10 +54,16 @@ internal extension MeteorClient {
     
     /// Subscription object
     struct SubHolder {
-        let id, name: String
+        let name: String
         let collectionName: String?
         var completion: MeteorCompletionVoid?
         let callback: MeteorCollectionCallback?
+    }
+    
+    /// Object to persist request messages against id
+    struct SubRequest {
+        let id: String
+        let messages: [MessageOut]
     }
     
     /// Method object
@@ -65,5 +71,6 @@ internal extension MeteorClient {
         var name: String
         var completion: MeteorMethodCallback
     }
+    
     
 }

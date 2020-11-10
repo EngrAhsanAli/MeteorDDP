@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01904B0245AC2031E9ADD586BE7224C0 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA97105F847780F57B18582F82C2AE /* EndWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		01DAA6DD1809A39129FF7C72DDF93054 /* mach_excServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 69AD588668D915CB616679EAC7D87A99 /* mach_excServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01E25D86A78B58B3C4210DB8AF3B2A67 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1037D5B473100F91B965C59AEA838064 /* Combine.framework */; };
 		044707D54906AA7CF4554B3516491FB8 /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9842D57796B9DDEE42A1D1ACD43C6E0 /* PKCS7Padding.swift */; };
 		05109AB8FA9FFC8FF3116F100D4CAD5B /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C39D15EDFE7F0080FBCC1C61801723F /* CryptoSwift.framework */; };
 		05C985DCB4F3D41492BC333EDA7EE34E /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076680C1B9E10DD5E45DD209C0288FDF /* Blowfish+Foundation.swift */; };
@@ -29,6 +30,7 @@
 		108C651B09B6E400F6C67F43780D6E7B /* MeteorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AD0CBD7DDD21C13AAC390406196E8 /* MeteorClient.swift */; };
 		11EDFDE1BC5494E14D6F81320FE3925F /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CA9E9B2D042BED7790EEFD1FF62064 /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1291696393FFEA6F94FF1E0B79923B43 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF506D9140CB8B7FAEBCAEE744828B /* HooksPhase.swift */; };
+		14D34E32263C8D334AC63CA775357BA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */; };
 		15558F00820248BC3C31CCF0FA75C532 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BD5D00988E8B42E22D3D8911AAE511 /* AES.Cryptors.swift */; };
 		15BD0D56C2301F1210B4991E5FB40699 /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E01AD33269F1AA16F383A02CCD32F /* Scrypt.swift */; };
 		1662BEDD868AF1CD729C4269E69A3580 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854E549139D2929CAA05AA2025995909 /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -61,12 +63,13 @@
 		3A3486233FB309EA82A465F93D8DE889 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0186BB17E3F9C3EE6CD5BAA895C2BB /* CBCMAC.swift */; };
 		3B324746542B5868C6AA793F2EF93FEB /* Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F76C730184064C583A460EBE90C0ED /* Await.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		3B525CC6E41701E9A5969F9AD4F31CFD /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E70079E1CC496D7517762F81C9B6566 /* BlockEncryptor.swift */; };
+		3C119455BE65C043AF78EBB9DB4B435C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */; };
 		3CFD5091F02F30ADE4EEC622C7F487C8 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC93D1A0A67CA9FA9869252D7DE5F67B /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		3D317145F0CA3D74E737AB0B919AB6E9 /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = E19A0ECEA06C94C2FF0D264F75129FAA /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D5AB75EA5429442D1597FBE377F2409 /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695F321ECD0A1E3CAEB6D65556F6D36 /* WSEngine.swift */; };
 		3F1ECBD497A45250260618905A957017 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404825E7F6757FF2D6E9BE0A5CE3E380 /* ZeroPadding.swift */; };
 		405AB644E5E32AB19AE8697B4C0CE124 /* CwlMachBadInstructionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C2812C3D5B0D03CFF3099EA53C0475B /* CwlMachBadInstructionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43BF42159F430B01CB7F94DFDA66F510 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11D1A300F1C5E683CC1A33723F1FF06 /* XCTest.framework */; };
+		4416BF4CBD91DA06F60BB9B4BAFA7C1D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C87376F46AF7A1DACE29AB23B00DBAB /* XCTest.framework */; };
 		442EA849CBB8549884CD5FD9ADDD98C0 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6095ABDAB003DC80030DC3D5449B8C95 /* CBC.swift */; };
 		4660867D6E616474D6B62FAF476CCAAD /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79AD4B10312353F9BA017BC5AB4D990 /* BeginWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		48A0611D2388053C5EE7BFA2CE0FD267 /* MeteorDDP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E63AD8F87F57D52E372013365BEDD88 /* MeteorDDP-dummy.m */; };
@@ -94,8 +97,6 @@
 		5AB1B1555B4D9010C541A4C59F7462D1 /* MeteorEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999F24BB1873957D5D7A450FB6F1FA2 /* MeteorEncodable.swift */; };
 		5B8DC6716BDD04AF78AC8048F5BACF38 /* SatisfyAllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD08DCD6EFA61FCDCD98A49FF02C4BA /* SatisfyAllOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		5CE5E8EA75E0B3DC5BE140B61DF37EFD /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD57C9FC796CDA37871D055CCD1A4E6F /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FB97086158EAEABFD97C23892661394 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
-		6079B2858CD3F4D1717B62E4493F791A /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81C2F17E5B68FF2B250F15088504E83 /* Combine.framework */; };
 		60AD44D1236ACD82D40A3789AA9F4C8E /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355C8234D670D359228CFCB61C4AD76 /* Blowfish.swift */; };
 		62DFF94A7A777939C861EDA13627999B /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = CD08D387000F764568BCE4FE8E77DE15 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		639C6438CD01AE7A36FE1E551F2E7A8F /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B89DB624F29F2D34D5E2392B92F2281C /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,6 +116,7 @@
 		6D8C8798BA67FEAC054AA1070D7B61E9 /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCE3C8F320CE581BD27E451D628CA8 /* SHA2.swift */; };
 		7262FFAEB1BD2731B9A12B1D0B458DEC /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C79CC67A8CF819FC593BE34BB58951 /* Digest.swift */; };
 		732EA08CF38FFA4299E4FC5AC01203C7 /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39E2167AC519CFBEF6601C29F068D9 /* NativeEngine.swift */; };
+		742FD64192F548D82DA16458F3E3E3D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */; };
 		7460C7CD0497AAE90DA55B895F47DEC4 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE63585F3C5C3F017CB3154C6F0CBC9D /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		76049DE81EB1E2B6C436086630F77CA0 /* NMBStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = BC168476CC363A702B2DB34C65CF800A /* NMBStringify.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		7803047DA2F58FEA92C2FE22784E9B57 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBF84FD87AF445D29EA0128159809B /* AES.swift */; };
@@ -137,9 +139,8 @@
 		8C3F5E7FF0571B63D4DAA2825C9705D1 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D72382F00DF0B6F7BDE061B7AEAA34 /* QuickSelectedTestSuiteBuilder.swift */; };
 		8CB9325284A6E8E782D34AF833480CA3 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CC4EB82F08389F34FC8F2E5D6CDC0D /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8D16EAB20CD849E7DC1B1EDCEF61067D /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B0156470400E920562504D16EF63295 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E8DB0413F47528F1A30410B067B9C28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		8EDFE4CCE75ECB4F442C48F8A95E33EA /* MeteorClient+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE287BEE3CCFCB816C6E757F47E1A1 /* MeteorClient+User.swift */; };
-		8EF7F408443B1D8ED39BFA7CACE56AF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
+		8F2D39EE86A4AF9B9BC0F82E1724FADC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */; };
 		96C4F7349BB0B624490075CB4F37F2B4 /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C3B35331F8759AFCEEA5B578E47D0A /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		981D9FBF09890E4E20DF889B2AD514F0 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C7A63041B7F5FE57E97C549CBB807 /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		99AA881E586F22B7E3295232A94C462A /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BACD44BF798150D391FCC10BD3A123 /* PKCS5.swift */; };
@@ -148,17 +149,18 @@
 		9BA4E7F68AE9967DE324C686E6DDF1A9 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825B343F0349E234522E8BD8FA55242 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9BBB1FFC4DBE4DBC086B77A27DF11406 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD95449CC6A19F95995B4B53EC94AFC /* PCBC.swift */; };
 		9DB13659CA8F9BF54942DEDAE9F5E858 /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB1564166380D040D94F5D2CB155A4 /* QuickSpecBase.m */; };
-		9E82E59647C2E9653D2E5BAA5D15CF3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		9F97818F89D611D55CB8D0FA48C05334 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D4E8C5EBC9095E7456022B561B736 /* CMAC.swift */; };
 		A02F4AB85BBBEBA608F33B3EA07C0CF9 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD17BFBF201BA874963933ECC6BA5FD2 /* BeNil.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A1259ED9D2C8A08AA42FD5C26A303307 /* ISO78164Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B827FBB5E0C3EF2AFDBCCAF327F96EFE /* ISO78164Padding.swift */; };
 		A149FC2A5F857A9CB57E0E5497FD8C6A /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C0970B12E9AA982EF59FBAECCC6FAA /* Engine.swift */; };
 		A1D3E1BE50863A721286C133F9B21632 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85F573342A4EE7666F03E9466CF607 /* Server.swift */; };
+		A28690D3483A78A9F694E8779ECD7AC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */; };
 		A38A1BAB9DC7FB158426F2791D2BDB9B /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE581A126B143C74B099D3F192E30D8 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A3A25739D8FCB7A4FE17C8C5A6C7BE72 /* NMBStringify.h in Headers */ = {isa = PBXBuildFile; fileRef = 240C7D8E99487584CCB43454CFA2CB51 /* NMBStringify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A540B2C1A87E8BFBC546CA7DDB669DC6 /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DDA525B5B5DBC708927BD255F3F789 /* NoPadding.swift */; };
 		A769921AD645A9FB4D8C3F6812EA59F8 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB9B6FE2B129ABFCD7C76B008DA844 /* WebSocket.swift */; };
 		A787308C5CA0BCA2B3A706F44CD5F7B4 /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E5705D79A9C5545301C83C8F66F8A4 /* ErrorUtility.swift */; };
+		A82E7DBC2B0A4B2722257BC09609626F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */; };
 		A9AA3412BC04172A1AABAF8E5128405B /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4E3B038C6BF8A6320871182CE56C6 /* CCM.swift */; };
 		AAA0671E75369B0CFD71449AFACFFA81 /* Pods-MeteorDDP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE95E8E8F90C3F1715F519F3FE03C05 /* Pods-MeteorDDP_Example-dummy.m */; };
 		AADC2368A9BB00B6BFB6166561DA7ED5 /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC957205061BDD511F3A4A1FDAD0268 /* StreamDecryptor.swift */; };
@@ -185,7 +187,6 @@
 		BB1619BCE35A078A932C56B2519CCB6C /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE90E5E6B7028335E02B47E905D907 /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BC707EE6F1F2944EC00E84985856F3D6 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B66C32AB79B6C49820ED278D80F694 /* Utils+Foundation.swift */; };
 		BD3A8A47F0415452E6050485C3BCDC12 /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05251C2976264B46AFD2B8C80DE0CC /* BlockCipher.swift */; };
-		BD4DF82D8F54ADD54240E6BAA0280063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		BD8AB3699C483B11671A85C72CE92B50 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7667A7907638B48FD4D9D4E403E44F /* ExampleGroup.swift */; };
 		BE2E0A9AC5E2019BFD31452E96ED83D9 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C3D03C748C80ED6F4306A8075EB6D /* AssertionRecorder.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BE4EF0266BA2D10A3BFBEC822F812877 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F179BD2D1A52371965ADB18662A63F /* SecureBytes.swift */; };
@@ -195,14 +196,12 @@
 		BFB8E22035DC97A06283CB42CACBF9BF /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCFA69AD6F35ABA8803F941697E77AA /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C098C153F2988A344EAD8EE4C0CDF882 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAAF2109B87007FA152B1D9AC616227 /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C32B07D5BDAE0512ECF7D6CFDA4BD249 /* MeteorClient+Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B08722B96A527A4D6FE12D90272CF /* MeteorClient+Sub.swift */; };
-		C420D783040F4FCEEE8E008D6A1CBA0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		C42E25AEAE4758760D9239D25E88FEAF /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A8F6074FCDF14C0EC7C458C0005891E /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C58E477A67D7B8C127643270D2A8AFE3 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6197EB0C866216F93095641BEE14122 /* CipherModeWorker.swift */; };
 		C7950AC7B81DDBB435FCBD29F09654E7 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D09EB464C884C16820419EB24F589B /* Int+Extension.swift */; };
 		C90A138294C054100E1AD3E417D15E9F /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4600B3F770967A59C6515BEAAB316 /* Padding.swift */; };
 		C93D142141163E70A614006BAE72CC59 /* MeteorWebSockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F3CE35176F90F5A36A658AC70243E /* MeteorWebSockets.swift */; };
 		C971A8D42C7C043DC4970A69B81546A7 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = A99C18D9037920869D4CB989DB50E9AC /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA9A2D74A41B640925B521CEC8BBEACE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */; };
 		CCA41EC992E6CFEC5367FE79E843240D /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E196F50EFFC2D209809529B565A8D /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		CEA5DAF45185EED5EA8E1FB2B259DA40 /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C96EA8658CDE4F1DD1B59FDC93754E1 /* CFB.swift */; };
 		CEB0B57C65304E1E2A8C70B2A3FC7A6B /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 884A37EC73AA0ACE7164BFBD76D143EE /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -227,6 +226,7 @@
 		E27A4FDCBE6C5356072F2430E78C7B6A /* MeteorDDP+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5D1BD4680234C8413AADBEDF43707D /* MeteorDDP+Error.swift */; };
 		E27DA35DAA8219DD5A7557799A59DC81 /* Pods-MeteorDDP_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3701B13783E9108EA3F9E665C940C665 /* Pods-MeteorDDP_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2A3FF8FBAC2E21C91E8C5EE009E0FCD /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F023C9F3B3F7B93A78F229927227A1 /* QCKDSL.m */; };
+		E32ABFF6B2F0F07388E9B23B9CC0B5EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */; };
 		E4643CB17F6A94F949974F0F32FB6807 /* MeteorClient+Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4E3BC4DA64F2EF96875AC99C0DAC0 /* MeteorClient+Object.swift */; };
 		E4F96D299417E852A360C53F5AC28C27 /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75655C869ACA8AC6B13E41B46AE67BAC /* Cryptors.swift */; };
 		E594306BF52C899BCE23A4BA56CD0DD0 /* CwlPreconditionTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 329B70CC88DE5089384AC2ED667D60FD /* CwlPreconditionTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -332,6 +332,7 @@
 		0E70079E1CC496D7517762F81C9B6566 /* BlockEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockEncryptor.swift; path = Sources/CryptoSwift/BlockEncryptor.swift; sourceTree = "<group>"; };
 		0FEB1564166380D040D94F5D2CB155A4 /* QuickSpecBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpecBase.m; path = Sources/QuickSpecBase/QuickSpecBase.m; sourceTree = "<group>"; };
 		0FEE287BEE3CCFCB816C6E757F47E1A1 /* MeteorClient+User.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MeteorClient+User.swift"; sourceTree = "<group>"; };
+		1037D5B473100F91B965C59AEA838064 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
 		1052E01543DB4CDCAD27ADF4E967AC78 /* Pods-MeteorDDP_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeteorDDP_Example-Info.plist"; sourceTree = "<group>"; };
 		109B2709C471859695FC313D24554574 /* FoundationHTTPServerHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationHTTPServerHandler.swift; path = Sources/Framer/FoundationHTTPServerHandler.swift; sourceTree = "<group>"; };
 		10C79CC67A8CF819FC593BE34BB58951 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/CryptoSwift/Digest.swift; sourceTree = "<group>"; };
@@ -489,8 +490,10 @@
 		9999F24BB1873957D5D7A450FB6F1FA2 /* MeteorEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MeteorEncodable.swift; sourceTree = "<group>"; };
 		9A3F3502A9255C15D87C086CBBF0EB8C /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		9AB1AAAA96FEB965C4D8225E91173EC7 /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS/PBKDF1.swift; sourceTree = "<group>"; };
+		9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9C2EA956F0342A2FFA247895333FB5B7 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
 		9C45DE9E683E508DE76AD638FD9EC897 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/CryptoSwift/HMAC.swift; sourceTree = "<group>"; };
+		9C87376F46AF7A1DACE29AB23B00DBAB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9CCFA69AD6F35ABA8803F941697E77AA /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E0E399C903762BA3ACE7C88D3D0078C /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
@@ -530,7 +533,6 @@
 		B79AD4B10312353F9BA017BC5AB4D990 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
 		B7B4FBC69CB9EB0CD148448E759A1F8D /* Pods-MeteorDDP_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MeteorDDP_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B827FBB5E0C3EF2AFDBCCAF327F96EFE /* ISO78164Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO78164Padding.swift; path = Sources/CryptoSwift/ISO78164Padding.swift; sourceTree = "<group>"; };
-		B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B89DB624F29F2D34D5E2392B92F2281C /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
 		B8DCA85B2620FDA70474475852B94FDD /* UInt8+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt8+Extension.swift"; path = "Sources/CryptoSwift/UInt8+Extension.swift"; sourceTree = "<group>"; };
 		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -562,7 +564,6 @@
 		CFF71C3B5A101D3148DD04505CD401BF /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
 		D06815F3CE1FF9BE0F1DC1B1D4D7BD0C /* ExponentialBackoff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExponentialBackoff.swift; sourceTree = "<group>"; };
 		D118EB140073B3FA3085808832E167BA /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/CryptoSwift/Utils.swift; sourceTree = "<group>"; };
-		D11D1A300F1C5E683CC1A33723F1FF06 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D320FB57BAD58FC644EA062FC06AEA19 /* Pods-MeteorDDP_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeteorDDP_Tests-Info.plist"; sourceTree = "<group>"; };
 		D470D52C63CBAE4281BD5D1984822120 /* Pods-MeteorDDP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MeteorDDP_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D4FB8A32ACC370D522303A6B6720F03B /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
@@ -595,7 +596,6 @@
 		F45C3D03C748C80ED6F4306A8075EB6D /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
 		F55ACB378C66C78DAEB7311DD913A299 /* Data+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Sources/CryptoSwift/Foundation/Data+Extension.swift"; sourceTree = "<group>"; };
 		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F81C2F17E5B68FF2B250F15088504E83 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
 		F8FB533F80CB4CBFA4FDD2FEA9975C30 /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		F9842D57796B9DDEE42A1D1ACD43C6E0 /* PKCS7Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7Padding.swift; path = Sources/CryptoSwift/PKCS/PKCS7Padding.swift; sourceTree = "<group>"; };
 		FAD95449CC6A19F95995B4B53EC94AFC /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
@@ -612,7 +612,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4DF82D8F54ADD54240E6BAA0280063 /* Foundation.framework in Frameworks */,
+				A28690D3483A78A9F694E8779ECD7AC1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,8 +620,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E82E59647C2E9653D2E5BAA5D15CF3D /* Foundation.framework in Frameworks */,
-				43BF42159F430B01CB7F94DFDA66F510 /* XCTest.framework in Frameworks */,
+				742FD64192F548D82DA16458F3E3E3D1 /* Foundation.framework in Frameworks */,
+				4416BF4CBD91DA06F60BB9B4BAFA7C1D /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,9 +629,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6079B2858CD3F4D1717B62E4493F791A /* Combine.framework in Frameworks */,
+				01E25D86A78B58B3C4210DB8AF3B2A67 /* Combine.framework in Frameworks */,
 				05109AB8FA9FFC8FF3116F100D4CAD5B /* CryptoSwift.framework in Frameworks */,
-				8EF7F408443B1D8ED39BFA7CACE56AF0 /* Foundation.framework in Frameworks */,
+				3C119455BE65C043AF78EBB9DB4B435C /* Foundation.framework in Frameworks */,
 				809523151250269F32B168E78808D590 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +640,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FB97086158EAEABFD97C23892661394 /* Foundation.framework in Frameworks */,
+				A82E7DBC2B0A4B2722257BC09609626F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +648,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C420D783040F4FCEEE8E008D6A1CBA0B /* Foundation.framework in Frameworks */,
+				E32ABFF6B2F0F07388E9B23B9CC0B5EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +656,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9A2D74A41B640925B521CEC8BBEACE /* Foundation.framework in Frameworks */,
+				8F2D39EE86A4AF9B9BC0F82E1724FADC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,7 +664,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8DB0413F47528F1A30410B067B9C28 /* Foundation.framework in Frameworks */,
+				14D34E32263C8D334AC63CA775357BA8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,7 +827,7 @@
 			children = (
 				2C39D15EDFE7F0080FBCC1C61801723F /* CryptoSwift.framework */,
 				BC9D78952727DCD56DD4EED2FB359E29 /* Starscream.framework */,
-				8CB60C946BE70A7AE880225350535D76 /* iOS */,
+				B8CF57213AD346F70BC59AED7296291C /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -852,16 +852,6 @@
 			);
 			name = Support;
 			path = Support;
-			sourceTree = "<group>";
-		};
-		8CB60C946BE70A7AE880225350535D76 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F81C2F17E5B68FF2B250F15088504E83 /* Combine.framework */,
-				B8944D00A48CA8DF6D00E0BD831B4C67 /* Foundation.framework */,
-				D11D1A300F1C5E683CC1A33723F1FF06 /* XCTest.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		8E595B7E1BB21699C6E72E4692C4FF6E /* Pods-MeteorDDP_Tests */ = {
@@ -894,6 +884,16 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CryptoSwift";
+			sourceTree = "<group>";
+		};
+		B8CF57213AD346F70BC59AED7296291C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1037D5B473100F91B965C59AEA838064 /* Combine.framework */,
+				9BFCA960998B902C5E3BFD3C7BDDF579 /* Foundation.framework */,
+				9C87376F46AF7A1DACE29AB23B00DBAB /* XCTest.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		C042E797FCE172FDD839BA9715F87171 /* Targets Support Files */ = {
@@ -1825,11 +1825,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0AB073ED25AABCCD395983C77D8444D8 /* Debug */ = {
+		0B6070421A40F6C4857EB84BC50F4A22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9363E32452958905C0B8D2829A4FF659 /* MeteorDDP.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1841,7 +1840,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MeteorDDP/MeteorDDP-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MeteorDDP/MeteorDDP-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MeteorDDP/MeteorDDP.modulemap";
 				PRODUCT_MODULE_NAME = MeteorDDP;
@@ -1856,11 +1855,10 @@
 			};
 			name = Debug;
 		};
-		0BB2B50075FEC9A4156C6BECF11B4615 /* Release */ = {
+		1EFC8012C654B50C7126FA52F5A705DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDE70B31FB5FB307D7A5B2EE95C73E5F /* Nimble.release.xcconfig */;
+			baseConfigurationReference = B337E941A1528CB82E9351104C69B5ED /* MeteorDDP.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1869,18 +1867,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MeteorDDP/MeteorDDP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MeteorDDP/MeteorDDP-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
-				PRODUCT_MODULE_NAME = Nimble;
-				PRODUCT_NAME = Nimble;
+				MODULEMAP_FILE = "Target Support Files/MeteorDDP/MeteorDDP.modulemap";
+				PRODUCT_MODULE_NAME = MeteorDDP;
+				PRODUCT_NAME = MeteorDDP;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.1.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1888,7 +1886,101 @@
 			};
 			name = Release;
 		};
-		264A9F638BB029C9415E7128794E01AD /* Release */ = {
+		21C3BEAB898B6D510BD5692E94FC3E23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A394E8CDFF63561D174F26528BDC794F /* Starscream.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3030B7C704D21A84F0EA197C7AA9B9AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2C0E97A15D49745F2D36CD084F3539 /* Pods-MeteorDDP_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3454BF0C0BBBE0BEAAEBC0A4DBF91FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9822F6A3EB94AFE71C1B797C1437BFC /* Starscream.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		431BA2B8298F0EE71735B9E0114E1955 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1915,6 +2007,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1949,7 +2042,67 @@
 			};
 			name = Release;
 		};
-		31059FC4CDCFE28D42E245A795B024B8 /* Debug */ = {
+		4BB63D93B1BF8E014060B85F5F4BD7BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7466BD463E7D4E0DE647ECC394701FA3 /* Nimble.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
+				PRODUCT_MODULE_NAME = Nimble;
+				PRODUCT_NAME = Nimble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		601056FD9436C9221F03A4F0B604FB33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4B424C91D0810194561CBF8EC53F5E /* CryptoSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
+				PRODUCT_MODULE_NAME = CryptoSwift;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79759604D78320E712558F49DF19AA9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1976,6 +2129,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2014,12 +2168,10 @@
 			};
 			name = Debug;
 		};
-		4700D4FD03EE07D6AD639EB7F3AE509A /* Release */ = {
+		9261938CA1C3295343460280D6F45AC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A2C0E97A15D49745F2D36CD084F3539 /* Pods-MeteorDDP_Example.release.xcconfig */;
+			baseConfigurationReference = 0A77CF2DB53DC8C5D279B4176F68AC05 /* CryptoSwift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2028,12 +2180,44 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
+				PRODUCT_MODULE_NAME = CryptoSwift;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B84C6B789BABA2BEB7E3CC4A55E06105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E891E025F456C165696840C81668BAD6 /* Pods-MeteorDDP_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2048,11 +2232,10 @@
 			};
 			name = Release;
 		};
-		4C9ACC68574BAAEBA626D2082AC16667 /* Debug */ = {
+		DD0FA66D75191C6285C12446AAD46875 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F82320900E8ECFD448D2EFE7C682722 /* Quick.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2079,74 +2262,10 @@
 			};
 			name = Debug;
 		};
-		58B925C89629C18AB7958704D6305AAB /* Debug */ = {
+		E69F4DE6E789413F63DE67C15E997AFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A4B424C91D0810194561CBF8EC53F5E /* CryptoSwift.debug.xcconfig */;
+			baseConfigurationReference = DDE70B31FB5FB307D7A5B2EE95C73E5F /* Nimble.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
-				PRODUCT_MODULE_NAME = CryptoSwift;
-				PRODUCT_NAME = CryptoSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6A36E578AE603D74B38765DF5B64000F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A394E8CDFF63561D174F26528BDC794F /* Starscream.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
-				PRODUCT_MODULE_NAME = Starscream;
-				PRODUCT_NAME = Starscream;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6D6E2D0CA6E66BF511E01A4D9077371A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7466BD463E7D4E0DE647ECC394701FA3 /* Nimble.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2168,179 +2287,16 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7DAA1F20E510AABCCDBCBF5F22589F8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B337E941A1528CB82E9351104C69B5ED /* MeteorDDP.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MeteorDDP/MeteorDDP-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MeteorDDP/MeteorDDP-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MeteorDDP/MeteorDDP.modulemap";
-				PRODUCT_MODULE_NAME = MeteorDDP;
-				PRODUCT_NAME = MeteorDDP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		7E87FB8042F14EDA0819961A7BD69434 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A427FD8B876F1E51547FF55C81596C1D /* Pods-MeteorDDP_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9FA2169DCDCEA047999C7D11FA489D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E891E025F456C165696840C81668BAD6 /* Pods-MeteorDDP_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A9285FD228B09AC7B0DAEC1CF162C5F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9822F6A3EB94AFE71C1B797C1437BFC /* Starscream.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
-				PRODUCT_MODULE_NAME = Starscream;
-				PRODUCT_NAME = Starscream;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B370F36DB588A0F46F633F0AEF8CC7D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D470D52C63CBAE4281BD5D1984822120 /* Pods-MeteorDDP_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D786D4838DDE7FF84FD603B90BD016C2 /* Release */ = {
+		E775C969092DA03EDEF7C9911B9AA48A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8555B5E0A88D11BBB2DD92EB67F5DB6 /* Quick.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2368,11 +2324,11 @@
 			};
 			name = Release;
 		};
-		F8EF1A10413E0A502396F508A431A1C4 /* Release */ = {
+		EAFA35451E57A8047E468988C22C8F1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A77CF2DB53DC8C5D279B4176F68AC05 /* CryptoSwift.release.xcconfig */;
+			baseConfigurationReference = A427FD8B876F1E51547FF55C81596C1D /* Pods-MeteorDDP_Tests.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2381,24 +2337,56 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
-				PRODUCT_MODULE_NAME = CryptoSwift;
-				PRODUCT_NAME = CryptoSwift;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Tests/Pods-MeteorDDP_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		F5617DB643DCE8D562F2033B68BAAB22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D470D52C63CBAE4281BD5D1984822120 /* Pods-MeteorDDP_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeteorDDP_Example/Pods-MeteorDDP_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -2406,8 +2394,8 @@
 		0C039FA9C6EBEAD80AD25EDF79E04E13 /* Build configuration list for PBXNativeTarget "Pods-MeteorDDP_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7E87FB8042F14EDA0819961A7BD69434 /* Debug */,
-				9FA2169DCDCEA047999C7D11FA489D9F /* Release */,
+				EAFA35451E57A8047E468988C22C8F1C /* Debug */,
+				B84C6B789BABA2BEB7E3CC4A55E06105 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2415,8 +2403,8 @@
 		0EDE00A0AE7F2ACDA112F853133A5D2F /* Build configuration list for PBXNativeTarget "Nimble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6D6E2D0CA6E66BF511E01A4D9077371A /* Debug */,
-				0BB2B50075FEC9A4156C6BECF11B4615 /* Release */,
+				4BB63D93B1BF8E014060B85F5F4BD7BB /* Debug */,
+				E69F4DE6E789413F63DE67C15E997AFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2424,8 +2412,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				31059FC4CDCFE28D42E245A795B024B8 /* Debug */,
-				264A9F638BB029C9415E7128794E01AD /* Release */,
+				79759604D78320E712558F49DF19AA9F /* Debug */,
+				431BA2B8298F0EE71735B9E0114E1955 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2433,8 +2421,8 @@
 		7F8539845BD41E830F4E38F3A0390C9D /* Build configuration list for PBXNativeTarget "Quick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C9ACC68574BAAEBA626D2082AC16667 /* Debug */,
-				D786D4838DDE7FF84FD603B90BD016C2 /* Release */,
+				DD0FA66D75191C6285C12446AAD46875 /* Debug */,
+				E775C969092DA03EDEF7C9911B9AA48A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2442,8 +2430,8 @@
 		89E8DF872CAF60EFFFFA02A14BC1FB71 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9285FD228B09AC7B0DAEC1CF162C5F5 /* Debug */,
-				6A36E578AE603D74B38765DF5B64000F /* Release */,
+				3454BF0C0BBBE0BEAAEBC0A4DBF91FEC /* Debug */,
+				21C3BEAB898B6D510BD5692E94FC3E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2451,8 +2439,8 @@
 		B4F74826BC78DD227D4C0E8DAC510B1F /* Build configuration list for PBXNativeTarget "MeteorDDP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AB073ED25AABCCD395983C77D8444D8 /* Debug */,
-				7DAA1F20E510AABCCDBCBF5F22589F8C /* Release */,
+				0B6070421A40F6C4857EB84BC50F4A22 /* Debug */,
+				1EFC8012C654B50C7126FA52F5A705DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2460,8 +2448,8 @@
 		BEC188AE116BFA6B920C92B4CE25505B /* Build configuration list for PBXNativeTarget "Pods-MeteorDDP_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B370F36DB588A0F46F633F0AEF8CC7D5 /* Debug */,
-				4700D4FD03EE07D6AD639EB7F3AE509A /* Release */,
+				F5617DB643DCE8D562F2033B68BAAB22 /* Debug */,
+				3030B7C704D21A84F0EA197C7AA9B9AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2469,8 +2457,8 @@
 		CF129DCD30773EF2C3A3E9B2EFFB4A7E /* Build configuration list for PBXNativeTarget "CryptoSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58B925C89629C18AB7958704D6305AAB /* Debug */,
-				F8EF1A10413E0A502396F508A431A1C4 /* Release */,
+				601056FD9436C9221F03A4F0B604FB33 /* Debug */,
+				9261938CA1C3295343460280D6F45AC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

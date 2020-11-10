@@ -45,6 +45,7 @@ public class MeteorWebSockets {
     internal var preferredMethod: WebSocketMethod
     internal var onEvent: ((WebSocketEvent) -> ())?
     internal var timeout: TimeInterval
+    internal var isConnected: Bool = false
     
     /// Init
     /// - Parameters:
@@ -110,21 +111,29 @@ internal extension MeteorWebSockets {
         socket.onEvent = { event in
             switch event {
             case .connected(let session):
+                self.isConnected = true
                 self.onEvent?(.connected)
                 logger.log(.socket, "Connection started with session \(session)", .info)
             case .disconnected(let reason, let code):
+                self.isConnected = false
                 self.onEvent?(.disconnected)
                 logger.log(.socket, "Connection closed with code \(code). \(reason)", .info)
             case .text(let text):
                 self.onEvent?(.text(text))
             case .error(let error):
+                self.isConnected = false
                 self.onEvent?(.error(error))
+            case .cancelled:
+                self.isConnected = false
+                self.onEvent?(.disconnected)
             default:
+                self.isConnected = false
                 self.onEvent?(.error(self.noInternetError))
                 
             }
         }
         socket.connect()
+        
         return socket
     }
     
@@ -133,6 +142,7 @@ internal extension MeteorWebSockets {
     func configureWebSocketTask() -> WebSocketTask {
         let socket = WebSocketTask(url: url, timeout: timeout)
         socket.onEvent = onEvent
+        socket.isConnected = { self.isConnected = $0 }
         socket.connect()
         return socket
     }

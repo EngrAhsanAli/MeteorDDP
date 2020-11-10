@@ -49,13 +49,15 @@ public final class MeteorClient {
     
     var subCollections = [String: String]()                 // subscription holder for collection names
 
-    var subNames = [String: String]()                       // subscription holder for names
+    var subRequests = [String: SubRequest]()                // subscription requests against names
 
     var methodHandler = [String: MethodHolder]()            // methods handler
     
     var connectedCallback: ((String) -> ())?                // meteor connected callback
     
     var loggedInUser: UserHolder?                           // persisted logged in user
+    
+    var autoSubReconnect: Bool = true                       // flag to auto sub if websocket disconnect
     
     var backOff = ExponentialBackoff()                      // exponantional back off for ddp failure
     
@@ -178,20 +180,29 @@ public final class MeteorClient {
     }
     
     /// Disconnects and remove events for provided websocket interface
-    /// - Parameter receiveEvents: receive disconnect events
-    public func disconnect(receiveEvents: Bool = false) {
+    /// - Parameters:
+    ///   - forced: Remove last session id and not suppose to reconnect
+    ///   - receiveEvents: receive disconnect events
+    public func disconnect(forced: Bool = true, receiveEvents: Bool = false) {
         if !receiveEvents {
             socket.onEvent = nil
             delegate = nil
             notificationCenter.removeObserver(self)
         }
+        if forced {
+            sessionId = nil
+        }
         socket.disconnect()
     }
     
     /// Auto trigger reconnection
-    public func triggerReconnect() {
+    public func triggerReconnect(callback: ((String) -> ())?) {
+        guard (socket.isConnectedToNetwork || socket.isConnected) && sessionId != nil else {
+            logger.log(.socket, "MeteorDDP is already connected", .info)
+            return
+        }
         backOff.createBackoff {
-            self.socket.configureWebSocket()
+            self.connect(callback: callback)
             self.ping()
         }
     }
@@ -219,7 +230,7 @@ internal extension MeteorClient {
                 self.eventOnOpen()
                 
             case .disconnected:
-                self.triggerReconnect()
+                self.triggerReconnect(callback: nil )
                 
             case let .text(text):
                 self.handleResponse(text)
@@ -262,10 +273,15 @@ internal extension MeteorClient {
     /// DDP loginServiceConfiguration
     func loginServiceSubscription() {
         let loginServiceConfig = "meteor.loginServiceConfiguration"
-        if let sub = subNames[loginServiceConfig] {
-            unsubscribe(sub, completion: nil)
+        
+        if subRequests[loginServiceConfig] != nil {
+            subscribe(loginServiceConfig, params: nil)
         }
-        self.subscribe(loginServiceConfig, params: nil)
+        if autoSubReconnect {
+            subRequests.forEach { (name, req) in
+                sub(req.id, name: name, params: nil, collectionName: nil, callback: nil, completion: nil)
+            }
+        }
         
         if !self.loginWithToken({ result, error in
             guard let error = error else {

@@ -35,12 +35,8 @@ internal extension MeteorClient {
     /// Iterates over the Dictionary of subscriptions to find a subscription by name
     /// - Parameter name: name
     
-    func findSubscription(byName name: String) -> SubHolder? {
-        if let identifier = subNames[name] {
-            return subHandler[identifier]
-        }
-        logger.logError(.sub, "Sub not found with name \(name)")
-        return nil
+    func findSubscriptionId(byName name: String) -> String? {
+        subRequests[name]?.id
     }
     
     func findSubscription(byCollection name: String) -> SubHolder? {
@@ -71,7 +67,7 @@ internal extension MeteorClient {
             if let sub = subHandler[id] {
                 removeEventObservers(sub.name, event: MeteorEvents.collection)
                 sub.completion?()
-                subHandler[id] = nil
+                clearSubRequestData(with: id)
             }
             return
         }
@@ -87,15 +83,21 @@ internal extension MeteorClient {
     @discardableResult
     func sub(_ id: String, name: String, params: [Any]?, collectionName: String?, callback: MeteorCollectionCallback?, completion: MeteorCompletionVoid?) -> String {
         
-        if let collectionName = collectionName {
-            subCollections[collectionName] = id // Get id from collectionName
+        var messages: [MessageOut]
+        
+        if let subRequest = subRequests[name] { // Previously binded messages with same callbacks
+            messages = subRequest.messages
         }
-        subNames[name] = id // Get id from sub name
-        subHandler[id] = SubHolder(id: id, name: name, collectionName: collectionName, completion: completion, callback: callback)
-
-        var messages: [MessageOut] = [.msg(.sub), .name(name), .id(id)]
-        if let p = params {
-            messages.append(.params(p))
+        else {
+            messages = [.msg(.sub), .name(name), .id(id)]
+            if let p = params { messages.append(.params(p)) }
+            
+            if let collectionName = collectionName {
+                subCollections[collectionName] = id // Get id from collectionName
+            }
+            subRequests[name] = SubRequest(id: id, messages: messages) // Request object from sub name
+            subHandler[id] = SubHolder(name: name, collectionName: collectionName, completion: completion, callback: callback)
+            
         }
         
         userBackground.addOperation() { [weak self] in
@@ -109,6 +111,11 @@ internal extension MeteorClient {
         return id
     }
 
+    func clearSubRequestData(with id: String) {
+        guard subHandler[id] != nil else { return }
+        subRequests[subHandler[id]!.name] = nil
+        subHandler[id] = nil
+    }
 }
 
 // MARK:- MeteorClient Sub for interacting with basic Meteor server-side services
@@ -142,9 +149,7 @@ public extension MeteorClient {
     /// UnSub All
     /// - Parameter callback: completion
     func unsubscribeAll(_ completion: MeteorCompletionVoid?) {
-        subHandler.values.forEach {
-            self.unsubscribe($0.id, completion: completion)
-        }
+        subHandler.keys.forEach { unsubscribe($0, completion: completion) }
     }
     
     /// Unsubscribe Sends an unsubscribe request to the server.
@@ -153,7 +158,7 @@ public extension MeteorClient {
     ///   - allowRemove:  Auto remove messages after unsub
     ///   - callback: The closure to be executed when the server sends a 'ready' message
     func unsubscribe(withName name: String, allowRemove: Bool = true, callback: MeteorCompletionVoid?) {
-        guard let holder = findSubscription(byName: name) else {
+        guard let id = findSubscriptionId(byName: name) else {
             logger.log(.unsub, "Cannot find name \(name)", .info)
             return
         }
@@ -161,9 +166,9 @@ public extension MeteorClient {
             subHandler[name] = nil
             removeEventObservers(name, event: MeteorEvents.collection)
         }
-        unsubscribe(holder.id) {
+        unsubscribe(id) {
             logger.log(.unsub, "Removed data due to unsubscribe", .info)
-            self.subNames[name] = nil
+            self.subRequests[name] = nil
             callback?()
         }
     }
