@@ -77,12 +77,11 @@ class TodoViewController: UIViewController {
                 case .dataRemove:
 
                     break
+                    
                 default:
                     break
                     
                 }
-                
-                
                 
             }) {
                 print("Subscription Done")
