@@ -26,55 +26,22 @@ class ViewController: UIViewController {
         self.logResult("Logged In? " + (meteor.isLoggedIn ? "Yep" : "Nope"))
         self.logResult("Found User ID? " + (meteor.userId != nil ? "Yep" : "Nope"))
         
-        meteor.unsubscribe(withName: collection, allowRemove: false, callback: nil)
-        meteor.subscribe(collection, params: [["pageNum": 0]], collectionName: "groups", callback: { (event, doc) in
-            switch event {
-            
-            case .dataAdded:
-                
-                print("¥ADDED")
-                
-                break
-                
-            case .dataChange:
-                
-                print("¥CAHFE")
-                
-                break
-                
-            case .dataRemove:
-                
-                print("¥REMVOE")
-                
-                
-                break
-                
-            default:
-                break
-            }
-            
-            
-        }) {
-            print("Subscription Done")
+        meteor.call(callName, params: nil) { (res, err) in
+            print("Call Result ", res)
         }
-        
-        
-//        meteor.call(callName, params: nil) { (res, err) in
-//            print("Call Result ", res)
-//        }
-//
-//        meteorCollection.subscribe(collection, params: nil) { events, document in
-//            print("Subscription to collection " + collection)
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-//                meteorCollection.unsubscribe(collection)
-//            }
-//        }
-//
-//        meteorCollection.collectionDidChange = { collection, id in
-//            collection.documents.forEach { (d) in
-//                self.logTasks(d, nil)
-//            }
-//        }
+
+        meteorCollection.subscribe(collection, params: nil) { events, document in
+            print("Subscription to collection " + collection)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                meteorCollection.unsubscribe(collection)
+            }
+        }
+
+        meteorCollection.collectionDidChange = { collection, id in
+            collection.documents.forEach { (d) in
+                self.logTasks(d, nil)
+            }
+        }
         
     }
     

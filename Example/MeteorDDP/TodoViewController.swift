@@ -75,7 +75,7 @@ class TodoViewController: UIViewController {
                     break
                     
                 case .dataRemove:
-                    print("jahsdjksad")
+
                     break
                 default:
                     break
