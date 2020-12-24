@@ -82,11 +82,9 @@ public extension MeteorClient {
     ///   - password: A password string
     ///   - callback: A closure with result and error parameters describing the outcome of the operation
     func loginWithPassword(_ email: String, password: String, callback: MeteorMethodCallback?) {
-        if !(loginWithToken(callback)) {
-            
-            let msg: [UserMessage] = [.email(email), .password(password)]
-            loginUser(params: makeMessage(msg), method: .login, callback: callback)
-        }
+        resetUserData()
+        let msg: [UserMessage] = [.email(email), .password(password)]
+        loginUser(params: makeMessage(msg), method: .login, callback: callback)
     }
     
     /// Logs a user into the server using a username and password
@@ -95,11 +93,9 @@ public extension MeteorClient {
     ///   - password: A password string
     ///   - callback: A closure with result and error parameters describing the outcome of the operation
     func loginWithUsername(_ username: String, password: String, callback: MeteorMethodCallback?) {
-        if !(loginWithToken(callback)) {
-            let msg: [UserMessage] = [.username(username), .password(password)]
-            loginUser(params: makeMessage(msg), method: .login, callback: callback)
-
-        }
+        resetUserData()
+        let msg: [UserMessage] = [.username(username), .password(password)]
+        loginUser(params: makeMessage(msg), method: .login, callback: callback)
     }
     
     /// Logs a user out and removes their account data from NSUserDefaults. When it completes, it posts a notification: DDP_USER_DID_LOGOUT on the main queue

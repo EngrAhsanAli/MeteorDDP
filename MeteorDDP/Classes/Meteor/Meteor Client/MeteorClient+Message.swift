@@ -129,7 +129,7 @@ fileprivate extension MeteorClient {
         if let collection = message.collection,
             let id = message.id {
             
-            var event: MeteorEvents
+            var event: MeteorCollectionEvents
             var result: MeteorDocument
             
             switch type {
@@ -148,8 +148,8 @@ fileprivate extension MeteorClient {
                 
             }
             
-            broadcastEvent(collection, event: event, value: result)
-            invokeCallback(collection, event, result)
+            broadcastEvent(collection, event: event.meteorEvent, value: result)
+            invokeCallback(byCollection: collection, event, result)
             
         }
     }
@@ -162,10 +162,7 @@ fileprivate extension MeteorClient {
         methodResultQueue.addOperation() {
             DispatchQueue.main.async {
                 
-                guard let id = message.id,
-                    let method = self.methodHandler[id] else {
-                        return
-                }
+                guard let id = message.id, let method = self.methodHandler?[id] else { return }
                 
                 switch type {
                     
@@ -174,7 +171,7 @@ fileprivate extension MeteorClient {
                     
                     let result = MeteorMethod(name: method.name, result: message.result, error: message.error)
                     self.broadcastEvent(method.name, event: .method, value: result)
-                    self.methodHandler[id] = nil
+                    self.methodHandler?[id] = nil
                     
                 case .error:
                     
@@ -193,9 +190,10 @@ fileprivate extension MeteorClient {
     ///   - collection: collection Name
     ///   - event: Meteor event
     ///   - result: Meteor document
-    func invokeCallback(_ collection: String, _ event: MeteorEvents, _ result: MeteorDocument) {
+    func invokeCallback(byCollection collection: String, _ event: MeteorCollectionEvents, _ result: MeteorDocument) {
         DispatchQueue.main.async {
             self.findSubscription(byCollection: collection)?.callback?(event, result)
         }
+        
     }
 }

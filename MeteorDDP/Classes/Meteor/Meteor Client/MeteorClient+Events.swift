@@ -35,6 +35,14 @@ public enum MeteorEvents: String {
     
 }
 
+public enum MeteorCollectionEvents: String {
+    case dataAdded, dataChange, dataRemove
+    
+    var meteorEvent: MeteorEvents {
+        MeteorEvents(rawValue: rawValue)!
+    }
+}
+
 public extension MeteorEvents {
     static var collection: [MeteorEvents] {
         return [.dataAdded, .dataChange, .dataRemove]
@@ -87,12 +95,11 @@ fileprivate extension MeteorClient {
     
     /// Make NSNotification against given ddp event
     /// - Parameters:
-    ///   - name: string
-    ///   - event: MeteorEvents
-    /// - Returns: NSNotification.Name
-    func makeNotificationName(_ name: String, event: MeteorEvents) -> NSNotification.Name {
-        let identifier = METEOR_DDP + name + event.rawValue
-        return NSNotification.Name(rawValue: identifier)
+    ///   - name: collection name
+    ///   - event: collection event
+    /// - Returns: notification name
+    func makeNotificationName(_ name: String, event: MeteorEvents) -> String {
+        "\(METEOR_DDP)_\(name)_\(event.rawValue)"
     }
 }
 
@@ -106,11 +113,13 @@ internal extension MeteorClient {
     func broadcastEvent(_ name: String, event: MeteorEvents, value: MeteorResponse) {
         DispatchQueue.main.async {
             self.delegate?.didReceive(name: event, event: value)
+            
+            let identifier = self.makeNotificationName(name, event: event)
+            if self.observers[identifier] != nil {
+                notificationCenter.post(name: NSNotification.Name(rawValue: identifier), object: value, userInfo: nil)
+            }
         }
         
-        let identifier = makeNotificationName(name, event: event)
-        notificationCenter.post(name: identifier, object: value, userInfo: nil)
-        // TODO:- Make sure multiple in queue
     }
 }
 
@@ -123,8 +132,7 @@ public extension MeteorClient {
     ///   - callback: callback
      func addEventObserver(_ name: String, event: MeteorEvents, callback: ((MeteorResponse) -> ())?) {
         let identifier = makeNotificationName(name, event: event)
-        
-        notificationCenter.addObserver(forName: identifier, object: nil, queue: .main) {
+        observers[identifier] = notificationCenter.addObserver(forName: NSNotification.Name(rawValue: identifier), object: nil, queue: .main) {
             guard let response = $0.object as? MeteorResponse else {
                 logger.logError(.receiveMessage, "Failed to parse notification payload")
                 return
@@ -135,12 +143,18 @@ public extension MeteorClient {
     
     /// Remove Observer on events
     /// - Parameters:
-    ///   - name: name
+    ///   - name: collection name
     ///   - event: event array
     func removeEventObservers(_ name: String, event: [MeteorEvents]) {
         event.forEach {
             let identifier = makeNotificationName(name, event: $0)
-            notificationCenter.removeObserver(self, name: identifier, object: nil)
+            if let observer = observers[identifier] {
+                notificationCenter.removeObserver(observer)
+                observers[identifier] = nil
+            }
+            else {
+                logger.logError(.error, "Fail to fetch the observer for collection \( name) and event \($0.rawValue)")
+            }
         }
     }
     

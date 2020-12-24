@@ -57,7 +57,7 @@ internal extension MeteorClient {
         let name: String
         let collectionName: String?
         var completion: MeteorCompletionVoid?
-        let callback: MeteorCollectionCallback?
+        var callback: MeteorCollectionCallback?
     }
     
     /// Object to persist request messages against id

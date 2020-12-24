@@ -20,36 +20,68 @@ class ViewController: UIViewController {
         
         clearLogAction(self)
         connectAction(self)
-        
     }
     
     @IBAction func checkAttrsAction(_ sender: Any) {
         self.logResult("Logged In? " + (meteor.isLoggedIn ? "Yep" : "Nope"))
         self.logResult("Found User ID? " + (meteor.userId != nil ? "Yep" : "Nope"))
         
-        meteor.call(callName, params: nil) { (res, err) in
-            print("Call Result ", res)
+        meteor.unsubscribe(withName: collection, allowRemove: false, callback: nil)
+        meteor.subscribe(collection, params: [["pageNum": 0]], collectionName: "groups", callback: { (event, doc) in
+            switch event {
+            
+            case .dataAdded:
+                
+                print("¥ADDED")
+                
+                break
+                
+            case .dataChange:
+                
+                print("¥CAHFE")
+                
+                break
+                
+            case .dataRemove:
+                
+                print("¥REMVOE")
+                
+                
+                break
+                
+            default:
+                break
+            }
+            
+            
+        }) {
+            print("Subscription Done")
         }
         
-        meteorCollection.subscribe(collection, params: nil) { events, document in
-            print("Subscription to collection " + collection)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                meteorCollection.unsubscribe(collection)
-            }
-        }
         
-        meteorCollection.collectionDidChange = { collection in
-            collection.documents.forEach { (d) in
-                self.logTasks(d, nil)
-            }
-        }
+//        meteor.call(callName, params: nil) { (res, err) in
+//            print("Call Result ", res)
+//        }
+//
+//        meteorCollection.subscribe(collection, params: nil) { events, document in
+//            print("Subscription to collection " + collection)
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//                meteorCollection.unsubscribe(collection)
+//            }
+//        }
+//
+//        meteorCollection.collectionDidChange = { collection, id in
+//            collection.documents.forEach { (d) in
+//                self.logTasks(d, nil)
+//            }
+//        }
         
     }
     
     @IBAction func connectAction(_ sender: Any) {
         meteor.connect {
             self.logResult("Session: " + $0)
-            self.loginWithUsernameAction(self)
+//            self.loginWithUsernameAction(self)
         }
     }
     

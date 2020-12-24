@@ -41,13 +41,11 @@ public extension MeteorClient {
     func call(_ name: String, params: [Any]?, callback: MeteorMethodCallback? = nil) -> String {
         let id = String.randomString
         var messages: [MessageOut] = [.msg(.method), .method(name), .id(id)]
-        
-        if let callback = callback {
-             self.methodHandler[id] = MethodHolder(name: name, completion: callback)
-         }
-        
         if let p = params {
             messages.append(.params(p))
+        }
+        if let callback = callback {
+            self.methodHandler?[id] = MethodHolder(name: name, completion: callback)
         }
         
         userBackground.addOperation() {

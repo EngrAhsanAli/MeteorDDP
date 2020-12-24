@@ -23,23 +23,24 @@ class TodoViewController: UIViewController {
         
         if inputField.isEnabled {
             
-            meteor.subscribe(collection, params: nil, collectionName: nil, callback: { (event, doc) in
-                print("Event received in closure ", event)
-                print("Document received in closure ", doc)
-                
-            }) {
-                print("Subscription Done")
+            sub()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.documents.removeAll()
+                self.tableView.reloadData()
+                self.sub()
             }
             
         }
         
-        meteor.addEventObserver("collectionName", event: .dataAdded) {
-            guard let value = $0 as? MeteorDocument else {
-                return
-            }
-            self.documents[value.id] = value.fields
-            self.tableView.reloadData()
-        }
+//        meteor.addEventObserver("groups", event: .dataAdded) {
+//            guard let value = $0 as? MeteorDocument else {
+//                return
+//            }
+//            self.documents[value.id] = value.fields
+//            self.tableView.reloadData()
+//        }
+//        meteor.removeEventObservers("groups", event: [.dataAdded])
         
     }
     
@@ -47,7 +48,7 @@ class TodoViewController: UIViewController {
         super.viewWillDisappear(animated)
         tableView.delegate = nil
         tableView.dataSource = nil
-        meteor.unsubscribe(withName: collection, callback: {
+        meteor.unsubscribe(withName: collection, allowRemove: false, callback: {
             meteor.removeEventObservers(collection, event: [.dataAdded]) // no need
             self.documents.removeAll()
         })
@@ -55,6 +56,40 @@ class TodoViewController: UIViewController {
     }
     
 
+    func sub() {
+        meteor.unsubscribe(withName: collection, allowRemove: false, callback: {
+            
+            meteor.subscribe(collection, params:  [["pageNum": 0]], collectionName: "groups", callback: { (event, doc) in
+                print("Event received in closure ", event)
+                print("Document received in closure ", doc)
+                
+                switch event {
+                
+                case .dataAdded:
+                    
+                    self.documents[doc.id] = doc.fields
+                    self.tableView.reloadData()
+                    
+                    
+                    
+                    break
+                    
+                case .dataRemove:
+                    print("jahsdjksad")
+                    break
+                default:
+                    break
+                    
+                }
+                
+                
+                
+            }) {
+                print("Subscription Done")
+            }
+            
+        })
+    }
 }
 
 extension TodoViewController: UITableViewDelegate, UITableViewDataSource {

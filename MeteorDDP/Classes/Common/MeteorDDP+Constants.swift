@@ -47,7 +47,7 @@ public typealias MeteorCompletionBool = (Bool) -> ()
 
 public typealias MeteorMethodCallback = (Any?, MeteorError?) -> ()
 
-public typealias MeteorCollectionCallback = (MeteorEvents, MeteorDocument) -> ()
+public typealias MeteorCollectionCallback = (MeteorCollectionEvents, MeteorDocument) -> ()
 
 // MARK:- 🚀 MeteorDelegate
 

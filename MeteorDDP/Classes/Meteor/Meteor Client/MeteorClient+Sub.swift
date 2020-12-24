@@ -40,11 +40,7 @@ internal extension MeteorClient {
     }
     
     func findSubscription(byCollection name: String) -> SubHolder? {
-        if let identifier = subCollections[name] {
-            return subHandler[identifier]
-        }
-        return nil
-        
+        subCollections[name]
     }
     
     /// Sub Ready
@@ -65,9 +61,7 @@ internal extension MeteorClient {
     func nosub(_ id: String, error: MeteorError?) {
         guard let error = error else {
             if let sub = subHandler[id] {
-                removeEventObservers(sub.name, event: MeteorEvents.collection)
                 sub.completion?()
-                clearSubRequestData(with: id)
             }
             return
         }
@@ -92,12 +86,14 @@ internal extension MeteorClient {
             messages = [.msg(.sub), .name(name), .id(id)]
             if let p = params { messages.append(.params(p)) }
             
-            if let collectionName = collectionName {
-                subCollections[collectionName] = id // Get id from collectionName
-            }
             subRequests[name] = SubRequest(id: id, messages: messages) // Request object from sub name
-            subHandler[id] = SubHolder(name: name, collectionName: collectionName, completion: completion, callback: callback)
             
+            let subHolder = SubHolder(name: name, collectionName: collectionName, completion: completion, callback: callback)
+            subHandler[id] = subHolder
+            
+            if let collectionName = collectionName {
+                subCollections[collectionName] = subHolder // Get id from collectionName
+            }
         }
         
         userBackground.addOperation() { [weak self] in
@@ -112,8 +108,8 @@ internal extension MeteorClient {
     }
 
     func clearSubRequestData(with id: String) {
-        guard subHandler[id] != nil else { return }
-        subRequests[subHandler[id]!.name] = nil
+        guard let handler = subHandler[id] else { return }
+        subRequests[handler.name] = nil
         subHandler[id] = nil
     }
 }
@@ -160,19 +156,29 @@ public extension MeteorClient {
     func unsubscribe(withName name: String, allowRemove: Bool = true, callback: MeteorCompletionVoid?) {
         guard let id = findSubscriptionId(byName: name) else {
             logger.log(.unsub, "Cannot find name \(name)", .info)
+            callback?()
             return
         }
         if !allowRemove {
-            subHandler[name] = nil
+            subHandler[id]?.callback = nil
             removeEventObservers(name, event: MeteorEvents.collection)
         }
         unsubscribe(id) {
             logger.log(.unsub, "Removed data due to unsubscribe", .info)
             self.subRequests[name] = nil
+            DispatchQueue.main.async { callback?() }
+        }
+    }
+        
+        
+    func unsubscribe(withCollection name: String, allowRemove: Bool = true, callback: MeteorCompletionVoid?) {
+        if let sub = findSubscription(byCollection: name) {
+            self.unsubscribe(withName: sub.name, allowRemove: allowRemove, callback: callback)
+        }
+        else {
             callback?()
         }
     }
-    
     /// Update Collection
     /// - Parameters:
     ///   - collection: name

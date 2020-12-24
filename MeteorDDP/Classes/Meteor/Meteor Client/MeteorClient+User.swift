@@ -55,12 +55,8 @@ internal extension MeteorClient {
 public extension MeteorClient {
 
     /// Check for current loggedIn user
-    var isLoggedIn: Bool {
-        return loggedInUser != nil
-    }
+    var isLoggedIn: Bool { getPersistedUser != nil }
     
     /// Returns the client userId, if it exists
-    var userId: String? {
-        return loggedInUser?.id
-    }
+    var userId: String? { loggedInUser?.id }
 }

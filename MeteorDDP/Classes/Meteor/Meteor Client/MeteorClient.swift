@@ -47,11 +47,13 @@ public final class MeteorClient {
     
     var subHandler = [String: SubHolder]()                  // subscription handler
     
-    var subCollections = [String: String]()                 // subscription holder for collection names
+    var subCollections = [String: SubHolder]()              // subscription holder for collection names
+    
+    var observers = [String: NSObjectProtocol]()
 
     var subRequests = [String: SubRequest]()                // subscription requests against names
 
-    var methodHandler = [String: MethodHolder]()            // methods handler
+    var methodHandler: [String: MethodHolder]?              // methods handler
     
     var connectedCallback: ((String) -> ())?                // meteor connected callback
     
@@ -69,11 +71,6 @@ public final class MeteorClient {
     
     weak public var delegate: MeteorDelegate?               // meteor ddp and websocket events delegate
     
-    // Find sub name queue
-    let findSubQueue: DispatchQueue = {
-        DispatchQueue(label: "\(METEOR_DDP) FindSubQueue", attributes: .concurrent)
-    }()
-    
     // Background data queue
     let backgroundQueue: OperationQueue = {
         let queue = OperationQueue()
@@ -86,6 +83,15 @@ public final class MeteorClient {
     let methodResultQueue: OperationQueue = {
         let queue = OperationQueue()
         queue.name = "\(METEOR_DDP) Callback Queue"
+        queue.maxConcurrentOperationCount = 1
+        queue.qualityOfService = .userInitiated
+        return queue
+    }()
+    
+    // Callbacks execute in the order they're received
+    let subResultQueue: OperationQueue = {
+        let queue = OperationQueue()
+        queue.name = "\(METEOR_DDP) Sub Callback Queue"
         queue.maxConcurrentOperationCount = 1
         queue.qualityOfService = .userInitiated
         return queue
@@ -124,11 +130,28 @@ public final class MeteorClient {
         return queue
     }()
     
+    // Main queue for current user
+    let subQueue: DispatchQueue = {
+        DispatchQueue(label: "\(METEOR_DDP)-subscription-handler", attributes: .concurrent)
+    }()
+    
     // Warning to avoid synchronous operations on main UI thread
     let syncWarning = { (name: String) -> () in
         if Thread.isMainThread {
             logger.logError(.mainThread, "\(name) is running synchronously on the main thread. It should run on a background thread")
         }
+    }
+    
+    let methodInvokeGroup = DispatchGroup()
+    
+    /// Flag to check the socket connection
+    public var isSocketConnected: Bool {
+        socket.isConnectedToNetwork && socket.isConnected
+    }
+    
+    /// Meteor connection flag
+    public var isConnected: Bool {
+        isSocketConnected && sessionId != nil
     }
     
     /// DDP client to init with websocket interface and configurations
@@ -172,6 +195,7 @@ public final class MeteorClient {
     /// Connects the ddp server and bind websocket events with the provided websocket interfacxe
     /// - Parameter callback: ddp session
     public func connect(callback: ((String) -> ())?) {
+        methodHandler = [:]
         connectedCallback = callback
         backOff = ExponentialBackoff()
         bindEvent()
@@ -196,9 +220,10 @@ public final class MeteorClient {
     }
     
     /// Auto trigger reconnection
-    public func triggerReconnect(callback: ((String) -> ())?) {
-        guard (socket.isConnectedToNetwork || socket.isConnected) && sessionId != nil else {
+    public func triggerReconnect(callback: ((String?) -> ())?) {
+        guard !isConnected else {
             logger.log(.socket, "MeteorDDP is already connected", .info)
+            callback?(nil)
             return
         }
         backOff.createBackoff {

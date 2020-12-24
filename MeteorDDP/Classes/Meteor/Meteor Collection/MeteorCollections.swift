@@ -40,7 +40,7 @@ open class MeteorCollections {
     
     open var updateDelay: TimeInterval = 0.33
     
-    open var collectionDidChange: ((MeteorCollections) -> ())?
+    open var collectionDidChange: ((MeteorCollections, String) -> ())?
     
     open var documents: [MeteorKeyValue] {
         return Array(_documents.values)
@@ -113,7 +113,7 @@ public extension MeteorCollections {
     ///   - fields: new fields
     func localInsert(_ id: String, fields: MeteorKeyValue) {
         self._documents[id] = fields
-        broadcastChange()
+        broadcastChange(id)
     }
     
     /// Updates local document
@@ -129,7 +129,7 @@ public extension MeteorCollections {
                 document[$0] = nil
             }
             self._documents[id] = document
-            broadcastChange()
+            broadcastChange(id)
         }
     }
     
@@ -138,7 +138,7 @@ public extension MeteorCollections {
     func localRemove(_ id: String) {
         if let _ = _documents[id] {
             self._documents[id] = nil
-            broadcastChange()
+            broadcastChange(id)
         }
     }
     
@@ -158,7 +158,7 @@ public extension MeteorCollections {
             if let error = error {
                 error.log(.doc)
                 self._documents[id] = nil
-                self.broadcastChange()
+                self.broadcastChange(id)
             }
         }
         
@@ -176,13 +176,13 @@ public extension MeteorCollections {
         
         let originalDocument = _documents[id]
         _documents[id] = document
-        broadcastChange()
+        broadcastChange(id)
         
         client.updateColection(name, type: .update, documents: [["_id":id], operation]) { result, error in
             if let error = error {
                 error.log(.doc)
                 self._documents[id] = originalDocument
-                self.broadcastChange()
+                self.broadcastChange(id)
             }
         }
     }
@@ -196,13 +196,13 @@ public extension MeteorCollections {
         }
         let originalDocument = _documents[id]
         _documents[id] = document
-        broadcastChange()
+        broadcastChange(id)
         
         client.updateColection(name, type: .update, documents: [["_id":id],["$set": document]]) { result, error in
             if let error = error {
                 error.log(.doc)
                 self._documents[id] = originalDocument
-                self.broadcastChange()
+                self.broadcastChange(id)
             }
         }
 
@@ -216,13 +216,13 @@ public extension MeteorCollections {
             return
         }
         localRemove(id)
-        broadcastChange()
+        broadcastChange(id)
 
         client.updateColection(name, type: .remove, documents: [["_id":id]]) { result, error in
             if let error = error {
                 error.log(.doc)
                 self._documents[id] = document
-                self.broadcastChange()
+                self.broadcastChange(id)
             }
         }
     }
@@ -263,13 +263,13 @@ public extension MeteorCollections {
 fileprivate extension MeteorCollections {
     
     /// Broadcast dataset change
-    func broadcastChange() {
+    func broadcastChange(_ id: String) {
         guard let didChange = self.collectionDidChange else {
             return
         }
         updateDelay.debounce(.main) {
             OperationQueue.main.addOperation() {
-                didChange(self)
+                didChange(self, id)
             }
         }
     }
