@@ -36,11 +36,11 @@
 public struct MeteorError: Error {
     
     /// DDP error message
-    fileprivate var keyValue: MeteorKeyValue?
+    var keyValue: MeteorKeyValue?
     
     /// Error description
-    public var error: String? {
-        keyValue?["error"] as? String
+    public var error: Int? {
+        keyValue?["error"] as? Int
     }
     
     /// Error reason

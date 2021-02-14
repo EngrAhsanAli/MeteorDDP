@@ -126,7 +126,7 @@ public extension MeteorClient {
     @discardableResult
     func subscribe(_ name: String, params: [Any]?, collectionName: String? = nil, callback: MeteorCollectionCallback? = nil, completion: MeteorCompletionVoid? = nil) -> String {
         let id = String.randomString
-        logger.log(.sub, "Collection [\(name)] with id [\(id)]", .info)
+        logger.log(.sub, "Collection [\(name)] with id [\(id)] and params \(params?.debugDescription ?? "[]")", .info)
         return sub(id, name: name, params: params, collectionName: collectionName, callback: callback, completion: completion)
     }
 
@@ -191,4 +191,12 @@ public extension MeteorClient {
         return call(callName, params: documents, callback: callback)
     }
     
+    
+    /// Check if the collection name or subscription name is already subscribed
+    /// - Parameter name: collection name or subscription name
+    /// - Returns:isSubcribed flag
+    func isSubcribed(_ name: String) -> Bool {
+        findSubscriptionId(byName: name) != nil ||
+        findSubscription(byCollection: name) != nil
+    }
 }

@@ -38,12 +38,7 @@ open class MeteorLogger {
     }
     
     /// Flag to allow logging information  in the application
-    public static var loggingLevel: Level = .incomming
-    
-    /// Print header
-    fileprivate func printTag() {
-        print("\n ❕ ❕ ❕ 🚀 \(METEOR_DDP) ❕ ❕ ❕")
-    }
+    public static var loggingLevel: Level = .info
     
     /// Print log information
     /// - Parameters:
@@ -53,8 +48,7 @@ open class MeteorLogger {
         guard (MeteorLogger.loggingLevel != .none) && ((type == MeteorLogger.loggingLevel) || MeteorLogger.loggingLevel == .normal) else {
             return
         }
-        printTag()
-        print("\(label.rawValue) 👉🏼 \(items)", terminator: "\n\n")
+        print("\n ❕ ❕ ❕ 🚀 \(METEOR_DDP) ❕ ❕ ❕\n", "\(label.rawValue) 👉🏼 \(items)", terminator: "\n\n")
 
     }
     
@@ -63,8 +57,10 @@ open class MeteorLogger {
     ///   - label: tag
     ///   - items: items to print
     internal func logError(_ label: LogTags, _ items: Any...) {
-        printTag()
-        print("\(label.rawValue) 👉🏼 \(items)", terminator: " ‼️ \n\n")
+        guard (MeteorLogger.loggingLevel != .none) else {
+            return
+        }
+        print("\n ❕ ❕ ❕ 🚀 \(METEOR_DDP) ❕ ❕ ❕\n", "\(label.rawValue) 👉🏼 \(items)", terminator: " ‼️ \n\n")
         
     }
 
@@ -80,6 +76,7 @@ internal extension MeteorLogger {
         case sub = "Meteor Subscribe"
         case unsub = "Meteor Unsubscribe"
         case doc = "Meteor Document"
+        case method = "Meteor Method"
         case receiveMessage = "Meteor Receive Message"
         case socket = "Web Socket"
         case mainThread = "Main Thread Warning"

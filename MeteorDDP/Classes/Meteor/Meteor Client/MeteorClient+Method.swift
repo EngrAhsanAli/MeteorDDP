@@ -40,6 +40,7 @@ public extension MeteorClient {
     @discardableResult
     func call(_ name: String, params: [Any]?, callback: MeteorMethodCallback? = nil) -> String {
         let id = String.randomString
+        logger.log(.method, "Method [\(name)] with id [\(id)] and params \(params?.debugDescription ?? "[]")", .info)
         var messages: [MessageOut] = [.msg(.method), .method(name), .id(id)]
         if let p = params {
             messages.append(.params(p))
