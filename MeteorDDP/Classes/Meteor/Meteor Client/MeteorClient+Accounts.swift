@@ -40,10 +40,11 @@ public extension MeteorClient {
     ///   - password: A password string
     ///   - callback: A closure with result and error parameters describing the outcome of the operation
     func login(_ id: String, password: String, callback: MeteorMethodCallback?) {
-        if !(loginWithToken(callback)) {
-            
-            let msg: [UserMessage] = [.email(id), .username(id), .password(password)]
-            loginUser(params: makeMessage(msg), method: .login, callback: callback)
+        if id.isValidEmail {
+            loginWithPassword(id, password: password, callback: callback)
+        }
+        else {
+            loginWithUsername(id, password: password, callback: callback)
         }
     }
     
