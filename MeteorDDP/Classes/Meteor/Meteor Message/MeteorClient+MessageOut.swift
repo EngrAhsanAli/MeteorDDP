@@ -84,15 +84,19 @@ internal extension MeteorClient {
         var message = MeteorKeyValue()
         messages.forEach {
             switch $0 {
-                
-            case .email(let p):     message["user"] = ["email": p]
-
-            case .username(let p):  message["user"] = ["username": p]
-
-            case .password(let p):  message["password"] = ["digest" : p.sha256(), "algorithm":"sha-256"]
-                
-            case .profile(let p):   message["profile"] = p
             
+            case .emailSignup(let p):       message["email"] = p
+                
+            case .usernameSignup(let p):    message["username"] = p
+                
+            case .emailLogin(let p):        message["user"] = ["email": p]
+                
+            case .usernameLogin(let p):     message["user"] = ["username": p]
+                
+            case .password(let p):          message["password"] = ["digest" : p.sha256(), "algorithm":"sha-256"]
+                
+            case .profile(let p):           message["profile"] = p
+                
             }
         }
         
@@ -121,8 +125,9 @@ internal extension MeteorClient {
     
     /// DDP outgoing user messages types
     enum UserMessage {
-        case email(String), username(String), password(String)
+        case emailLogin(String), usernameLogin(String), password(String)
         case profile(MeteorKeyValue)
+        case emailSignup(String), usernameSignup(String)
     }
 
 }

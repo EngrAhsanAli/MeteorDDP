@@ -51,7 +51,7 @@ public typealias MeteorCollectionCallback = (MeteorCollectionEvents, MeteorDocum
 
 // MARK:- 🚀 MeteorDelegate
 
-public protocol MeteorDelegate: class {
+public protocol MeteorDelegate: AnyObject {
     func didReceive(name : MeteorEvents, event: Any)
 }
 

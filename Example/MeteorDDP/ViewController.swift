@@ -46,10 +46,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func connectAction(_ sender: Any) {
-        meteor.connect {
-            self.logResult("Session: " + $0)
-//            self.loginWithUsernameAction(self)
-        }
+        meteor.connect(callback: nil)
     }
     
     @IBAction func loginWtihEmailAction(_ sender: Any) {
@@ -163,8 +160,49 @@ extension ViewController: MeteorDelegate {
         case .dataRemove:
             self.logResult("Removed data in collection " + (event as? MeteorDocument)!.name)
             
+        case .connected:
+            print("Connected (Event will be session id) => ", event)
+            
+        case .login:
+            print("Login (Event will be user _id) => ", event)
+            
+        case .logout:
+            print("Logout (Event will be error) => ", event)
+            
+        case .reconnection:
+            print("Reconnection attemp (Event will be completion) => ", event)
         }
     }
     
     
+}
+
+extension JSONSerialization {
+    
+    static func loadJSON(withFilename filename: String) throws -> Any? {
+        let fm = FileManager.default
+        let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
+        if let url = urls.first {
+            var fileURL = url.appendingPathComponent(filename)
+            fileURL = fileURL.appendingPathExtension("json")
+            let data = try Data(contentsOf: fileURL)
+            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers, .mutableLeaves])
+            return jsonObject
+        }
+        return nil
+    }
+    
+    static func save(jsonObject: Any, toFilename filename: String) throws -> Bool{
+        let fm = FileManager.default
+        let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
+        if let url = urls.first {
+            var fileURL = url.appendingPathComponent(filename)
+            fileURL = fileURL.appendingPathExtension("json")
+            let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted])
+            try data.write(to: fileURL, options: [.atomicWrite])
+            return true
+        }
+        
+        return false
+    }
 }

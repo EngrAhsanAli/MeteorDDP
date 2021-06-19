@@ -68,8 +68,9 @@ internal extension MeteorClient {
                     
                 case .connected:
                     self.sessionId = message.session
-                    self.connectedCallback?(sessionId!)
+                    self.onSessionConnected?(sessionId!)
                     self.loginServiceSubscription()
+                    self.broadcastEvent(MeteorEvents.connected.rawValue, event: .connected, value: sessionId!)
                     message.log(.info)
                     
                 case .ping:

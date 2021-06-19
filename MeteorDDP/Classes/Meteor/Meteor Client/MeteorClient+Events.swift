@@ -32,7 +32,10 @@
 public enum MeteorEvents: String {
     case method, websocket
     case dataAdded, dataChange, dataRemove
-    
+    case connected = "DDP_Connected"
+    case reconnection = "DDP_Reconnection"
+    case login = "DDP_Login"
+    case logout = "DDP_Logout"
 }
 
 public enum MeteorCollectionEvents: String {
@@ -110,7 +113,7 @@ internal extension MeteorClient {
     ///   - name: name string
     ///   - event: MeteorEvents
     ///   - value: MeteorResponse
-    func broadcastEvent(_ name: String, event: MeteorEvents, value: MeteorResponse) {
+    func broadcastEvent(_ name: String, event: MeteorEvents, value: Any) {
         DispatchQueue.main.async {
             self.delegate?.didReceive(name: event, event: value)
             
@@ -130,14 +133,26 @@ public extension MeteorClient {
     ///   - name: name
     ///   - event: event
     ///   - callback: callback
-     func addEventObserver(_ name: String, event: MeteorEvents, callback: ((MeteorResponse) -> ())?) {
+     func addEventObserver(_ name: String, event: MeteorEvents, callback: ((Any) -> ())?) {
         let identifier = makeNotificationName(name, event: event)
         observers[identifier] = notificationCenter.addObserver(forName: NSNotification.Name(rawValue: identifier), object: nil, queue: .main) {
-            guard let response = $0.object as? MeteorResponse else {
+            guard let response = $0.object else {
                 logger.logError(.receiveMessage, "Failed to parse notification payload")
                 return
             }
             callback?(response)
+        }
+    }
+    
+    /// Listen Observer for once only just like callback. After first ping, the observer will be removed automatically
+    /// - Parameters:
+    ///   - name: name of the observer
+    ///   - event: event
+    ///   - callback: callback
+    func listEventOnce(_ name: String, event: MeteorEvents, callback: @escaping ((Any) -> ())) {
+        addEventObserver(name, event: event) {
+            callback($0)
+            self.removeEventObservers(name, event: [event])
         }
     }
     
@@ -151,9 +166,6 @@ public extension MeteorClient {
             if let observer = observers[identifier] {
                 notificationCenter.removeObserver(observer)
                 observers[identifier] = nil
-            }
-            else {
-                logger.logError(.error, "Fail to fetch the observer for collection \( name) and event \($0.rawValue)")
             }
         }
     }

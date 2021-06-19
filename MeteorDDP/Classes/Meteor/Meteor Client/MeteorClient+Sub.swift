@@ -170,7 +170,12 @@ public extension MeteorClient {
         }
     }
         
-        
+    
+    /// Unsubscribe collection
+    /// - Parameters:
+    ///   - name: name of the collection
+    ///   - allowRemove: flag to allow document remove
+    ///   - callback: completion callback
     func unsubscribe(withCollection name: String, allowRemove: Bool = true, callback: MeteorCompletionVoid?) {
         if let sub = findSubscription(byCollection: name) {
             self.unsubscribe(withName: sub.name, allowRemove: allowRemove, callback: callback)
@@ -198,5 +203,29 @@ public extension MeteorClient {
     func isSubcribed(_ name: String) -> Bool {
         findSubscriptionId(byName: name) != nil ||
         findSubscription(byCollection: name) != nil
+    }
+    
+    func subscribe(name: String, of collection: String, params: [String: Any]?, allowRemove: Bool, callback: @escaping ((MeteorDocument, MeteorCollectionEvents) -> ())) {
+        
+        removeEventObservers(collection, event: [.dataAdded, .dataRemove, .dataChange])
+        
+        addEventObserver(collection, event: .dataAdded) {
+            let value = $0 as! MeteorDocument
+            callback(value, .dataAdded)
+        }
+        
+        addEventObserver(collection, event: .dataChange) {
+            let value = $0 as! MeteorDocument
+            callback(value, .dataChange)
+        }
+        
+        addEventObserver(collection, event: .dataRemove) {
+            let value = $0 as! MeteorDocument
+            callback(value, .dataRemove)
+        }
+        
+        unsubscribe(withCollection: collection, allowRemove: allowRemove) {
+            self.subscribe(name, params: [params as Any], collectionName: collection, callback: nil, completion: nil)
+        }
     }
 }

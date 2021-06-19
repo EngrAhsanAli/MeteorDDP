@@ -58,10 +58,10 @@ public extension MeteorClient {
     func signup(_ email: String?, username: String?, password: String, profile: MeteorKeyValue?, callback: MeteorMethodCallback?) {
         var id: UserMessage?
         if let email = email, email.isValidEmail {
-            id = .email(email)
+            id = .emailSignup(email)
         }
         if let username = username {
-            id = .username(username)
+            id = .usernameSignup(username)
         }
         
         if let id = id {
@@ -83,7 +83,7 @@ public extension MeteorClient {
     ///   - callback: A closure with result and error parameters describing the outcome of the operation
     func loginWithPassword(_ email: String, password: String, callback: MeteorMethodCallback?) {
         resetUserData()
-        let msg: [UserMessage] = [.email(email), .password(password)]
+        let msg: [UserMessage] = [.emailLogin(email), .password(password)]
         loginUser(params: makeMessage(msg), method: .login, callback: callback)
     }
     
@@ -94,7 +94,7 @@ public extension MeteorClient {
     ///   - callback: A closure with result and error parameters describing the outcome of the operation
     func loginWithUsername(_ username: String, password: String, callback: MeteorMethodCallback?) {
         resetUserData()
-        let msg: [UserMessage] = [.username(username), .password(password)]
+        let msg: [UserMessage] = [.usernameLogin(username), .password(password)]
         loginUser(params: makeMessage(msg), method: .login, callback: callback)
     }
     
@@ -109,6 +109,7 @@ public extension MeteorClient {
                     self.resetUserData()
                 }
             }
+            self.broadcastEvent(MeteorEvents.logout.rawValue, event: .logout, value: error as Any)
             callback?(result, error)
         }
     }
@@ -126,7 +127,7 @@ public extension MeteorClient {
             oauthDialog.url = URL(string: oauth.getServiceUrl(service, clientId: clientId))
             viewController.present(oauthDialog, animated: true, completion: nil)
         } else {
-            logger.log(.login, "Already have valid server login credentials. Logging in with preexisting login token", .normal)
+            logger.log(.login, "Already have valid server login credentials. Logging in with previous login token", .normal)
         }
     }
     
@@ -143,14 +144,7 @@ internal extension MeteorClient {
     ///   - callback: callback
     func loginUser(params: MeteorKeyValue, method: Method, callback: MeteorMethodCallback?) {        
         call(method.rawValue, params: [params]) { result, error in
-            
-            if let error = error {
-                error.log()
-            }
-            else {
-                self.saveLoggedInUser(result, error: error)
-            }
-            
+            self.saveLoggedInUser(result, error: error)
             self.userMainQueue.addOperation() {
                 callback?(result, error)
             }
@@ -185,10 +179,12 @@ internal extension MeteorClient {
             let tokenExpires = data["tokenExpires"] as? MeteorKeyValue {
             
             self.loggedInUser = UserHolder(id: id, token: token, tokenExpires: tokenExpires.dateFromTimestamp)
-            
             self.persistUser(object: self.loggedInUser!)
+            self.broadcastEvent(MeteorEvents.login.rawValue, event: .login, value: id)
+            
         }
         else if let error = error {
+            self.resetUserData()
             error.log()
         }
 

@@ -33,15 +33,6 @@ class TodoViewController: UIViewController {
             
         }
         
-//        meteor.addEventObserver("groups", event: .dataAdded) {
-//            guard let value = $0 as? MeteorDocument else {
-//                return
-//            }
-//            self.documents[value.id] = value.fields
-//            self.tableView.reloadData()
-//        }
-//        meteor.removeEventObservers("groups", event: [.dataAdded])
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -59,7 +50,7 @@ class TodoViewController: UIViewController {
     func sub() {
         meteor.unsubscribe(withName: collection, allowRemove: false, callback: {
             
-            meteor.subscribe(collection, params:  [["pageNum": 0]], collectionName: "groups", callback: { (event, doc) in
+            meteor.subscribe(collection, params:  nil, collectionName: "tasks", callback: { (event, doc) in
                 print("Event received in closure ", event)
                 print("Document received in closure ", doc)
                 
