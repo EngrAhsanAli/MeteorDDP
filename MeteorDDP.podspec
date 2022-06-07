@@ -41,7 +41,6 @@ MeteorDDP is really helpful to integrate servers written in meteor (a framework 
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   
-  s.frameworks = 'Combine'
   s.dependency 'CryptoSwift', '~> 1.4.0'
   s.dependency 'Starscream', '~> 4.0.4'
   s.swift_version = '5.1.2'

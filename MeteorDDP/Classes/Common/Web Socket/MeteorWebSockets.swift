@@ -34,7 +34,7 @@ import SystemConfiguration
 
 // MARK:- WebSocketMethod
 public enum WebSocketMethod {
-    case starscream, webSocketTask
+    case starscream, webSocketTask, custom
 }
 
 // MARK:- 🚀 MeteorWebSockets
@@ -52,7 +52,7 @@ public class MeteorWebSockets {
     ///   - url: websocket url endpoint
     ///   - method: Starscream or URLSessionWebSocketTask
     ///   - timeout: request timeout
-    public init(_ url: String, _ method: WebSocketMethod, _ timeout: Double) {
+    public init(_ url: String, _ method: WebSocketMethod = .webSocketTask, _ timeout: Double) {
         self.url = url.websocketUrl
         self.preferredMethod = method
         self.timeout = TimeInterval(timeout)
@@ -66,14 +66,18 @@ internal extension MeteorWebSockets {
     
     /// Configuration
     func configureWebSocket() {
-        self.socket = nil
+        socket = nil
+        
         if preferredMethod == .webSocketTask {
-            if #available(iOS 13.0, *) {
-                self.socket = configureWebSocketTask()
-            }
+            if #available(iOS 13.0, *) { socket = configureWebSocketTask() }
+            else { preferredMethod = .custom }
         }
+        
         if socket == nil {
-            socket = configureStarscream()
+            switch preferredMethod {
+            case .starscream:       socket = configureStarscream()
+            default:                socket = configureWebSocketCustom()
+            }
         }
 
     }
@@ -82,6 +86,9 @@ internal extension MeteorWebSockets {
     func disconnect() {
         if let socket = socket as? WebSocket {
             socket.forceDisconnect()
+        }
+        else if let socket = socket as? WebSocketCustom {
+            socket.close()
         }
         else if #available(iOS 13.0, *) {
             if let socket = socket as? WebSocketTask {
@@ -96,57 +103,15 @@ internal extension MeteorWebSockets {
         if let socket = socket as? WebSocket {
             socket.write(string: text, completion: nil)
         }
+        else if let socket = socket as? WebSocketCustom {
+            socket.send(text)
+        }
         else if #available(iOS 13.0, *) {
             if let socket = socket as? WebSocketTask {
                 socket.send(text: text)
             }
         }
     }
-    
-    /// Configure Starscream Websocket
-    func configureStarscream() -> WebSocket {
-        var request = URLRequest(url: url)
-        request.timeoutInterval = timeout
-        let socket = WebSocket(request: request)
-        socket.onEvent = { event in
-            switch event {
-            case .connected(let session):
-                self.isConnected = true
-                self.onEvent?(.connected)
-                logger.log(.socket, "Connection started with session \(session)", .info)
-            case .disconnected(let reason, let code):
-                self.isConnected = false
-                self.onEvent?(.disconnected)
-                logger.log(.socket, "Connection closed with code \(code). \(reason)", .info)
-            case .text(let text):
-                self.onEvent?(.text(text))
-            case .error(let error):
-                self.isConnected = false
-                self.onEvent?(.error(error))
-            case .cancelled:
-                self.isConnected = false
-                self.onEvent?(.disconnected)
-            default:
-                self.isConnected = false
-                self.onEvent?(.error(self.noInternetError))
-                
-            }
-        }
-        socket.connect()
-        
-        return socket
-    }
-    
-    /// Configure URLSessionWebSocketTask
-    @available(iOS 13.0, *)
-    func configureWebSocketTask() -> WebSocketTask {
-        let socket = WebSocketTask(url: url, timeout: timeout)
-        socket.onEvent = onEvent
-        socket.isConnected = { self.isConnected = $0 }
-        socket.connect()
-        return socket
-    }
-    
     
     /// Check network connectivity and through Error
     var noInternetError: Error? {
@@ -180,4 +145,84 @@ internal extension MeteorWebSockets {
         return (isReachable && !needsConnection)
         
     }
+}
+
+// MARK: Configure different Websocket methods
+private extension MeteorWebSockets {
+    
+    /// Configure Starscream Websocket
+    func configureStarscream() -> WebSocket {
+        var request = URLRequest(url: url)
+        request.timeoutInterval = timeout
+        let socket = WebSocket(request: request)
+        socket.onEvent = { event in
+            switch event {
+            case .connected(let session):
+                self.isConnected = true
+                self.onEvent?(.connected)
+                logger.log(.socket, "Connection started with session \(session)", .info)
+            case .disconnected(let reason, let code):
+                self.isConnected = false
+                self.onEvent?(.disconnected)
+                logger.log(.socket, "Connection closed with code \(code). \(reason)", .info)
+            case .text(let text):
+                self.onEvent?(.text(text))
+            case .error(let error):
+                self.isConnected = false
+                self.onEvent?(.error(error))
+            case .cancelled:
+                self.isConnected = false
+                self.onEvent?(.disconnected)
+            default:
+                self.isConnected = false
+                self.onEvent?(.error(self.noInternetError))
+                
+            }
+        }
+        return socket
+    }
+    
+    /// Configure URLSessionWebSocketTask
+    @available(iOS 13.0, *)
+    func configureWebSocketTask() -> WebSocketTask {
+        let socket = WebSocketTask(url: url, timeout: timeout)
+        socket.onEvent = onEvent
+        socket.isConnected = { self.isConnected = $0 }
+        socket.connect()
+        return socket
+    }
+    
+    /// Configure WebSocketCustom
+    func configureWebSocketCustom() -> WebSocketCustom {
+        let socket = WebSocketCustom(url: url)
+        socket.setTimeout(timeout)
+        socket.services = [.VoIP, .Background]
+
+        socket.event.open = {
+            self.isConnected = true
+            self.onEvent?(.connected)
+            logger.log(.socket, "Connection started with session", .info)
+        }
+        socket.event.close = { code, reason, clean in
+            self.isConnected = false
+            self.onEvent?(.disconnected)
+            logger.log(.socket, "Connection closed with code \(code). \(reason)", .info)
+        }
+        socket.event.error = { error in
+            self.isConnected = false
+            self.onEvent?(.error(error))
+        }
+        socket.event.message = { message in
+            guard let text = message as? String else { return }
+            self.onEvent?(.text(text))
+        }
+        socket.event.end = { code, reason, _, _ in
+            self.isConnected = false
+            self.onEvent?(.disconnected)
+            logger.log(.socket, "Connection closed with code \(code). \(reason)", .info)
+        }
+        socket.open(nsurl: url)
+        return socket
+    }
+    
 }

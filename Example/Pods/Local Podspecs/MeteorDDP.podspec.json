@@ -20,7 +20,6 @@
     "ios": "9.0"
   },
   "source_files": "MeteorDDP/Classes/**/*",
-  "frameworks": "Combine",
   "dependencies": {
     "CryptoSwift": [
       "~> 1.4.0"
